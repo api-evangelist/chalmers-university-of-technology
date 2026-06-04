@@ -1,0 +1,46 @@
+---
+name: Chalmers University of Technology
+description: Chalmers University of Technology public developer/API footprint review for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/review.yml
+created: '2026-06-03'
+modified: '2026-06-03'
+reviews:
+  - date: '2026-06-03'
+    rating: 3
+    summary: >-
+      Verified live: the Chalmers Research API (api.research.chalmers.se, HTTP
+      200, reporting thousands of projects), the Chalmers Research portal
+      OAI-PMH interface (valid Identify, records back to 1942), and the Chalmers
+      Open Digital Repository OAI-PMH interface (valid Identify, base resolves
+      to /server/oai/request). The Chalmers University Library GitHub org
+      (ChalmersLibrary, 44 public repos) is real and hosts data/metadata tooling
+      (Research2CrossRef, dsw2es, create-dmp, chami). The legacy Chalmers
+      Publication Library (CPL) OAI-PMH endpoint returns 404 and appears retired.
+      No single self-service developer portal and no published OpenAPI were
+      confirmed; no separate top-level "chalmers" GitHub org exists. No
+      endpoints were fabricated.
+    endpoints:
+      - url: https://api.research.chalmers.se/
+        status: 200
+        note: Chalmers Research API root; live, serves research projects, has /Help.
+      - url: https://api.research.chalmers.se/Help
+        status: 500
+        note: Help/docs path returned 500 at probe time; root confirms it exists.
+      - url: https://research.chalmers.se/oai-pmh/general/?verb=Identify
+        status: 200
+        note: OAI-PMH 2.0 Identify for Chalmers Research; records since 1942.
+      - url: https://odr.chalmers.se/server/oai/request?verb=Identify
+        status: 200
+        note: OAI-PMH 2.0 Identify for Chalmers Open Digital Repository (ODR).
+      - url: http://publications.lib.chalmers.se/cpl/oai-pmh/general?verb=Identify
+        status: 404
+        note: Legacy CPL OAI-PMH endpoint; appears retired/migrated.
+      - url: https://github.com/ChalmersLibrary
+        status: 200
+        note: Chalmers University Library GitHub org, 44 public repos.
+      - url: https://www.chalmers.se/en/
+        status: 200
+        note: Official institutional website.
+      - url: https://www.linkedin.com/school/chalmers-university-of-technology/
+        status: 200
+        note: Official LinkedIn school page.

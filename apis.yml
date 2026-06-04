@@ -1,0 +1,90 @@
+---
+aid: chalmers-university-of-technology
+name: Chalmers University of Technology
+description: >-
+  Chalmers University of Technology (Chalmers tekniska hogskola) is a private
+  technical university in Gothenburg, Sweden, ranked #139 in the QS World
+  University Rankings 2025. Its public, machine-readable footprint is centered
+  on research information and library/repository services rather than a unified
+  developer portal. Confirmed surfaces include the Chalmers Research API
+  (api.research.chalmers.se), OAI-PMH metadata interfaces for the Chalmers
+  Research portal and the Chalmers Open Digital Repository (ODR), and the
+  Chalmers University Library GitHub organization hosting open-source data and
+  metadata tooling. There is no single consolidated, self-service developer
+  portal; access is API/repository specific.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/apis.yml
+tags:
+  - Education
+  - Higher Education
+  - University
+  - Research
+  - Open Data
+  - Library
+  - OAI-PMH
+  - Sweden
+created: '2026-06-03'
+modified: '2026-06-03'
+specificationVersion: '0.19'
+apis:
+  - aid: chalmers-university-of-technology:research-api
+    name: Chalmers Research API
+    description: >-
+      Public API serving research information from the Chalmers Research portal,
+      including research projects, publications, funders and collaborations. The
+      live service reports thousands of projects and exposes a Help endpoint for
+      documentation. A test instance is also published.
+    humanURL: https://api.research.chalmers.se/
+    baseURL: https://api.research.chalmers.se/
+    tags: [ Research, Publications, Projects, Open Data ]
+    properties:
+      - type: Documentation
+        url: https://api.research.chalmers.se/Help
+  - aid: chalmers-university-of-technology:research-oai-pmh
+    name: Chalmers Research OAI-PMH
+    description: >-
+      OAI-PMH 2.0 metadata harvesting interface for the Chalmers Research portal
+      (research.chalmers.se), covering Chalmers research publications with
+      records dating back to 1942. Returns a valid Identify response.
+    humanURL: https://research.chalmers.se/en/
+    baseURL: https://research.chalmers.se/oai-pmh/general/
+    tags: [ OAI-PMH, Research, Publications, Metadata, Open Data ]
+    properties:
+      - type: Documentation
+        url: https://research.chalmers.se/oai-pmh/general/?verb=Identify
+  - aid: chalmers-university-of-technology:odr-oai-pmh
+    name: Chalmers Open Digital Repository (ODR) OAI-PMH
+    description: >-
+      OAI-PMH 2.0 metadata harvesting interface for the Chalmers Open Digital
+      Repository (ODR), which holds student theses and selected special digital
+      collections. Confirmed via an Identify response; the base OAI request
+      endpoint resolves to /server/oai/request.
+    humanURL: https://odr.chalmers.se/
+    baseURL: https://odr.chalmers.se/server/oai/request
+    tags: [ OAI-PMH, Repository, Theses, Metadata, Open Data ]
+    properties:
+      - type: Documentation
+        url: https://odr.chalmers.se/server/oai/request?verb=Identify
+common:
+  - type: Website
+    url: https://www.chalmers.se/en/
+  - type: GitHub
+    url: https://github.com/ChalmersLibrary
+  - type: LinkedIn
+    url: https://www.linkedin.com/school/chalmers-university-of-technology/
+  - type: SourceCode
+    url: https://github.com/ChalmersLibrary
+  - type: Plans
+    url: plans/chalmers-university-of-technology-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/chalmers-university-of-technology-rate-limits.yml
+  - type: FinOps
+    url: finops/chalmers-university-of-technology-finops.yml
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
