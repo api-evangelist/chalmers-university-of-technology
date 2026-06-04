@@ -1,0 +1,19 @@
+{
+  "ID": 100,
+  "OrganizationNameSv": "Chalmers tekniska hogskola",
+  "OrganizationNameEn": "Chalmers University of Technology",
+  "OrganizationDisplayNameSv": "Chalmers tekniska hogskola",
+  "OrganizationDisplayNameEn": "Chalmers University of Technology",
+  "OrganizationTypeID": 1,
+  "OrganizationTypeNameSv": "Universitet",
+  "OrganizationTypeNameEn": "University",
+  "OrganizationCity": "Gothenburg",
+  "OrganizationCountry": "Sweden",
+  "OrganizationLevel": 0,
+  "OrganizationIdentifiers": [
+    {
+      "OrganizationIdentifierValue": "https://ror.org/040wg7k59"
+    }
+  ],
+  "OrganizationParents": []
+}

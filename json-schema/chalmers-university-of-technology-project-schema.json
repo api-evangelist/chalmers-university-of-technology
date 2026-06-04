@@ -1,0 +1,1182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/main/json-schema/chalmers-university-of-technology-project-schema.json",
+  "title": "Project",
+  "description": "JSON Schema for the Project object from the Chalmers Research API (api.research.chalmers.se).",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "ProjectTitleSwe": {
+      "type": "string"
+    },
+    "ProjectDescriptionSwe": {
+      "type": "string"
+    },
+    "ProjectDescriptionSweHtml": {
+      "type": "string"
+    },
+    "ProjectTitleEng": {
+      "type": "string"
+    },
+    "ProjectDescriptionEng": {
+      "type": "string"
+    },
+    "ProjectDescriptionEngHtml": {
+      "type": "string"
+    },
+    "PublishStatus": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "StartDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "EndDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "ProjectSource": {
+      "description": "The information source that the project was created from",
+      "type": "string"
+    },
+    "CreatedDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "CreatedBy": {
+      "type": "string"
+    },
+    "UpdatedDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "UpdatedBy": {
+      "type": "string"
+    },
+    "Contracts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProjectContract"
+      }
+    },
+    "Identifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProjectIdentifier"
+      }
+    },
+    "Organizations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProjectOrganization"
+      }
+    },
+    "Persons": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProjectOrganizationPerson"
+      }
+    },
+    "Categories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProjectCategory"
+      }
+    },
+    "Keywords": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProjectKeyword"
+      }
+    }
+  },
+  "$defs": {
+    "ProjectContract": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "description": "Primary key for FundingContracts",
+          "type": "integer"
+        },
+        "EkoImportID": {
+          "format": "int32",
+          "description": "Id number used in EKO-database for this contract",
+          "type": "integer"
+        },
+        "ContractSource": {
+          "description": "The information source that the project was created from",
+          "type": "string"
+        },
+        "DmpValue": {
+          "description": "Data Management Plan (DMP), link or id",
+          "type": "string"
+        },
+        "DmpVersion": {
+          "description": "Data Management Plan (DMP), version",
+          "type": "string"
+        },
+        "ProjectID": {
+          "format": "int32",
+          "description": "Internal id of project",
+          "type": "integer"
+        },
+        "OrganizationID": {
+          "description": "Internal id of funding organization",
+          "type": "string"
+        },
+        "ContractStartDate": {
+          "format": "date-time",
+          "description": "Start date for funding",
+          "type": "string"
+        },
+        "ContractEndDate": {
+          "format": "date-time",
+          "description": "End date for funding",
+          "type": "string"
+        },
+        "ContractAmount": {
+          "format": "int32",
+          "description": "Funding amount",
+          "type": "integer"
+        },
+        "ContractCurrencyCode": {
+          "description": "Funding currency code",
+          "type": "string"
+        },
+        "FunderID": {
+          "description": "Funder ID(s), virtual field",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "CreatedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "UpdatedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "ContractOrganization": {
+          "$ref": "#/$defs/OrganizationOrganization"
+        },
+        "ContractIdentifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ProjectContractIdentifier"
+          }
+        }
+      }
+    },
+    "OrganizationOrganization": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "NameSwe": {
+          "type": "string"
+        },
+        "NameEng": {
+          "type": "string"
+        },
+        "DisplayNameSwe": {
+          "type": "string"
+        },
+        "DisplayNameEng": {
+          "type": "string"
+        },
+        "DisplayPathSwe": {
+          "type": "string"
+        },
+        "DisplayPathEng": {
+          "type": "string"
+        },
+        "DisplayPathShortSwe": {
+          "type": "string"
+        },
+        "DisplayPathShortEng": {
+          "type": "string"
+        },
+        "PossibleDisplayPaths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OrganizationDisplayPath"
+          }
+        },
+        "City": {
+          "type": "string"
+        },
+        "PostalNo": {
+          "type": "string"
+        },
+        "Country": {
+          "type": "string"
+        },
+        "GeoLat": {
+          "type": "string"
+        },
+        "GeoLong": {
+          "type": "string"
+        },
+        "Level": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "StartYear": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "EndYear": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OrganizationOrganizationType"
+          }
+        },
+        "OrganizationParents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OrganizationOrganizationParent"
+          }
+        },
+        "ActiveOrganizationParentIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "HasIdentifiers": {
+          "type": "boolean"
+        },
+        "IdentifiersCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OrganizationIdentifier"
+          }
+        },
+        "IdentifierLdapCode": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "IdentifierCplDepartmentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "UpdatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ValidatedBy": {
+          "type": "string"
+        },
+        "ValidatedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "DeletedBy": {
+          "type": "string"
+        },
+        "DeletedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "NeedsAttention": {
+          "type": "boolean"
+        },
+        "IsReplacedById": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "OrganizationDisplayPath": {
+      "type": "object",
+      "properties": {
+        "DisplayPathSwe": {
+          "type": "string"
+        },
+        "DisplayPathEng": {
+          "type": "string"
+        }
+      }
+    },
+    "OrganizationOrganizationType": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "NameSwe": {
+          "type": "string"
+        },
+        "NameEng": {
+          "type": "string"
+        },
+        "LegacyOrganizationTypeId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "OrganizationOrganizationParent": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "FromDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ToDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ParentOrganizationId": {
+          "type": "string"
+        },
+        "ParentOrganizationData": {
+          "$ref": "#/$defs/OrganizationOrganization"
+        }
+      }
+    },
+    "OrganizationIdentifier": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/$defs/OrganizationIdentifierType"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "UpdatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        },
+        "Value": {
+          "type": "string"
+        }
+      }
+    },
+    "OrganizationIdentifierType": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Value": {
+          "type": "string"
+        },
+        "DescriptionSwe": {
+          "type": "string"
+        },
+        "DescriptionEng": {
+          "type": "string"
+        }
+      }
+    },
+    "ProjectContractIdentifier": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectContractID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectContractIdentifierID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectContractIdentifierDescription": {
+          "type": "string"
+        },
+        "ProjectContractIdentifierValue": {
+          "type": "string"
+        }
+      }
+    },
+    "ProjectIdentifier": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectIdentifierID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectIdentifierDescription": {
+          "type": "string"
+        },
+        "ProjectIdentifierValue": {
+          "type": "string"
+        }
+      }
+    },
+    "ProjectOrganization": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationID": {
+          "type": "string"
+        },
+        "Organization": {
+          "$ref": "#/$defs/OrganizationOrganization"
+        },
+        "OrganizationRoleID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationRoleNameEn": {
+          "type": "string"
+        },
+        "OrganizationRoleNameSv": {
+          "type": "string"
+        }
+      }
+    },
+    "ProjectOrganizationPerson": {
+      "description": "Connects a person with affiliation to a project",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PersonID": {
+          "type": "string"
+        },
+        "OrganizationID": {
+          "type": "string"
+        },
+        "PersonRoleID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PersonRoleName_en": {
+          "type": "string"
+        },
+        "PersonRoleName_sc": {
+          "type": "string"
+        },
+        "Person": {
+          "$ref": "#/$defs/PersonPerson"
+        },
+        "PersonOrganizations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ProjectOrganizationPersonOrganization"
+          }
+        },
+        "Verified": {
+          "format": "date-time",
+          "description": "The date for a users verification as a project member",
+          "type": "string"
+        },
+        "VerificationMailSent": {
+          "format": "date-time",
+          "description": "The date for sending a users verification email",
+          "type": "string"
+        }
+      }
+    },
+    "PersonPerson": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "DisplayName": {
+          "type": "string"
+        },
+        "BirthYear": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "IsReplacedById": {
+          "type": "string"
+        },
+        "IsReplacingId": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        },
+        "IsDeleted": {
+          "type": "boolean"
+        },
+        "HasOrganizationHome": {
+          "type": "boolean"
+        },
+        "HasIdentifiers": {
+          "type": "boolean"
+        },
+        "HasPublications": {
+          "type": "boolean"
+        },
+        "HasProjects": {
+          "type": "boolean"
+        },
+        "OrganizationHomeCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "IdentifiersCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "IdentifierCid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "IdentifierCplPersonId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "IdentifierOrcid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PersonIdentifier"
+          }
+        },
+        "OrganizationHome": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OrganizationHome"
+          }
+        },
+        "PdbCategories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PdbCategory"
+          }
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "UpdatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "DeletedBy": {
+          "type": "string"
+        },
+        "DeletedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "SightedBy": {
+          "type": "string"
+        },
+        "SightedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ValidatedBy": {
+          "type": "string"
+        },
+        "ValidatedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "NeedsAttention": {
+          "type": "boolean"
+        }
+      }
+    },
+    "PersonIdentifier": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/$defs/PersonIdentifierType"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "UpdatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        },
+        "Value": {
+          "type": "string"
+        }
+      }
+    },
+    "PersonIdentifierType": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Value": {
+          "type": "string"
+        },
+        "DescriptionSwe": {
+          "type": "string"
+        },
+        "DescriptionEng": {
+          "type": "string"
+        }
+      }
+    },
+    "OrganizationHome": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "OrganizationId": {
+          "type": "string"
+        },
+        "OrganizationData": {
+          "$ref": "#/$defs/PersonOrganization"
+        },
+        "LastUpdatedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "TitleSwe": {
+          "type": "string"
+        },
+        "TitleEng": {
+          "type": "string"
+        },
+        "StartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "EndDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "Source": {
+          "type": "string"
+        },
+        "Priority": {
+          "type": "string"
+        }
+      }
+    },
+    "PersonOrganization": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "NameSwe": {
+          "type": "string"
+        },
+        "NameEng": {
+          "type": "string"
+        },
+        "DisplayNameSwe": {
+          "type": "string"
+        },
+        "DisplayNameEng": {
+          "type": "string"
+        },
+        "DisplayPathSwe": {
+          "type": "string"
+        },
+        "DisplayPathEng": {
+          "type": "string"
+        },
+        "DisplayPathShortSwe": {
+          "type": "string"
+        },
+        "DisplayPathShortEng": {
+          "type": "string"
+        },
+        "PossibleDisplayPaths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PersonDisplayPath"
+          }
+        },
+        "City": {
+          "type": "string"
+        },
+        "PostalNo": {
+          "type": "string"
+        },
+        "Country": {
+          "type": "string"
+        },
+        "GeoLat": {
+          "type": "string"
+        },
+        "GeoLong": {
+          "type": "string"
+        },
+        "Level": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "StartYear": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "EndYear": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PersonOrganizationType"
+          }
+        },
+        "OrganizationParents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PersonOrganizationParent"
+          }
+        },
+        "ActiveOrganizationParentIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "HasIdentifiers": {
+          "type": "boolean"
+        },
+        "IdentifiersCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PersonOrganizationIdentifier"
+          }
+        },
+        "IdentifierLdapCode": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "IdentifierCplDepartmentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "UpdatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ValidatedBy": {
+          "type": "string"
+        },
+        "ValidatedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "DeletedBy": {
+          "type": "string"
+        },
+        "DeletedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "NeedsAttention": {
+          "type": "boolean"
+        },
+        "IsReplacedById": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "PersonDisplayPath": {
+      "type": "object",
+      "properties": {
+        "DisplayPathSwe": {
+          "type": "string"
+        },
+        "DisplayPathEng": {
+          "type": "string"
+        }
+      }
+    },
+    "PersonOrganizationType": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "NameSwe": {
+          "type": "string"
+        },
+        "NameEng": {
+          "type": "string"
+        },
+        "LegacyOrganizationTypeId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "PersonOrganizationParent": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "FromDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ToDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ParentOrganizationId": {
+          "type": "string"
+        },
+        "ParentOrganizationData": {
+          "$ref": "#/$defs/PersonOrganization"
+        }
+      }
+    },
+    "PersonOrganizationIdentifier": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/$defs/PersonOrganizationIdentifierType"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "UpdatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        },
+        "Value": {
+          "type": "string"
+        }
+      }
+    },
+    "PersonOrganizationIdentifierType": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Value": {
+          "type": "string"
+        },
+        "DescriptionSwe": {
+          "type": "string"
+        },
+        "DescriptionEng": {
+          "type": "string"
+        }
+      }
+    },
+    "PdbCategory": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "StartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "EndDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "ProjectOrganizationPersonOrganization": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationID": {
+          "type": "string"
+        },
+        "StartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "EndDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ProjectOrganizationPersonID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationData": {
+          "$ref": "#/$defs/OrganizationOrganization"
+        }
+      }
+    },
+    "ProjectCategory": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "CategoryID": {
+          "type": "string"
+        },
+        "Category": {
+          "$ref": "#/$defs/Category"
+        }
+      }
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "NameSwe": {
+          "type": "string"
+        },
+        "NameEng": {
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/$defs/CategoryType"
+        },
+        "Identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Identifier"
+          }
+        }
+      }
+    },
+    "CategoryType": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "NameSwe": {
+          "type": "string"
+        },
+        "NameEng": {
+          "type": "string"
+        }
+      }
+    },
+    "Identifier": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/$defs/IdentifierType"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        },
+        "UpdatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        },
+        "Value": {
+          "type": "string"
+        }
+      }
+    },
+    "IdentifierType": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Value": {
+          "type": "string"
+        },
+        "DescriptionSwe": {
+          "type": "string"
+        },
+        "DescriptionEng": {
+          "type": "string"
+        }
+      }
+    },
+    "ProjectKeyword": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProjectID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Value": {
+          "type": "string"
+        },
+        "Lang": {
+          "type": "string"
+        },
+        "Type": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

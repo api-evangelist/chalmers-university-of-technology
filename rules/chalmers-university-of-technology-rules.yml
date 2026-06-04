@@ -1,0 +1,68 @@
+extends: [[spectral:oas, off]]
+formats: [oas3]
+documentationUrl: https://github.com/api-evangelist/chalmers-university-of-technology
+description: >-
+  Spectral ruleset encoding patterns observed in the Chalmers Research API
+  (api.research.chalmers.se), converted from its live Swagger 2.0 description.
+rules:
+  chalmers-info-title:
+    description: API must declare an info.title.
+    given: $.info
+    severity: error
+    then:
+      field: title
+      function: truthy
+  chalmers-info-version:
+    description: API must declare an info.version.
+    given: $.info
+    severity: error
+    then:
+      field: version
+      function: truthy
+  chalmers-server-https:
+    description: Servers must use HTTPS (the API only advertises the https scheme).
+    given: $.servers[*].url
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://"
+  chalmers-paths-api-prefix:
+    description: Resource paths are served under the /api prefix.
+    given: $.paths[*]~
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "^/api/"
+  chalmers-operation-tags:
+    description: Every operation should carry at least one tag (e.g. Projects, Organizations).
+    given: $.paths[*][get,post,put,delete]
+    severity: warn
+    then:
+      field: tags
+      function: truthy
+  chalmers-operation-id:
+    description: Every operation should declare an operationId.
+    given: $.paths[*][get,post,put,delete]
+    severity: warn
+    then:
+      field: operationId
+      function: truthy
+  chalmers-pascalcase-schemas:
+    description: Schema/object property names use PascalCase (e.g. ProjectTitleEng, OrganizationNameEn).
+    given: $.components.schemas[*].properties[*]~
+    severity: info
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][A-Za-z0-9]*$"
+  chalmers-basic-auth:
+    description: The API authenticates with HTTP Basic; a basic security scheme should be defined.
+    given: $.components.securitySchemes[*]
+    severity: info
+    then:
+      field: scheme
+      function: pattern
+      functionOptions:
+        match: "^basic$"

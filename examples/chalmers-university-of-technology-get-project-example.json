@@ -1,0 +1,62 @@
+{
+  "ID": 12345,
+  "ProjectTitleSwe": "Hallbara energisystem for framtidens stadsmiljoer",
+  "ProjectTitleEng": "Sustainable Energy Systems for Future Urban Environments",
+  "ProjectDescriptionEng": "A representative research project record as served by the Chalmers Research API.",
+  "PublishStatus": 1,
+  "StartDate": "2024-01-01T00:00:00",
+  "EndDate": "2027-12-31T00:00:00",
+  "ProjectSource": "research.chalmers.se",
+  "CreatedDate": "2024-01-15T09:30:00",
+  "CreatedBy": "import",
+  "UpdatedDate": "2026-05-01T12:00:00",
+  "UpdatedBy": "import",
+  "Identifiers": [
+    {
+      "ID": 1,
+      "ProjectID": 12345,
+      "ProjectIdentifierID": 1,
+      "ProjectIdentifierDescription": "CPL ProjectId",
+      "ProjectIdentifierValue": "12345"
+    }
+  ],
+  "Organizations": [
+    {
+      "ID": 1,
+      "ProjectID": 12345,
+      "OrganizationID": 100,
+      "OrganizationRoleID": 1,
+      "OrganizationRoleNameEn": "Coordinating organization",
+      "OrganizationRoleNameSv": "Koordinerande organisation"
+    }
+  ],
+  "Contracts": [
+    {
+      "ID": 1,
+      "ProjectID": 12345,
+      "OrganizationID": 200,
+      "FunderID": 200,
+      "ContractStartDate": "2024-01-01T00:00:00",
+      "ContractEndDate": "2027-12-31T00:00:00",
+      "ContractAmount": 5000000,
+      "ContractCurrencyCode": "SEK",
+      "ContractSource": "EKO"
+    }
+  ],
+  "Categories": [
+    {
+      "ID": 1,
+      "ProjectID": 12345,
+      "CategoryID": 10
+    }
+  ],
+  "Keywords": [
+    {
+      "ID": 1,
+      "ProjectID": 12345,
+      "Value": "Energy systems",
+      "Lang": "en",
+      "Type": "free"
+    }
+  ]
+}

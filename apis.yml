@@ -43,6 +43,28 @@ apis:
     properties:
       - type: Documentation
         url: https://api.research.chalmers.se/Help
+      - type: OpenAPI
+        url: openapi/chalmers-university-of-technology-research-api.yaml
+      - type: JSONSchema
+        url: json-schema/chalmers-university-of-technology-project-schema.json
+      - type: JSONSchema
+        url: json-schema/chalmers-university-of-technology-organization-schema.json
+      - type: x-json-structure
+        url: json-structure/chalmers-university-of-technology-project-structure.json
+      - type: x-json-structure
+        url: json-structure/chalmers-university-of-technology-organization-structure.json
+      - type: x-example
+        url: examples/chalmers-university-of-technology-get-project-example.json
+      - type: x-example
+        url: examples/chalmers-university-of-technology-get-organization-example.json
+      - type: x-example
+        url: examples/chalmers-university-of-technology-projectsearch-example.json
+      - type: x-spectral-rules
+        url: rules/chalmers-university-of-technology-rules.yml
+      - type: x-vocabulary
+        url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+      - type: x-json-ld
+        url: json-ld/chalmers-university-of-technology-context.jsonld
   - aid: chalmers-university-of-technology:research-oai-pmh
     name: Chalmers Research OAI-PMH
     description: >-

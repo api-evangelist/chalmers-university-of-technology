@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/main/json-structure/chalmers-university-of-technology-project-structure.json",
+  "name": "Project",
+  "type": "object",
+  "description": "JSON Structure for the Project object from the Chalmers Research API.",
+  "required": [],
+  "properties": {
+    "ID": {
+      "type": "int32"
+    },
+    "ProjectTitleSwe": {
+      "type": "string"
+    },
+    "ProjectDescriptionSwe": {
+      "type": "string"
+    },
+    "ProjectDescriptionSweHtml": {
+      "type": "string"
+    },
+    "ProjectTitleEng": {
+      "type": "string"
+    },
+    "ProjectDescriptionEng": {
+      "type": "string"
+    },
+    "ProjectDescriptionEngHtml": {
+      "type": "string"
+    },
+    "PublishStatus": {
+      "type": "int32"
+    },
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "ProjectSource": {
+      "type": "string",
+      "description": "The information source that the project was created from"
+    },
+    "CreatedDate": {
+      "type": "datetime"
+    },
+    "CreatedBy": {
+      "type": "string"
+    },
+    "UpdatedDate": {
+      "type": "datetime"
+    },
+    "UpdatedBy": {
+      "type": "string"
+    },
+    "Contracts": {
+      "type": "array",
+      "items": {
+        "type": "ProjectContract"
+      }
+    },
+    "Identifiers": {
+      "type": "array",
+      "items": {
+        "type": "ProjectIdentifier"
+      }
+    },
+    "Organizations": {
+      "type": "array",
+      "items": {
+        "type": "ProjectOrganization"
+      }
+    },
+    "Persons": {
+      "type": "array",
+      "items": {
+        "type": "ProjectOrganizationPerson"
+      }
+    },
+    "Categories": {
+      "type": "array",
+      "items": {
+        "type": "ProjectCategory"
+      }
+    },
+    "Keywords": {
+      "type": "array",
+      "items": {
+        "type": "ProjectKeyword"
+      }
+    }
+  }
+}

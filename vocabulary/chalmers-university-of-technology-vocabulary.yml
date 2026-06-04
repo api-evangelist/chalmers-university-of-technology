@@ -1,0 +1,70 @@
+vocabulary:
+  name: Chalmers Research API Vocabulary
+  description: >-
+    Controlled vocabulary of the core terms exposed by the Chalmers Research API
+    (api.research.chalmers.se), derived directly from its live Swagger 2.0
+    description. Covers research projects, organizations, funding contracts,
+    identifiers, categories and keywords.
+  version: v1
+  terms:
+    - term: Project
+      definition: >-
+        A research project served by the API, with bilingual (Swedish/English)
+        titles and descriptions, start/end dates, publish status, source and
+        related organizations, persons, contracts, categories and keywords.
+      tags: [ research, project, core ]
+    - term: SimpleProjectMetadata
+      definition: >-
+        A lightweight metadata view of a project containing ID, bilingual
+        titles, dates, publish status, identifiers and simplified contracts.
+      tags: [ research, project, metadata ]
+    - term: Organization
+      definition: >-
+        An organizational entity (e.g. department, funder, partner institution)
+        with bilingual names, type, location, geo-coordinates, hierarchy level,
+        identifiers and parent organizations.
+      tags: [ organization, funder, core ]
+    - term: ProjectContract
+      definition: >-
+        A funding contract tied to a project, including funder organization,
+        contract start/end dates, amount, currency code and source.
+      tags: [ funding, contract, finance ]
+    - term: ProjectOrganization
+      definition: >-
+        The association between a project and an organization, qualified by a
+        bilingual organization role (e.g. coordinating organization, partner).
+      tags: [ relationship, organization, project ]
+    - term: ProjectOrganizationPerson
+      definition: >-
+        A person affiliated with a project through an organization, capturing
+        researcher participation and roles.
+      tags: [ person, researcher, project ]
+    - term: ProjectIdentifier
+      definition: >-
+        An external or internal identifier for a project (e.g. CPL ProjectId),
+        with a description and value.
+      tags: [ identifier, project ]
+    - term: ProjectCategory
+      definition: >-
+        A classification category assigned to a project, linking it to a Category
+        in the research taxonomy.
+      tags: [ classification, category, project ]
+    - term: ProjectKeyword
+      definition: >-
+        A free-text or controlled keyword attached to a project, with language
+        and type qualifiers.
+      tags: [ keyword, subject, project ]
+    - term: ProjectQueryResult
+      definition: >-
+        The result envelope returned by project search/query operations,
+        containing a TotalCount and an array of Projects.
+      tags: [ search, result, pagination ]
+    - term: ProjectSearch
+      definition: >-
+        General Lucene-style search over projects with funder, paging (max,
+        start), sorting and selected-field parameters.
+      tags: [ search, query, lucene ]
+    - term: PublishStatus
+      definition: >-
+        Integer flag indicating the publication state of a project record.
+      tags: [ status, project ]

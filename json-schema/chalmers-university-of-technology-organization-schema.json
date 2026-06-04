@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/main/json-schema/chalmers-university-of-technology-organization-schema.json",
+  "title": "Organization",
+  "description": "JSON Schema for the Organization object from the Chalmers Research API (api.research.chalmers.se).",
+  "required": [
+    "OrganizationNameSv",
+    "OrganizationNameEn",
+    "OrganizationDisplayNameSv",
+    "OrganizationDisplayNameEn",
+    "OrganizationTypeID"
+  ],
+  "type": "object",
+  "properties": {
+    "ID": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "OrganizationNameSv": {
+      "type": "string"
+    },
+    "OrganizationNameEn": {
+      "type": "string"
+    },
+    "OrganizationDisplayNameSv": {
+      "type": "string"
+    },
+    "OrganizationDisplayNameEn": {
+      "type": "string"
+    },
+    "OrganizationTypeID": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "OrganizationTypeNameSv": {
+      "type": "string"
+    },
+    "OrganizationTypeNameEn": {
+      "type": "string"
+    },
+    "OrganizationCity": {
+      "type": "string"
+    },
+    "OrganizationPostalNo": {
+      "type": "string"
+    },
+    "OrganizationCountry": {
+      "type": "string"
+    },
+    "OrganizationGeoLat": {
+      "type": "string"
+    },
+    "OrganizationGeoLong": {
+      "type": "string"
+    },
+    "OrganizationLevel": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "OrganizationIdentifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ApiOrganizationIdentifier"
+      }
+    },
+    "OrganizationParents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Organization"
+      }
+    }
+  },
+  "$defs": {
+    "ApiOrganizationIdentifier": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationIdentifierID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OrganizationIdentifierDescription": {
+          "type": "string"
+        },
+        "OrganizationIdentifierValue": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

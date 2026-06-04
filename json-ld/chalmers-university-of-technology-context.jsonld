@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "chalmers": "https://api.research.chalmers.se/vocab#",
+    "@vocab": "https://api.research.chalmers.se/vocab#",
+
+    "institution": {
+      "@id": "schema:CollegeOrUniversity",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "url": "schema:url",
+    "city": "schema:addressLocality",
+    "country": "schema:addressCountry",
+    "latitude": "schema:latitude",
+    "longitude": "schema:longitude",
+
+    "Project": "chalmers:Project",
+    "Organization": "schema:Organization",
+    "FundingContract": "schema:Grant",
+
+    "ID": "schema:identifier",
+    "ProjectTitleEng": "schema:name",
+    "ProjectTitleSwe": { "@id": "schema:name", "@language": "sv" },
+    "ProjectDescriptionEng": "schema:description",
+    "ProjectDescriptionSwe": { "@id": "schema:description", "@language": "sv" },
+    "StartDate": { "@id": "schema:startDate", "@type": "schema:DateTime" },
+    "EndDate": { "@id": "schema:endDate", "@type": "schema:DateTime" },
+    "CreatedDate": { "@id": "schema:dateCreated", "@type": "schema:DateTime" },
+    "UpdatedDate": { "@id": "schema:dateModified", "@type": "schema:DateTime" },
+    "ProjectSource": "schema:provider",
+    "PublishStatus": "schema:creativeWorkStatus",
+
+    "Organizations": { "@id": "schema:member", "@type": "@id" },
+    "Persons": { "@id": "schema:member", "@type": "@id" },
+    "Contracts": { "@id": "schema:funding", "@type": "@id" },
+    "Categories": { "@id": "schema:about", "@type": "@id" },
+    "Keywords": "schema:keywords",
+    "Identifiers": "schema:identifier",
+
+    "OrganizationNameEn": "schema:legalName",
+    "OrganizationNameSv": { "@id": "schema:legalName", "@language": "sv" },
+    "OrganizationDisplayNameEn": "schema:name",
+    "OrganizationTypeNameEn": "schema:additionalType",
+    "OrganizationCity": "schema:addressLocality",
+    "OrganizationCountry": "schema:addressCountry",
+    "OrganizationGeoLat": "schema:latitude",
+    "OrganizationGeoLong": "schema:longitude",
+    "OrganizationParents": { "@id": "schema:parentOrganization", "@type": "@id" },
+
+    "FunderID": { "@id": "schema:funder", "@type": "@id" },
+    "ContractAmount": "schema:amount",
+    "ContractCurrencyCode": "schema:currency",
+    "ContractStartDate": { "@id": "schema:startDate", "@type": "schema:DateTime" },
+    "ContractEndDate": { "@id": "schema:endDate", "@type": "schema:DateTime" }
+  },
+  "@type": "CollegeOrUniversity",
+  "name": "Chalmers University of Technology",
+  "url": "https://www.chalmers.se/en/",
+  "schema:sameAs": "https://ror.org/040wg7k59"
+}

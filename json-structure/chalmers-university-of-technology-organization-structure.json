@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/main/json-structure/chalmers-university-of-technology-organization-structure.json",
+  "name": "Organization",
+  "type": "object",
+  "description": "JSON Structure for the Organization object from the Chalmers Research API.",
+  "required": [
+    "OrganizationNameSv",
+    "OrganizationNameEn",
+    "OrganizationDisplayNameSv",
+    "OrganizationDisplayNameEn",
+    "OrganizationTypeID"
+  ],
+  "properties": {
+    "ID": {
+      "type": "int32"
+    },
+    "OrganizationNameSv": {
+      "type": "string"
+    },
+    "OrganizationNameEn": {
+      "type": "string"
+    },
+    "OrganizationDisplayNameSv": {
+      "type": "string"
+    },
+    "OrganizationDisplayNameEn": {
+      "type": "string"
+    },
+    "OrganizationTypeID": {
+      "type": "int32"
+    },
+    "OrganizationTypeNameSv": {
+      "type": "string"
+    },
+    "OrganizationTypeNameEn": {
+      "type": "string"
+    },
+    "OrganizationCity": {
+      "type": "string"
+    },
+    "OrganizationPostalNo": {
+      "type": "string"
+    },
+    "OrganizationCountry": {
+      "type": "string"
+    },
+    "OrganizationGeoLat": {
+      "type": "string"
+    },
+    "OrganizationGeoLong": {
+      "type": "string"
+    },
+    "OrganizationLevel": {
+      "type": "int32"
+    },
+    "OrganizationIdentifiers": {
+      "type": "array",
+      "items": {
+        "type": "ApiOrganizationIdentifier"
+      }
+    },
+    "OrganizationParents": {
+      "type": "array",
+      "items": {
+        "type": "Organization"
+      }
+    }
+  }
+}
