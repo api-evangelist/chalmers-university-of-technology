@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/chalmers-university-of-technology-research-api.yaml
+summary:
+  types:
+  - http
+schemes:
+- name: basic
+  type: http
+  scheme: basic
+  description: Basic HTTP Authentication
+  sources:
+  - openapi/chalmers-university-of-technology-research-api.yaml

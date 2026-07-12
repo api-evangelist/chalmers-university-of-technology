@@ -91,6 +91,10 @@ apis:
       - type: Documentation
         url: https://odr.chalmers.se/server/oai/request?verb=Identify
 common:
+  - type: DomainSecurity
+    url: security/chalmers-university-of-technology-domain-security.yml
+  - type: Authentication
+    url: authentication/chalmers-university-of-technology-authentication.yml
   - type: Website
     url: https://www.chalmers.se/en/
   - type: GitHub
