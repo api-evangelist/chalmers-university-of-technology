@@ -1,0 +1,112 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport LocalOrganizations API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: LocalOrganizations
+paths:
+  /api/LocalOrganizations:
+    get:
+      tags:
+      - LocalOrganizations
+      summary: Returns only local organizations without parent/child relations for faster access
+      operationId: LocalOrganizations_Get
+      deprecated: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organization'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organization'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organization'
+            text/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organization'
+components:
+  schemas:
+    ApiOrganizationIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        OrganizationID:
+          format: int32
+          type: integer
+        OrganizationIdentifierID:
+          format: int32
+          type: integer
+        OrganizationIdentifierDescription:
+          type: string
+        OrganizationIdentifierValue:
+          type: string
+    Organization:
+      required:
+      - OrganizationNameSv
+      - OrganizationNameEn
+      - OrganizationDisplayNameSv
+      - OrganizationDisplayNameEn
+      - OrganizationTypeID
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        OrganizationNameSv:
+          type: string
+        OrganizationNameEn:
+          type: string
+        OrganizationDisplayNameSv:
+          type: string
+        OrganizationDisplayNameEn:
+          type: string
+        OrganizationTypeID:
+          format: int32
+          type: integer
+        OrganizationTypeNameSv:
+          type: string
+        OrganizationTypeNameEn:
+          type: string
+        OrganizationCity:
+          type: string
+        OrganizationPostalNo:
+          type: string
+        OrganizationCountry:
+          type: string
+        OrganizationGeoLat:
+          type: string
+        OrganizationGeoLong:
+          type: string
+        OrganizationLevel:
+          format: int32
+          type: integer
+        OrganizationIdentifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ApiOrganizationIdentifier'
+        OrganizationParents:
+          type: array
+          items:
+            $ref: '#/components/schemas/Organization'
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

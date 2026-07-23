@@ -1,0 +1,280 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: ContractImport
+paths:
+  /api/ContractImport:
+    get:
+      tags:
+      - ContractImport
+      summary: Not implemented
+      operationId: ContractImport_Get
+      deprecated: false
+      parameters:
+      - name: item.contractImportID
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: item.ekoID
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.rDProject
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportStatus
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportProjectTitleEng
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportProjectTitleSwe
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportProjectDescriptionEng
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportProjectDescriptionSwe
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportProjectUrl
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.ekoKst
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.ekoFormedlare
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportAmount
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: item.contractImportCurrencyCode
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportType
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.ekoProjekt
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportFunder
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportFunderID
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportProjectContactPerson
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: item.contractImportStartDate
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: item.contractImportEndDate
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: item.contractImportImportedDate
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: item.contractImportImported
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: item.contractImportDeleted
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: item.ekoAnkomstDate
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: item.contractImportSource
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '204':
+          description: No Content
+    put:
+      tags:
+      - ContractImport
+      summary: Not implemented
+      operationId: ContractImport_Put
+      deprecated: false
+      responses:
+        '204':
+          description: No Content
+    post:
+      tags:
+      - ContractImport
+      summary: Create new Contract Import object
+      operationId: ContractImport_Post
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContractImport'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ContractImport'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/ContractImport'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/ContractImport'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ContractImport'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContractImport'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ContractImport'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ContractImport'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ContractImport'
+    delete:
+      tags:
+      - ContractImport
+      summary: Not implemented
+      operationId: ContractImport_Delete
+      deprecated: false
+      responses:
+        '204':
+          description: No Content
+components:
+  schemas:
+    ContractImport:
+      type: object
+      properties:
+        ContractImportID:
+          format: int32
+          type: integer
+        EkoID:
+          type: string
+        RDProject:
+          type: string
+        ContractImportStatus:
+          type: string
+        ContractImportProjectTitleEng:
+          type: string
+        ContractImportProjectTitleSwe:
+          type: string
+        ContractImportProjectDescriptionEng:
+          type: string
+        ContractImportProjectDescriptionSwe:
+          type: string
+        ContractImportProjectUrl:
+          type: string
+        EkoKst:
+          type: string
+        EkoFormedlare:
+          type: string
+        ContractImportAmount:
+          format: int32
+          type: integer
+        ContractImportCurrencyCode:
+          type: string
+        ContractImportType:
+          type: string
+        EkoProjekt:
+          type: string
+        ContractImportFunder:
+          type: string
+        ContractImportFunderID:
+          type: string
+        ContractImportProjectContactPerson:
+          type: string
+        ContractImportStartDate:
+          format: date-time
+          type: string
+        ContractImportEndDate:
+          format: date-time
+          type: string
+        ContractImportImportedDate:
+          format: date-time
+          type: string
+        ContractImportImported:
+          format: int32
+          type: integer
+        ContractImportDeleted:
+          format: int32
+          type: integer
+        EkoAnkomstDate:
+          format: date-time
+          type: string
+        ContractImportSource:
+          type: string
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

@@ -1,0 +1,939 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport ProjectEmbargos API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: ProjectEmbargos
+paths:
+  /api/ProjectEmbargos:
+    get:
+      tags:
+      - ProjectEmbargos
+      summary: "Returns the projects with a specified publish status, created within a specified timespan (days). \r\n            1 - New, 2- Only visible for logged in users, 3 - Public"
+      operationId: ProjectEmbargos_Get
+      deprecated: false
+      parameters:
+      - name: publishStatus
+        in: query
+        required: true
+        description: Current publish status. 1 - New, 2- Only visible for logged in users, 3 - Public
+        schema:
+          type: integer
+          format: int32
+      - name: noOfDays
+        in: query
+        required: true
+        description: Minimum number of days since publication
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProjectEmbargo'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProjectEmbargo'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProjectEmbargo'
+            text/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProjectEmbargo'
+    put:
+      tags:
+      - ProjectEmbargos
+      summary: Not implemented
+      operationId: ProjectEmbargos_Put
+      deprecated: false
+      responses:
+        '204':
+          description: No Content
+    post:
+      tags:
+      - ProjectEmbargos
+      summary: Not implemented
+      operationId: ProjectEmbargos_Post
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Project'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Project'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Project'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/Project'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Project'
+      responses:
+        '204':
+          description: No Content
+    delete:
+      tags:
+      - ProjectEmbargos
+      summary: Not implemented
+      operationId: ProjectEmbargos_Delete
+      deprecated: false
+      parameters:
+      - name: projectId
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: userId
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '204':
+          description: No Content
+components:
+  schemas:
+    PersonOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+    PersonOrganization:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        DisplayNameSwe:
+          type: string
+        DisplayNameEng:
+          type: string
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+        DisplayPathShortSwe:
+          type: string
+        DisplayPathShortEng:
+          type: string
+        PossibleDisplayPaths:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonDisplayPath'
+        City:
+          type: string
+        PostalNo:
+          type: string
+        Country:
+          type: string
+        GeoLat:
+          type: string
+        GeoLong:
+          type: string
+        Level:
+          format: int32
+          type: integer
+        StartYear:
+          format: int32
+          type: integer
+        EndYear:
+          format: int32
+          type: integer
+        OrganizationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonOrganizationType'
+        OrganizationParents:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonOrganizationParent'
+        ActiveOrganizationParentIds:
+          type: array
+          items:
+            type: string
+        HasIdentifiers:
+          type: boolean
+        IdentifiersCount:
+          format: int32
+          type: integer
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonOrganizationIdentifier'
+        IdentifierLdapCode:
+          type: array
+          items:
+            type: string
+        IdentifierCplDepartmentId:
+          type: array
+          items:
+            type: string
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+        IsReplacedById:
+          type: string
+        IsActive:
+          type: boolean
+    ProjectCategory:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        CategoryID:
+          type: string
+        Category:
+          $ref: '#/components/schemas/Category'
+    PersonOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    OrganizationOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    OrganizationDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+    ProjectContractIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectContractID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierDescription:
+          type: string
+        ProjectContractIdentifierValue:
+          type: string
+    ProjectOrganizationPersonOrganization:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        OrganizationID:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        ProjectOrganizationPersonID:
+          format: int32
+          type: integer
+        OrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
+    PdbCategory:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+    OrganizationOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
+    PersonIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    Category:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        Type:
+          $ref: '#/components/schemas/CategoryType'
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Identifier'
+    ProjectEmbargo:
+      type: object
+      properties:
+        projectID:
+          format: int32
+          type: integer
+        publishStatus:
+          format: int32
+          type: integer
+        createdDate:
+          format: date-time
+          type: string
+    PersonOrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    PersonOrganizationIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    Project:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectTitleSwe:
+          type: string
+        ProjectDescriptionSwe:
+          type: string
+        ProjectDescriptionSweHtml:
+          type: string
+        ProjectTitleEng:
+          type: string
+        ProjectDescriptionEng:
+          type: string
+        ProjectDescriptionEngHtml:
+          type: string
+        PublishStatus:
+          format: int32
+          type: integer
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        ProjectSource:
+          description: The information source that the project was created from
+          type: string
+        CreatedDate:
+          format: date-time
+          type: string
+        CreatedBy:
+          type: string
+        UpdatedDate:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        Contracts:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectContract'
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectIdentifier'
+        Organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectOrganization'
+        Persons:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectOrganizationPerson'
+        Categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectCategory'
+        Keywords:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectKeyword'
+    ProjectIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        ProjectIdentifierID:
+          format: int32
+          type: integer
+        ProjectIdentifierDescription:
+          type: string
+        ProjectIdentifierValue:
+          type: string
+    PersonPerson:
+      type: object
+      properties:
+        Id:
+          type: string
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        DisplayName:
+          type: string
+        BirthYear:
+          format: int32
+          type: integer
+        IsReplacedById:
+          type: string
+        IsReplacingId:
+          type: string
+        IsActive:
+          type: boolean
+        IsDeleted:
+          type: boolean
+        HasOrganizationHome:
+          type: boolean
+        HasIdentifiers:
+          type: boolean
+        HasPublications:
+          type: boolean
+        HasProjects:
+          type: boolean
+        OrganizationHomeCount:
+          format: int32
+          type: integer
+        IdentifiersCount:
+          format: int32
+          type: integer
+        IdentifierCid:
+          type: array
+          items:
+            type: string
+        IdentifierCplPersonId:
+          type: array
+          items:
+            type: string
+        IdentifierOrcid:
+          type: array
+          items:
+            type: string
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonIdentifier'
+        OrganizationHome:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationHome'
+        PdbCategories:
+          type: array
+          items:
+            $ref: '#/components/schemas/PdbCategory'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        SightedBy:
+          type: string
+        SightedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+    OrganizationIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/OrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    ProjectOrganizationPerson:
+      description: Connects a person with affiliation to a project
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        PersonID:
+          type: string
+        OrganizationID:
+          type: string
+        PersonRoleID:
+          format: int32
+          type: integer
+        PersonRoleName_en:
+          type: string
+        PersonRoleName_sc:
+          type: string
+        Person:
+          $ref: '#/components/schemas/PersonPerson'
+        PersonOrganizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectOrganizationPersonOrganization'
+        Verified:
+          format: date-time
+          description: The date for a users verification as a project member
+          type: string
+        VerificationMailSent:
+          format: date-time
+          description: The date for sending a users verification email
+          type: string
+    OrganizationHome:
+      type: object
+      properties:
+        Id:
+          type: string
+        OrganizationId:
+          type: string
+        OrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+        LastUpdatedDate:
+          format: date-time
+          type: string
+        TitleSwe:
+          type: string
+        TitleEng:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        Source:
+          type: string
+        Priority:
+          type: string
+    ProjectOrganization:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        OrganizationID:
+          type: string
+        Organization:
+          $ref: '#/components/schemas/OrganizationOrganization'
+        OrganizationRoleID:
+          format: int32
+          type: integer
+        OrganizationRoleNameEn:
+          type: string
+        OrganizationRoleNameSv:
+          type: string
+    CategoryType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+    Identifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/IdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    ProjectContract:
+      type: object
+      properties:
+        ID:
+          format: int32
+          description: Primary key for FundingContracts
+          type: integer
+        EkoImportID:
+          format: int32
+          description: Id number used in EKO-database for this contract
+          type: integer
+        ContractSource:
+          description: The information source that the project was created from
+          type: string
+        DmpValue:
+          description: Data Management Plan (DMP), link or id
+          type: string
+        DmpVersion:
+          description: Data Management Plan (DMP), version
+          type: string
+        ProjectID:
+          format: int32
+          description: Internal id of project
+          type: integer
+        OrganizationID:
+          description: Internal id of funding organization
+          type: string
+        ContractStartDate:
+          format: date-time
+          description: Start date for funding
+          type: string
+        ContractEndDate:
+          format: date-time
+          description: End date for funding
+          type: string
+        ContractAmount:
+          format: int32
+          description: Funding amount
+          type: integer
+        ContractCurrencyCode:
+          description: Funding currency code
+          type: string
+        FunderID:
+          description: Funder ID(s), virtual field
+          type: array
+          items:
+            type: string
+        CreatedDate:
+          format: date-time
+          type: string
+        CreatedBy:
+          type: string
+        UpdatedDate:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        ContractOrganization:
+          $ref: '#/components/schemas/OrganizationOrganization'
+        ContractIdentifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectContractIdentifier'
+    PersonDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+    PersonIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    ProjectKeyword:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        Value:
+          type: string
+        Lang:
+          type: string
+        Type:
+          format: int32
+          type: integer
+    OrganizationOrganization:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        DisplayNameSwe:
+          type: string
+        DisplayNameEng:
+          type: string
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+        DisplayPathShortSwe:
+          type: string
+        DisplayPathShortEng:
+          type: string
+        PossibleDisplayPaths:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationDisplayPath'
+        City:
+          type: string
+        PostalNo:
+          type: string
+        Country:
+          type: string
+        GeoLat:
+          type: string
+        GeoLong:
+          type: string
+        Level:
+          format: int32
+          type: integer
+        StartYear:
+          format: int32
+          type: integer
+        EndYear:
+          format: int32
+          type: integer
+        OrganizationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationOrganizationType'
+        OrganizationParents:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationOrganizationParent'
+        ActiveOrganizationParentIds:
+          type: array
+          items:
+            type: string
+        HasIdentifiers:
+          type: boolean
+        IdentifiersCount:
+          format: int32
+          type: integer
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationIdentifier'
+        IdentifierLdapCode:
+          type: array
+          items:
+            type: string
+        IdentifierCplDepartmentId:
+          type: array
+          items:
+            type: string
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+        IsReplacedById:
+          type: string
+        IsActive:
+          type: boolean
+    OrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    IdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

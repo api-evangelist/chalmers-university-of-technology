@@ -1,0 +1,453 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport ProjectParticipantsVerificationMail API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: ProjectParticipantsVerificationMail
+paths:
+  /api/ProjectParticipantsVerificationMail:
+    get:
+      tags:
+      - ProjectParticipantsVerificationMail
+      summary: Returns a list of persons eligable for Verification Mails.
+      operationId: ProjectParticipantsVerificationMail_Get
+      deprecated: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipientsOfVerificationMail'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipientsOfVerificationMail'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipientsOfVerificationMail'
+            text/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipientsOfVerificationMail'
+    put:
+      tags:
+      - ProjectParticipantsVerificationMail
+      summary: Not implemented
+      operationId: ProjectParticipantsVerificationMail_Put
+      deprecated: false
+      responses:
+        '204':
+          description: No Content
+    post:
+      tags:
+      - ProjectParticipantsVerificationMail
+      summary: Sets verifiction mail sent date for a given person
+      operationId: ProjectParticipantsVerificationMail_Post
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonPerson'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PersonPerson'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/PersonPerson'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/PersonPerson'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PersonPerson'
+        description: Person properties as JSON object
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonPerson'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PersonPerson'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PersonPerson'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/PersonPerson'
+    delete:
+      tags:
+      - ProjectParticipantsVerificationMail
+      summary: Removes the verification mail sent date for a person and project
+      operationId: ProjectParticipantsVerificationMail_Delete
+      deprecated: false
+      parameters:
+      - name: projectId
+        in: query
+        required: true
+        description: Project
+        schema:
+          type: integer
+          format: int32
+      - name: userId
+        in: query
+        required: true
+        description: Person
+        schema:
+          type: string
+      responses:
+        '204':
+          description: No Content
+components:
+  schemas:
+    PersonIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    PersonOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+    PersonOrganization:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        DisplayNameSwe:
+          type: string
+        DisplayNameEng:
+          type: string
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+        DisplayPathShortSwe:
+          type: string
+        DisplayPathShortEng:
+          type: string
+        PossibleDisplayPaths:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonDisplayPath'
+        City:
+          type: string
+        PostalNo:
+          type: string
+        Country:
+          type: string
+        GeoLat:
+          type: string
+        GeoLong:
+          type: string
+        Level:
+          format: int32
+          type: integer
+        StartYear:
+          format: int32
+          type: integer
+        EndYear:
+          format: int32
+          type: integer
+        OrganizationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonOrganizationType'
+        OrganizationParents:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonOrganizationParent'
+        ActiveOrganizationParentIds:
+          type: array
+          items:
+            type: string
+        HasIdentifiers:
+          type: boolean
+        IdentifiersCount:
+          format: int32
+          type: integer
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonOrganizationIdentifier'
+        IdentifierLdapCode:
+          type: array
+          items:
+            type: string
+        IdentifierCplDepartmentId:
+          type: array
+          items:
+            type: string
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+        IsReplacedById:
+          type: string
+        IsActive:
+          type: boolean
+    PersonOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    PersonIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    PersonOrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    OrganizationHome:
+      type: object
+      properties:
+        Id:
+          type: string
+        OrganizationId:
+          type: string
+        OrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+        LastUpdatedDate:
+          format: date-time
+          type: string
+        TitleSwe:
+          type: string
+        TitleEng:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        Source:
+          type: string
+        Priority:
+          type: string
+    PersonOrganizationIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    PdbCategory:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+    RecipientsOfVerificationMail:
+      type: object
+      properties:
+        personID:
+          type: string
+        email:
+          type: string
+        source:
+          type: string
+    PersonPerson:
+      type: object
+      properties:
+        Id:
+          type: string
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        DisplayName:
+          type: string
+        BirthYear:
+          format: int32
+          type: integer
+        IsReplacedById:
+          type: string
+        IsReplacingId:
+          type: string
+        IsActive:
+          type: boolean
+        IsDeleted:
+          type: boolean
+        HasOrganizationHome:
+          type: boolean
+        HasIdentifiers:
+          type: boolean
+        HasPublications:
+          type: boolean
+        HasProjects:
+          type: boolean
+        OrganizationHomeCount:
+          format: int32
+          type: integer
+        IdentifiersCount:
+          format: int32
+          type: integer
+        IdentifierCid:
+          type: array
+          items:
+            type: string
+        IdentifierCplPersonId:
+          type: array
+          items:
+            type: string
+        IdentifierOrcid:
+          type: array
+          items:
+            type: string
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonIdentifier'
+        OrganizationHome:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationHome'
+        PdbCategories:
+          type: array
+          items:
+            $ref: '#/components/schemas/PdbCategory'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        SightedBy:
+          type: string
+        SightedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+    PersonDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

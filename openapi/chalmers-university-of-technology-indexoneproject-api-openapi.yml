@@ -1,0 +1,47 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport IndexOneProject API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: IndexOneProject
+paths:
+  /api/IndexOneProject/{id}:
+    post:
+      tags:
+      - IndexOneProject
+      operationId: IndexOneProject_Post
+      deprecated: false
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '204':
+          description: No Content
+    delete:
+      tags:
+      - IndexOneProject
+      operationId: IndexOneProject_Delete
+      deprecated: false
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '204':
+          description: No Content
+components:
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

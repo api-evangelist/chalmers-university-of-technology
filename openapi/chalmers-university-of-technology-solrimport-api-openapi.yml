@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport SolrImport API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: SolrImport
+paths:
+  /api/SolrImport:
+    post:
+      tags:
+      - SolrImport
+      summary: ''
+      operationId: SolrImport_Post
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SolrImportRequestModel'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SolrImportRequestModel'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/SolrImportRequestModel'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/SolrImportRequestModel'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SolrImportRequestModel'
+        description: Request Parameters
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Object'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Object'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Object'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/Object'
+components:
+  schemas:
+    SolrImportRequestModel:
+      description: Model for requesting an import to Solr
+      type: object
+      properties:
+        coreName:
+          description: Solr core name
+          type: string
+        importType:
+          description: Type of import, Delta or Full
+          type: string
+        docId:
+          format: int32
+          description: Document Id when requesting Delta
+          type: integer
+        doOptimize:
+          description: Optimize index after import
+          type: boolean
+    Object:
+      type: object
+      properties: {}
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

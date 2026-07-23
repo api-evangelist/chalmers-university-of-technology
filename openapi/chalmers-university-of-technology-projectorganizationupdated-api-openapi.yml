@@ -1,0 +1,225 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport ProjectOrganizationUpdated API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: ProjectOrganizationUpdated
+paths:
+  /api/ProjectOrganizationUpdated:
+    post:
+      tags:
+      - ProjectOrganizationUpdated
+      operationId: ProjectOrganizationUpdated_Post
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationOrganization'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationOrganization'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/OrganizationOrganization'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/OrganizationOrganization'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OrganizationOrganization'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Object'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Object'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Object'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/Object'
+components:
+  schemas:
+    Object:
+      type: object
+      properties: {}
+    OrganizationOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    OrganizationDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+    OrganizationOrganization:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        DisplayNameSwe:
+          type: string
+        DisplayNameEng:
+          type: string
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+        DisplayPathShortSwe:
+          type: string
+        DisplayPathShortEng:
+          type: string
+        PossibleDisplayPaths:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationDisplayPath'
+        City:
+          type: string
+        PostalNo:
+          type: string
+        Country:
+          type: string
+        GeoLat:
+          type: string
+        GeoLong:
+          type: string
+        Level:
+          format: int32
+          type: integer
+        StartYear:
+          format: int32
+          type: integer
+        EndYear:
+          format: int32
+          type: integer
+        OrganizationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationOrganizationType'
+        OrganizationParents:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationOrganizationParent'
+        ActiveOrganizationParentIds:
+          type: array
+          items:
+            type: string
+        HasIdentifiers:
+          type: boolean
+        IdentifiersCount:
+          format: int32
+          type: integer
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationIdentifier'
+        IdentifierLdapCode:
+          type: array
+          items:
+            type: string
+        IdentifierCplDepartmentId:
+          type: array
+          items:
+            type: string
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+        IsReplacedById:
+          type: string
+        IsActive:
+          type: boolean
+    OrganizationIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/OrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    OrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    OrganizationOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

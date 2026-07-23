@@ -1,0 +1,62 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport ProjectQueries API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: ProjectQueries
+paths:
+  /api/ProjectQueries:
+    post:
+      tags:
+      - ProjectQueries
+      summary: Make a complex query against the existing projects using Elasticsearch DSL syntax.
+      operationId: ProjectQueries_Post
+      deprecated: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Object'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Object'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Object'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/Object'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Object'
+        description: The request in Elasticsearch DSL syntax.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Object'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Object'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Object'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/Object'
+components:
+  schemas:
+    Object:
+      type: object
+      properties: {}
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication

@@ -1,0 +1,253 @@
+openapi: 3.0.3
+info:
+  title: ChalmersResearch ContractImport SimpleProjectMetadata API
+  version: v1
+  description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
+servers:
+- url: https://api.research.chalmers.se
+tags:
+- name: SimpleProjectMetadata
+paths:
+  /api/SimpleProjectMetadata/{id}:
+    get:
+      tags:
+      - SimpleProjectMetadata
+      summary: Returns simple metadata for a single Project
+      operationId: SimpleProjectMetadata_GetById
+      deprecated: false
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: Project id
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleProjectMetadata'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/SimpleProjectMetadata'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/SimpleProjectMetadata'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/SimpleProjectMetadata'
+components:
+  schemas:
+    SimpleProjectContractMetadata:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        OrganizationID:
+          type: string
+        FunderID:
+          type: array
+          items:
+            type: string
+        ContractStartDate:
+          format: date-time
+          type: string
+        ContractEndDate:
+          format: date-time
+          type: string
+        CreatedDate:
+          format: date-time
+          type: string
+        UpdatedDate:
+          format: date-time
+          type: string
+        ContractOrganization:
+          $ref: '#/components/schemas/SimpleOrganization'
+        ContractIdentifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectContractIdentifier'
+    SimpleIdentifier:
+      type: object
+      properties:
+        Type:
+          $ref: '#/components/schemas/SimpleIdentifierType'
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    SimpleProjectMetadata:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectTitleSwe:
+          type: string
+        ProjectTitleEng:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        PublishStatus:
+          format: int32
+          type: integer
+        CreatedDate:
+          format: date-time
+          type: string
+        UpdatedDate:
+          format: date-time
+          type: string
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectIdentifier'
+        Contracts:
+          type: array
+          items:
+            $ref: '#/components/schemas/SimpleProjectContractMetadata'
+    ProjectContractIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectContractID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierDescription:
+          type: string
+        ProjectContractIdentifierValue:
+          type: string
+    SimpleOrganizationParent:
+      type: object
+      properties:
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/SimpleOrganization'
+    SimpleIdentifierType:
+      type: object
+      properties:
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    ProjectIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        ProjectIdentifierID:
+          format: int32
+          type: integer
+        ProjectIdentifierDescription:
+          type: string
+        ProjectIdentifierValue:
+          type: string
+    SimpleOrganization:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        DisplayNameSwe:
+          type: string
+        DisplayNameEng:
+          type: string
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+        DisplayPathShortSwe:
+          type: string
+        DisplayPathShortEng:
+          type: string
+        City:
+          type: string
+        Country:
+          type: string
+        GeoLat:
+          type: string
+        GeoLong:
+          type: string
+        Level:
+          format: int32
+          type: integer
+        StartYear:
+          format: int32
+          type: integer
+        EndYear:
+          format: int32
+          type: integer
+        OrganizationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/SimpleOrganizationType'
+        OrganizationParents:
+          type: array
+          items:
+            $ref: '#/components/schemas/SimpleOrganizationParent'
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/SimpleIdentifier'
+        IdentifierLdapCode:
+          type: array
+          items:
+            type: string
+        IdentifierCplDepartmentId:
+          type: array
+          items:
+            type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+    SimpleOrganizationType:
+      type: object
+      properties:
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication
