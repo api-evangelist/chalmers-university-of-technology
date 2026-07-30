@@ -13,9 +13,22 @@ description: >-
   metadata tooling. There is no single consolidated, self-service developer
   portal; access is API/repository specific.
 type: Index
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/chalmers-university-of-technology.png
 url: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/apis.yml
 tags:
   - Education
@@ -30,66 +43,787 @@ created: '2026-06-03'
 modified: '2026-06-03'
 specificationVersion: '0.19'
 apis:
-  - aid: chalmers-university-of-technology:research-api
-    name: Chalmers Research API
-    description: >-
-      Public API serving research information from the Chalmers Research portal,
-      including research projects, publications, funders and collaborations. The
-      live service reports thousands of projects and exposes a Help endpoint for
-      documentation. A test instance is also published.
-    humanURL: https://api.research.chalmers.se/
-    baseURL: https://api.research.chalmers.se/
-    tags: [ Research, Publications, Projects, Open Data ]
-    properties:
-      - type: Documentation
-        url: https://api.research.chalmers.se/Help
-      - type: OpenAPI
-        url: openapi/chalmers-university-of-technology-research-api.yaml
-      - type: JSONSchema
-        url: json-schema/chalmers-university-of-technology-project-schema.json
-      - type: JSONSchema
-        url: json-schema/chalmers-university-of-technology-organization-schema.json
-      - type: x-json-structure
-        url: json-structure/chalmers-university-of-technology-project-structure.json
-      - type: x-json-structure
-        url: json-structure/chalmers-university-of-technology-organization-structure.json
-      - type: x-example
-        url: examples/chalmers-university-of-technology-get-project-example.json
-      - type: x-example
-        url: examples/chalmers-university-of-technology-get-organization-example.json
-      - type: x-example
-        url: examples/chalmers-university-of-technology-projectsearch-example.json
-      - type: x-spectral-rules
-        url: rules/chalmers-university-of-technology-rules.yml
-      - type: x-vocabulary
-        url: vocabulary/chalmers-university-of-technology-vocabulary.yml
-      - type: x-json-ld
-        url: json-ld/chalmers-university-of-technology-context.jsonld
-  - aid: chalmers-university-of-technology:research-oai-pmh
-    name: Chalmers Research OAI-PMH
-    description: >-
-      OAI-PMH 2.0 metadata harvesting interface for the Chalmers Research portal
-      (research.chalmers.se), covering Chalmers research publications with
-      records dating back to 1942. Returns a valid Identify response.
-    humanURL: https://research.chalmers.se/en/
-    baseURL: https://research.chalmers.se/oai-pmh/general/
-    tags: [ OAI-PMH, Research, Publications, Metadata, Open Data ]
-    properties:
-      - type: Documentation
-        url: https://research.chalmers.se/oai-pmh/general/?verb=Identify
-  - aid: chalmers-university-of-technology:odr-oai-pmh
-    name: Chalmers Open Digital Repository (ODR) OAI-PMH
-    description: >-
-      OAI-PMH 2.0 metadata harvesting interface for the Chalmers Open Digital
-      Repository (ODR), which holds student theses and selected special digital
-      collections. Confirmed via an Identify response; the base OAI request
-      endpoint resolves to /server/oai/request.
-    humanURL: https://odr.chalmers.se/
-    baseURL: https://odr.chalmers.se/server/oai/request
-    tags: [ OAI-PMH, Repository, Theses, Metadata, Open Data ]
-    properties:
-      - type: Documentation
-        url: https://odr.chalmers.se/server/oai/request?verb=Identify
+- aid: chalmers-university-of-technology:research-oai-pmh
+  name: Chalmers Research OAI-PMH
+  description: >-
+    OAI-PMH 2.0 metadata harvesting interface for the Chalmers Research portal (research.chalmers.se),
+    covering Chalmers research publications with records dating back to 1942. Returns a valid Identify
+    response.
+  humanURL: https://research.chalmers.se/en/
+  baseURL: https://research.chalmers.se/oai-pmh/general/
+  tags:
+  - OAI-PMH
+  - Research
+  - Publications
+  - Metadata
+  - Open Data
+  properties:
+  - type: Documentation
+    url: https://research.chalmers.se/oai-pmh/general/?verb=Identify
+- aid: chalmers-university-of-technology:odr-oai-pmh
+  name: Chalmers Open Digital Repository (ODR) OAI-PMH
+  description: >-
+    OAI-PMH 2.0 metadata harvesting interface for the Chalmers Open Digital Repository (ODR), which holds
+    student theses and selected special digital collections. Confirmed via an Identify response; the base
+    OAI request endpoint resolves to /server/oai/request.
+  humanURL: https://odr.chalmers.se/
+  baseURL: https://odr.chalmers.se/server/oai/request
+  tags:
+  - OAI-PMH
+  - Repository
+  - Theses
+  - Metadata
+  - Open Data
+  properties:
+  - type: Documentation
+    url: https://odr.chalmers.se/server/oai/request?verb=Identify
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-contractimport-api
+  name: Chalmers University of Technology ContractImport API
+  description: >-
+    The ContractImport API from Chalmers University of Technology — 1 operation(s) for contractimport.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ContractImport
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-contractimport-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-deltaimportcplpublication-api
+  name: Chalmers University of Technology DeltaImportCplPublication API
+  description: >-
+    The DeltaImportCplPublication API from Chalmers University of Technology — 1 operation(s) for deltaimportcplpublication.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - DeltaImportCplPublication
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-deltaimportcplpublication-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-deltaimportprojectorganization-api
+  name: Chalmers University of Technology DeltaImportProjectOrganization API
+  description: >-
+    The DeltaImportProjectOrganization API from Chalmers University of Technology — 1 operation(s) for
+    deltaimportprojectorganization.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - DeltaImportProjectOrganization
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-deltaimportprojectorganization-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-deltaimportprojectperson-api
+  name: Chalmers University of Technology DeltaImportProjectPerson API
+  description: >-
+    The DeltaImportProjectPerson API from Chalmers University of Technology — 1 operation(s) for deltaimportprojectperson.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - DeltaImportProjectPerson
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-deltaimportprojectperson-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-electronicpublicationagreementsignature-api
+  name: Chalmers University of Technology ElectronicPublicationAgreementSignature API
+  description: >-
+    The ElectronicPublicationAgreementSignature API from Chalmers University of Technology — 2 operation(s)
+    for electronicpublicationagreementsignature.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ElectronicPublicationAgreementSignature
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/chalmers-university-of-technology-electronicpublicationagreementsignature-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-indexallprojects-api
+  name: Chalmers University of Technology IndexAllProjects API
+  description: >-
+    The IndexAllProjects API from Chalmers University of Technology — 1 operation(s) for indexallprojects.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - IndexAllProjects
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-indexallprojects-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-indexoneproject-api
+  name: Chalmers University of Technology IndexOneProject API
+  description: >-
+    The IndexOneProject API from Chalmers University of Technology — 1 operation(s) for indexoneproject.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - IndexOneProject
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-indexoneproject-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-localorganizations-api
+  name: Chalmers University of Technology LocalOrganizations API
+  description: >-
+    The LocalOrganizations API from Chalmers University of Technology — 1 operation(s) for localorganizations.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - LocalOrganizations
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-localorganizations-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-organizations-api
+  name: Chalmers University of Technology Organizations API
+  description: >-
+    The Organizations API from Chalmers University of Technology — 2 operation(s) for organizations.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-organizations-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-projectembargos-api
+  name: Chalmers University of Technology ProjectEmbargos API
+  description: >-
+    The ProjectEmbargos API from Chalmers University of Technology — 1 operation(s) for projectembargos.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectEmbargos
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projectembargos-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-projectorganizationupdated-api
+  name: Chalmers University of Technology ProjectOrganizationUpdated API
+  description: >-
+    The ProjectOrganizationUpdated API from Chalmers University of Technology — 1 operation(s) for projectorganizationupdated.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectOrganizationUpdated
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projectorganizationupdated-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-projectparticipantsverification-api
+  name: Chalmers University of Technology ProjectParticipantsVerification API
+  description: >-
+    The ProjectParticipantsVerification API from Chalmers University of Technology — 1 operation(s) for
+    projectparticipantsverification.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectParticipantsVerification
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/chalmers-university-of-technology-projectparticipantsverification-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-projectparticipantsverificationmail-api
+  name: Chalmers University of Technology ProjectParticipantsVerificationMail API
+  description: >-
+    The ProjectParticipantsVerificationMail API from Chalmers University of Technology — 1 operation(s)
+    for projectparticipantsverificationmail.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectParticipantsVerificationMail
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/chalmers-university-of-technology-projectparticipantsverificationmail-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-projectpersonupdated-api
+  name: Chalmers University of Technology ProjectPersonUpdated API
+  description: >-
+    The ProjectPersonUpdated API from Chalmers University of Technology — 1 operation(s) for projectpersonupdated.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectPersonUpdated
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projectpersonupdated-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-projectpublishstatus-api
+  name: Chalmers University of Technology ProjectPublishStatus API
+  description: >-
+    The ProjectPublishStatus API from Chalmers University of Technology — 1 operation(s) for projectpublishstatus.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectPublishStatus
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projectpublishstatus-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-projectqueries-api
+  name: Chalmers University of Technology ProjectQueries API
+  description: >-
+    The ProjectQueries API from Chalmers University of Technology — 1 operation(s) for projectqueries.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectQueries
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projectqueries-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-projects-api
+  name: Chalmers University of Technology Projects API
+  description: The Projects API from Chalmers University of Technology — 2 operation(s) for projects.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projects-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-projectsconnectedtoorganization-api
+  name: Chalmers University of Technology ProjectsConnectedToOrganization API
+  description: >-
+    The ProjectsConnectedToOrganization API from Chalmers University of Technology — 1 operation(s) for
+    projectsconnectedtoorganization.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectsConnectedToOrganization
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/chalmers-university-of-technology-projectsconnectedtoorganization-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-projectsconnectedtoperson-api
+  name: Chalmers University of Technology ProjectsConnectedToPerson API
+  description: >-
+    The ProjectsConnectedToPerson API from Chalmers University of Technology — 1 operation(s) for projectsconnectedtoperson.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectsConnectedToPerson
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projectsconnectedtoperson-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-projectsearch-api
+  name: Chalmers University of Technology ProjectSearch API
+  description: >-
+    The ProjectSearch API from Chalmers University of Technology — 1 operation(s) for projectsearch.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - ProjectSearch
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-projectsearch-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: >-
+    chalmers-university-of-technology:chalmers-university-of-technology-simpleprojectmetadata-api
+  name: Chalmers University of Technology SimpleProjectMetadata API
+  description: >-
+    The SimpleProjectMetadata API from Chalmers University of Technology — 1 operation(s) for simpleprojectmetadata.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - SimpleProjectMetadata
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-simpleprojectmetadata-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:chalmers-university-of-technology-solrimport-api
+  name: Chalmers University of Technology SolrImport API
+  description: >-
+    The SolrImport API from Chalmers University of Technology — 1 operation(s) for solrimport.
+  humanURL: https://api.research.chalmers.se/
+  baseURL: https://api.research.chalmers.se/
+  tags:
+  - SolrImport
+  properties:
+  - type: OpenAPI
+    url: openapi/chalmers-university-of-technology-solrimport-api-openapi.yml
+  - type: Documentation
+    url: https://api.research.chalmers.se/Help
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-project-schema.json
+  - type: JSONSchema
+    url: json-schema/chalmers-university-of-technology-organization-schema.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-project-structure.json
+  - type: x-json-structure
+    url: json-structure/chalmers-university-of-technology-organization-structure.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-project-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-get-organization-example.json
+  - type: x-example
+    url: examples/chalmers-university-of-technology-projectsearch-example.json
+  - type: x-spectral-rules
+    url: rules/chalmers-university-of-technology-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/chalmers-university-of-technology-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/chalmers-university-of-technology-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/chalmers-university-of-technology-agentic-access.yml
