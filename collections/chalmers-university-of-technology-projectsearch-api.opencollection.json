@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ProjectSearch API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ProjectSearch",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "General search for projects.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ProjectSearch",
+            "params": [
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "Lucene style query."
+              },
+              {
+                "name": "funder",
+                "value": "",
+                "type": "query",
+                "description": "Funder (Organization) Id."
+              },
+              {
+                "name": "funderId",
+                "value": "",
+                "type": "query",
+                "description": "FunderId."
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query",
+                "description": "Max number of documents to return."
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Starting position."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Sort field."
+              },
+              {
+                "name": "sortOrder",
+                "value": "",
+                "type": "query",
+                "description": "Sort order."
+              },
+              {
+                "name": "selectedFields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to return."
+              }
+            ]
+          },
+          "docs": "General search for projects."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

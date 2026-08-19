@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ProjectQueries API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ProjectQueries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Make a complex query against the existing projects using Elasticsearch DSL syntax.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ProjectQueries",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Make a complex query against the existing projects using Elasticsearch DSL syntax."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

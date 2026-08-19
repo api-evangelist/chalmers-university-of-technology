@@ -1,0 +1,781 @@
+{
+  "item": [
+    {
+      "id": "35fa9f71-baf5-47e9-93b4-df28fa254c2e",
+      "name": "ProjectParticipantsVerification",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a88eca88-d425-4226-ad62-eb8438ab1140",
+          "name": "Returns a nullable DateTime object representing the verification state.",
+          "request": {
+            "name": "Returns a nullable DateTime object representing the verification state.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectParticipantsVerification"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "projectId",
+                  "value": "<integer>",
+                  "description": "(Required) Project to get verification state for"
+                },
+                {
+                  "disabled": false,
+                  "key": "personId",
+                  "value": "<string>",
+                  "description": "(Required) Person to get verification state for"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "14621966-d01e-421d-a04c-1b6069304505",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectParticipantsVerification"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "projectId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "personId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"2004-03-10T08:27:58.189Z\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "87a76efd-605f-4093-af45-50f9d2a916f8",
+          "name": "Not implemented",
+          "request": {
+            "name": "Not implemented",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectParticipantsVerification"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bf7c06e7-32af-4e41-9e62-99ca63ef6653",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectParticipantsVerification"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6bc2febe-2366-4fe6-87c7-ab8d4dbf3e8a",
+          "name": "Sets verifiction state of given person in given project",
+          "request": {
+            "name": "Sets verifiction state of given person in given project",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectParticipantsVerification"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "ID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PersonID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PersonRoleID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PersonRoleName_en",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PersonRoleName_sc",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "FirstName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "LastName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "BirthYear",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsReplacedById",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsReplacingId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsActive",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsDeleted",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasOrganizationHome",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasIdentifiers",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasPublications",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasProjects",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationHomeCount",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifiersCount",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierCid",
+                  "value": "[\"<string>\",\"<string>\"]"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierCplPersonId",
+                  "value": "[\"<string>\",\"<string>\"]"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierOrcid",
+                  "value": "[\"<string>\",\"<string>\"]"
+                },
+                {
+                  "disabled": false,
+                  "key": "Identifiers",
+                  "value": "[{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationHome",
+                  "value": "[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}]"
+                },
+                {
+                  "disabled": false,
+                  "key": "PdbCategories",
+                  "value": "[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}]"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedAt",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedAt",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DeletedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DeletedAt",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "SightedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "SightedAt",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ValidatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ValidatedDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "NeedsAttention",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PersonOrganizations",
+                  "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "PersonOrganizations",
+                  "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Verified",
+                  "value": "<dateTime>",
+                  "description": "The date for a users verification as a project member"
+                },
+                {
+                  "disabled": false,
+                  "key": "VerificationMailSent",
+                  "value": "<dateTime>",
+                  "description": "The date for sending a users verification email"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e914cc74-dd7a-4acb-8312-34ed05eaa1fa",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectParticipantsVerification"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "ID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ProjectID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PersonID",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationID",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PersonRoleID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PersonRoleName_en",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PersonRoleName_sc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "FirstName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "LastName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DisplayName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "BirthYear",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IsReplacedById",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IsReplacingId",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IsActive",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IsDeleted",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "HasOrganizationHome",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "HasIdentifiers",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "HasPublications",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "HasProjects",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationHomeCount",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifiersCount",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifierCid",
+                      "value": "[\"<string>\",\"<string>\"]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifierCplPersonId",
+                      "value": "[\"<string>\",\"<string>\"]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifierOrcid",
+                      "value": "[\"<string>\",\"<string>\"]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Identifiers",
+                      "value": "[{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationHome",
+                      "value": "[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PdbCategories",
+                      "value": "[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "CreatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "CreatedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "UpdatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "UpdatedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DeletedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DeletedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "SightedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "SightedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ValidatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ValidatedDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "NeedsAttention",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PersonOrganizations",
+                      "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PersonOrganizations",
+                      "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The date for a users verification as a project member",
+                        "type": "text/plain"
+                      },
+                      "key": "Verified",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The date for sending a users verification email",
+                        "type": "text/plain"
+                      },
+                      "key": "VerificationMailSent",
+                      "value": "<dateTime>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ID\": \"<integer>\",\n  \"ProjectID\": \"<integer>\",\n  \"PersonID\": \"<string>\",\n  \"OrganizationID\": \"<string>\",\n  \"PersonRoleID\": \"<integer>\",\n  \"PersonRoleName_en\": \"<string>\",\n  \"PersonRoleName_sc\": \"<string>\",\n  \"Person\": {\n    \"Id\": \"<string>\",\n    \"FirstName\": \"<string>\",\n    \"LastName\": \"<string>\",\n    \"DisplayName\": \"<string>\",\n    \"BirthYear\": \"<integer>\",\n    \"IsReplacedById\": \"<string>\",\n    \"IsReplacingId\": \"<string>\",\n    \"IsActive\": \"<boolean>\",\n    \"IsDeleted\": \"<boolean>\",\n    \"HasOrganizationHome\": \"<boolean>\",\n    \"HasIdentifiers\": \"<boolean>\",\n    \"HasPublications\": \"<boolean>\",\n    \"HasProjects\": \"<boolean>\",\n    \"OrganizationHomeCount\": \"<integer>\",\n    \"IdentifiersCount\": \"<integer>\",\n    \"IdentifierCid\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"IdentifierCplPersonId\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"IdentifierOrcid\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"Identifiers\": [\n      {\n        \"Id\": \"<string>\",\n        \"Type\": {\n          \"Id\": \"<string>\",\n          \"Value\": \"<string>\",\n          \"DescriptionSwe\": \"<string>\",\n          \"DescriptionEng\": \"<string>\"\n        },\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"IsActive\": \"<boolean>\",\n        \"Value\": \"<string>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"Type\": {\n          \"Id\": \"<string>\",\n          \"Value\": \"<string>\",\n          \"DescriptionSwe\": \"<string>\",\n          \"DescriptionEng\": \"<string>\"\n        },\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"IsActive\": \"<boolean>\",\n        \"Value\": \"<string>\"\n      }\n    ],\n    \"OrganizationHome\": [\n      {\n        \"Id\": \"<string>\",\n        \"OrganizationId\": \"<string>\",\n        \"OrganizationData\": {\n          \"Id\": \"<string>\",\n          \"NameSwe\": \"<string>\",\n          \"NameEng\": \"<string>\",\n          \"DisplayNameSwe\": \"<string>\",\n          \"DisplayNameEng\": \"<string>\",\n          \"DisplayPathSwe\": \"<string>\",\n          \"DisplayPathEng\": \"<string>\",\n          \"DisplayPathShortSwe\": \"<string>\",\n          \"DisplayPathShortEng\": \"<string>\",\n          \"PossibleDisplayPaths\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"City\": \"<string>\",\n          \"PostalNo\": \"<string>\",\n          \"Country\": \"<string>\",\n          \"GeoLat\": \"<string>\",\n          \"GeoLong\": \"<string>\",\n          \"Level\": \"<integer>\",\n          \"StartYear\": \"<integer>\",\n          \"EndYear\": \"<integer>\",\n          \"OrganizationTypes\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"OrganizationParents\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"ActiveOrganizationParentIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"HasIdentifiers\": \"<boolean>\",\n          \"IdentifiersCount\": \"<integer>\",\n          \"Identifiers\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"IdentifierLdapCode\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"IdentifierCplDepartmentId\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"CreatedBy\": \"<string>\",\n          \"CreatedAt\": \"<dateTime>\",\n          \"UpdatedBy\": \"<string>\",\n          \"UpdatedAt\": \"<dateTime>\",\n          \"ValidatedBy\": \"<string>\",\n          \"ValidatedDate\": \"<dateTime>\",\n          \"DeletedBy\": \"<string>\",\n          \"DeletedAt\": \"<dateTime>\",\n          \"NeedsAttention\": \"<boolean>\",\n          \"IsReplacedById\": \"<string>\",\n          \"IsActive\": \"<boolean>\"\n        },\n        \"LastUpdatedDate\": \"<dateTime>\",\n        \"TitleSwe\": \"<string>\",\n        \"TitleEng\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\",\n        \"Source\": \"<string>\",\n        \"Priority\": \"<string>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"OrganizationId\": \"<string>\",\n        \"OrganizationData\": {\n          \"Id\": \"<string>\",\n          \"NameSwe\": \"<string>\",\n          \"NameEng\": \"<string>\",\n          \"DisplayNameSwe\": \"<string>\",\n          \"DisplayNameEng\": \"<string>\",\n          \"DisplayPathSwe\": \"<string>\",\n          \"DisplayPathEng\": \"<string>\",\n          \"DisplayPathShortSwe\": \"<string>\",\n          \"DisplayPathShortEng\": \"<string>\",\n          \"PossibleDisplayPaths\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"City\": \"<string>\",\n          \"PostalNo\": \"<string>\",\n          \"Country\": \"<string>\",\n          \"GeoLat\": \"<string>\",\n          \"GeoLong\": \"<string>\",\n          \"Level\": \"<integer>\",\n          \"StartYear\": \"<integer>\",\n          \"EndYear\": \"<integer>\",\n          \"OrganizationTypes\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"OrganizationParents\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"ActiveOrganizationParentIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"HasIdentifiers\": \"<boolean>\",\n          \"IdentifiersCount\": \"<integer>\",\n          \"Identifiers\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"IdentifierLdapCode\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"IdentifierCplDepartmentId\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"CreatedBy\": \"<string>\",\n          \"CreatedAt\": \"<dateTime>\",\n          \"UpdatedBy\": \"<string>\",\n          \"UpdatedAt\": \"<dateTime>\",\n          \"ValidatedBy\": \"<string>\",\n          \"ValidatedDate\": \"<dateTime>\",\n          \"DeletedBy\": \"<string>\",\n          \"DeletedAt\": \"<dateTime>\",\n          \"NeedsAttention\": \"<boolean>\",\n          \"IsReplacedById\": \"<string>\",\n          \"IsActive\": \"<boolean>\"\n        },\n        \"LastUpdatedDate\": \"<dateTime>\",\n        \"TitleSwe\": \"<string>\",\n        \"TitleEng\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\",\n        \"Source\": \"<string>\",\n        \"Priority\": \"<string>\"\n      }\n    ],\n    \"PdbCategories\": [\n      {\n        \"Id\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\"\n      }\n    ],\n    \"CreatedBy\": \"<string>\",\n    \"CreatedAt\": \"<dateTime>\",\n    \"UpdatedBy\": \"<string>\",\n    \"UpdatedAt\": \"<dateTime>\",\n    \"DeletedBy\": \"<string>\",\n    \"DeletedAt\": \"<dateTime>\",\n    \"SightedBy\": \"<string>\",\n    \"SightedAt\": \"<dateTime>\",\n    \"ValidatedBy\": \"<string>\",\n    \"ValidatedDate\": \"<dateTime>\",\n    \"NeedsAttention\": \"<boolean>\"\n  },\n  \"PersonOrganizations\": [\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<string>\",\n      \"StartDate\": \"<dateTime>\",\n      \"EndDate\": \"<dateTime>\",\n      \"ProjectOrganizationPersonID\": \"<integer>\",\n      \"OrganizationData\": {\n        \"Id\": \"<string>\",\n        \"NameSwe\": \"<string>\",\n        \"NameEng\": \"<string>\",\n        \"DisplayNameSwe\": \"<string>\",\n        \"DisplayNameEng\": \"<string>\",\n        \"DisplayPathSwe\": \"<string>\",\n        \"DisplayPathEng\": \"<string>\",\n        \"DisplayPathShortSwe\": \"<string>\",\n        \"DisplayPathShortEng\": \"<string>\",\n        \"PossibleDisplayPaths\": [\n          {\n            \"DisplayPathSwe\": \"<string>\",\n            \"DisplayPathEng\": \"<string>\"\n          },\n          {\n            \"DisplayPathSwe\": \"<string>\",\n            \"DisplayPathEng\": \"<string>\"\n          }\n        ],\n        \"City\": \"<string>\",\n        \"PostalNo\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"GeoLat\": \"<string>\",\n        \"GeoLong\": \"<string>\",\n        \"Level\": \"<integer>\",\n        \"StartYear\": \"<integer>\",\n        \"EndYear\": \"<integer>\",\n        \"OrganizationTypes\": [\n          {\n            \"Id\": \"<string>\",\n            \"NameSwe\": \"<string>\",\n            \"NameEng\": \"<string>\",\n            \"LegacyOrganizationTypeId\": \"<integer>\"\n          },\n          {\n            \"Id\": \"<string>\",\n            \"NameSwe\": \"<string>\",\n            \"NameEng\": \"<string>\",\n            \"LegacyOrganizationTypeId\": \"<integer>\"\n          }\n        ],\n        \"OrganizationParents\": [\n          {\n            \"Id\": \"<string>\",\n            \"FromDate\": \"<dateTime>\",\n            \"ToDate\": \"<dateTime>\",\n            \"ParentOrganizationId\": \"<string>\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"\n            }\n          },\n          {\n            \"Id\": \"<string>\",\n            \"FromDate\": \"<dateTime>\",\n            \"ToDate\": \"<dateTime>\",\n            \"ParentOrganizationId\": \"<string>\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"\n            }\n          }\n        ],\n        \"ActiveOrganizationParentIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"HasIdentifiers\": \"<boolean>\",\n        \"IdentifiersCount\": \"<integer>\",\n        \"Identifiers\": [\n          {\n            \"Id\": \"<string>\",\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": \"<string>\",\n            \"CreatedAt\": \"<dateTime>\",\n            \"UpdatedBy\": \"<string>\",\n            \"UpdatedAt\": \"<dateTime>\",\n            \"IsActive\": \"<boolean>\",\n            \"Value\": \"<string>\"\n          },\n          {\n            \"Id\": \"<string>\",\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": \"<string>\",\n            \"CreatedAt\": \"<dateTime>\",\n            \"UpdatedBy\": \"<string>\",\n            \"UpdatedAt\": \"<dateTime>\",\n            \"IsActive\": \"<boolean>\",\n            \"Value\": \"<string>\"\n          }\n        ],\n        \"IdentifierLdapCode\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"IdentifierCplDepartmentId\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"ValidatedBy\": \"<string>\",\n        \"ValidatedDate\": \"<dateTime>\",\n        \"DeletedBy\": \"<string>\",\n        \"DeletedAt\": \"<dateTime>\",\n        \"NeedsAttention\": \"<boolean>\",\n        \"IsReplacedById\": \"<string>\",\n        \"IsActive\": \"<boolean>\"\n      }\n    },\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<string>\",\n      \"StartDate\": \"<dateTime>\",\n      \"EndDate\": \"<dateTime>\",\n      \"ProjectOrganizationPersonID\": \"<integer>\",\n      \"OrganizationData\": {\n        \"Id\": \"<string>\",\n        \"NameSwe\": \"<string>\",\n        \"NameEng\": \"<string>\",\n        \"DisplayNameSwe\": \"<string>\",\n        \"DisplayNameEng\": \"<string>\",\n        \"DisplayPathSwe\": \"<string>\",\n        \"DisplayPathEng\": \"<string>\",\n        \"DisplayPathShortSwe\": \"<string>\",\n        \"DisplayPathShortEng\": \"<string>\",\n        \"PossibleDisplayPaths\": [\n          {\n            \"DisplayPathSwe\": \"<string>\",\n            \"DisplayPathEng\": \"<string>\"\n          },\n          {\n            \"DisplayPathSwe\": \"<string>\",\n            \"DisplayPathEng\": \"<string>\"\n          }\n        ],\n        \"City\": \"<string>\",\n        \"PostalNo\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"GeoLat\": \"<string>\",\n        \"GeoLong\": \"<string>\",\n        \"Level\": \"<integer>\",\n        \"StartYear\": \"<integer>\",\n        \"EndYear\": \"<integer>\",\n        \"OrganizationTypes\": [\n          {\n            \"Id\": \"<string>\",\n            \"NameSwe\": \"<string>\",\n            \"NameEng\": \"<string>\",\n            \"LegacyOrganizationTypeId\": \"<integer>\"\n          },\n          {\n            \"Id\": \"<string>\",\n            \"NameSwe\": \"<string>\",\n            \"NameEng\": \"<string>\",\n            \"LegacyOrganizationTypeId\": \"<integer>\"\n          }\n        ],\n        \"OrganizationParents\": [\n          {\n            \"Id\": \"<string>\",\n            \"FromDate\": \"<dateTime>\",\n            \"ToDate\": \"<dateTime>\",\n            \"ParentOrganizationId\": \"<string>\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"\n            }\n          },\n          {\n            \"Id\": \"<string>\",\n            \"FromDate\": \"<dateTime>\",\n            \"ToDate\": \"<dateTime>\",\n            \"ParentOrganizationId\": \"<string>\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"\n            }\n          }\n        ],\n        \"ActiveOrganizationParentIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"HasIdentifiers\": \"<boolean>\",\n        \"IdentifiersCount\": \"<integer>\",\n        \"Identifiers\": [\n          {\n            \"Id\": \"<string>\",\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": \"<string>\",\n            \"CreatedAt\": \"<dateTime>\",\n            \"UpdatedBy\": \"<string>\",\n            \"UpdatedAt\": \"<dateTime>\",\n            \"IsActive\": \"<boolean>\",\n            \"Value\": \"<string>\"\n          },\n          {\n            \"Id\": \"<string>\",\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": \"<string>\",\n            \"CreatedAt\": \"<dateTime>\",\n            \"UpdatedBy\": \"<string>\",\n            \"UpdatedAt\": \"<dateTime>\",\n            \"IsActive\": \"<boolean>\",\n            \"Value\": \"<string>\"\n          }\n        ],\n        \"IdentifierLdapCode\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"IdentifierCplDepartmentId\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"ValidatedBy\": \"<string>\",\n        \"ValidatedDate\": \"<dateTime>\",\n        \"DeletedBy\": \"<string>\",\n        \"DeletedAt\": \"<dateTime>\",\n        \"NeedsAttention\": \"<boolean>\",\n        \"IsReplacedById\": \"<string>\",\n        \"IsActive\": \"<boolean>\"\n      }\n    }\n  ],\n  \"Verified\": \"<dateTime>\",\n  \"VerificationMailSent\": \"<dateTime>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f0f87e8-84f9-4403-af2a-96d297406ce6",
+          "name": "Removes the verification state for a person and a project",
+          "request": {
+            "name": "Removes the verification state for a person and a project",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectParticipantsVerification"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "projectId",
+                  "value": "<integer>",
+                  "description": "(Required) Project to verfiy"
+                },
+                {
+                  "disabled": false,
+                  "key": "userId",
+                  "value": "<string>",
+                  "description": "(Required) Person to verify"
+                }
+              ],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a8e29912-a679-42a1-aefe-1ecae6e49400",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectParticipantsVerification"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "projectId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "userId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fe7136c8-83df-45db-82ff-a773be4f181a",
+    "name": "ChalmersResearch ContractImport ProjectParticipantsVerification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

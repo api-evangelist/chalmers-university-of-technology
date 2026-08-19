@@ -1,0 +1,762 @@
+{
+  "item": [
+    {
+      "id": "2c631426-c8cb-4152-a923-ac820264afba",
+      "name": "ContractImport",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1029b78e-1213-42a6-9153-743189064948",
+          "name": "Not implemented",
+          "request": {
+            "name": "Not implemented",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ContractImport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "item.contractImportID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.ekoID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.rDProject",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportStatus",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportProjectTitleEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportProjectTitleSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportProjectDescriptionEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportProjectDescriptionSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportProjectUrl",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.ekoKst",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.ekoFormedlare",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportAmount",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportCurrencyCode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.ekoProjekt",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportFunder",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportFunderID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportProjectContactPerson",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportStartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportEndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportImportedDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportImported",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportDeleted",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.ekoAnkomstDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item.contractImportSource",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "04a5f395-d406-4ed9-b017-06faa42ee352",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ContractImport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "item.contractImportID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "item.ekoID",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.rDProject",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportStatus",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportProjectTitleEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportProjectTitleSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportProjectDescriptionEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportProjectDescriptionSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportProjectUrl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.ekoKst",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.ekoFormedlare",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportAmount",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "item.contractImportCurrencyCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.ekoProjekt",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportFunder",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportFunderID",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportProjectContactPerson",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "item.contractImportStartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "item.contractImportEndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "item.contractImportImportedDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "item.contractImportImported",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "item.contractImportDeleted",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "item.ekoAnkomstDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "item.contractImportSource",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8f9ff484-7f26-4bc1-9a66-7038f6f61217",
+          "name": "Not implemented",
+          "request": {
+            "name": "Not implemented",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ContractImport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "51a0cebf-c240-487e-be32-2ab3765121e1",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ContractImport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69765ab6-dca0-4696-8714-8103187ba6fb",
+          "name": "Create new Contract Import object",
+          "request": {
+            "name": "Create new Contract Import object",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ContractImport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "ContractImportID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EkoID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "RDProject",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportStatus",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportProjectTitleEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportProjectTitleSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportProjectDescriptionEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportProjectDescriptionSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportProjectUrl",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EkoKst",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EkoFormedlare",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportAmount",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportCurrencyCode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EkoProjekt",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportFunder",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportFunderID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportProjectContactPerson",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportStartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportEndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportImportedDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportImported",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportDeleted",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EkoAnkomstDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractImportSource",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "703a7f22-360f-437a-ad73-7c9d9535b81a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ContractImport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "ContractImportID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "EkoID",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "RDProject",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportStatus",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportProjectTitleEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportProjectTitleSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportProjectDescriptionEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportProjectDescriptionSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportProjectUrl",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "EkoKst",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "EkoFormedlare",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportAmount",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportCurrencyCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportType",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "EkoProjekt",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportFunder",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportFunderID",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportProjectContactPerson",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportStartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportEndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportImportedDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportImported",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportDeleted",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "EkoAnkomstDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ContractImportSource",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ContractImportID\": \"<integer>\",\n  \"EkoID\": \"<string>\",\n  \"RDProject\": \"<string>\",\n  \"ContractImportStatus\": \"<string>\",\n  \"ContractImportProjectTitleEng\": \"<string>\",\n  \"ContractImportProjectTitleSwe\": \"<string>\",\n  \"ContractImportProjectDescriptionEng\": \"<string>\",\n  \"ContractImportProjectDescriptionSwe\": \"<string>\",\n  \"ContractImportProjectUrl\": \"<string>\",\n  \"EkoKst\": \"<string>\",\n  \"EkoFormedlare\": \"<string>\",\n  \"ContractImportAmount\": \"<integer>\",\n  \"ContractImportCurrencyCode\": \"<string>\",\n  \"ContractImportType\": \"<string>\",\n  \"EkoProjekt\": \"<string>\",\n  \"ContractImportFunder\": \"<string>\",\n  \"ContractImportFunderID\": \"<string>\",\n  \"ContractImportProjectContactPerson\": \"<string>\",\n  \"ContractImportStartDate\": \"<dateTime>\",\n  \"ContractImportEndDate\": \"<dateTime>\",\n  \"ContractImportImportedDate\": \"<dateTime>\",\n  \"ContractImportImported\": \"<integer>\",\n  \"ContractImportDeleted\": \"<integer>\",\n  \"EkoAnkomstDate\": \"<dateTime>\",\n  \"ContractImportSource\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9e7add88-0cd0-46ae-a849-1708dabc7770",
+          "name": "Not implemented",
+          "request": {
+            "name": "Not implemented",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ContractImport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "24f99d01-ec96-4ca8-9f04-48652f522bc2",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ContractImport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ce5407f2-51ac-467b-80a5-b6fb9bb35853",
+    "name": "ChalmersResearch ContractImport API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

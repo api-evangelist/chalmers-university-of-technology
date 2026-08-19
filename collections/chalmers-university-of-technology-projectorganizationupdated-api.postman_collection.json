@@ -1,0 +1,554 @@
+{
+  "item": [
+    {
+      "id": "45e1e996-3417-4f35-a87a-2e3567ef3b20",
+      "name": "ProjectOrganizationUpdated",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "47dc525c-38f4-4242-ad94-6af605ed16b9",
+          "name": "Project Organization Updated Post",
+          "request": {
+            "name": "Project Organization Updated Post",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectOrganizationUpdated"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "Id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "NameSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "NameEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayNameSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayNameEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayPathSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayPathEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayPathShortSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayPathShortEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PossibleDisplayPaths",
+                  "value": "{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "PossibleDisplayPaths",
+                  "value": "{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "City",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PostalNo",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Country",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "GeoLat",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "GeoLong",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Level",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartYear",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndYear",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypes",
+                  "value": "{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypes",
+                  "value": "{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationParents",
+                  "value": "{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"},{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationParents",
+                  "value": "{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"},{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "ActiveOrganizationParentIds",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ActiveOrganizationParentIds",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasIdentifiers",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifiersCount",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Identifiers",
+                  "value": "{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Identifiers",
+                  "value": "{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierLdapCode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierLdapCode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierCplDepartmentId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierCplDepartmentId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedAt",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedAt",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ValidatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ValidatedDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DeletedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "DeletedAt",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "NeedsAttention",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsReplacedById",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsActive",
+                  "value": "<boolean>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "887b3db0-cec0-49d3-8094-c89cac5feedf",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectOrganizationUpdated"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "Id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "NameSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "NameEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DisplayNameSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DisplayNameEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DisplayPathSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DisplayPathEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DisplayPathShortSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DisplayPathShortEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PossibleDisplayPaths",
+                      "value": "{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PossibleDisplayPaths",
+                      "value": "{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "City",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PostalNo",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "GeoLat",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "GeoLong",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Level",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "StartYear",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "EndYear",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationTypes",
+                      "value": "{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationTypes",
+                      "value": "{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationParents",
+                      "value": "{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"},{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationParents",
+                      "value": "{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"},{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganizationParent detected>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ActiveOrganizationParentIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ActiveOrganizationParentIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "HasIdentifiers",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifiersCount",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Identifiers",
+                      "value": "{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Identifiers",
+                      "value": "{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifierLdapCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifierLdapCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifierCplDepartmentId",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IdentifierCplDepartmentId",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "CreatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "CreatedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "UpdatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "UpdatedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ValidatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ValidatedDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DeletedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "DeletedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "NeedsAttention",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IsReplacedById",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "IsActive",
+                      "value": "<boolean>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b2573ec3-9739-4856-b1be-24d667bca524",
+    "name": "ChalmersResearch ContractImport ProjectOrganizationUpdated API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

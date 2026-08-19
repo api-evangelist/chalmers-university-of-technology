@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ProjectEmbargos API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ProjectEmbargos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns the projects with a specified publish status, created within a specified timespan (days). \r\n            1 - New, 2- Only visible for logged in users, 3 - Public",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ProjectEmbargos",
+            "params": [
+              {
+                "name": "publishStatus",
+                "value": "",
+                "type": "query",
+                "description": "Current publish status. 1 - New, 2- Only visible for logged in users, 3 - Public"
+              },
+              {
+                "name": "noOfDays",
+                "value": "",
+                "type": "query",
+                "description": "Minimum number of days since publication"
+              }
+            ]
+          },
+          "docs": "Returns the projects with a specified publish status, created within a specified timespan (days). \r\n            1 - New, 2- Only visible for logged in users, 3 - Public"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ProjectEmbargos",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Not implemented"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.research.chalmers.se/api/ProjectEmbargos"
+          },
+          "docs": "Not implemented"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.research.chalmers.se/api/ProjectEmbargos",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "userId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Not implemented"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

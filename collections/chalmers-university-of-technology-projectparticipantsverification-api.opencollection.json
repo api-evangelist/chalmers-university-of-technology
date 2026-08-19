@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ProjectParticipantsVerification API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ProjectParticipantsVerification",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns a nullable DateTime object representing the verification state.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerification",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "query",
+                "description": "Project to get verification state for"
+              },
+              {
+                "name": "personId",
+                "value": "",
+                "type": "query",
+                "description": "Person to get verification state for"
+              }
+            ]
+          },
+          "docs": "Returns a nullable DateTime object representing the verification state."
+        },
+        {
+          "info": {
+            "name": "Sets verifiction state of given person in given project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerification",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sets verifiction state of given person in given project"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerification"
+          },
+          "docs": "Not implemented"
+        },
+        {
+          "info": {
+            "name": "Removes the verification state for a person and a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerification",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "query",
+                "description": "Project to verfiy"
+              },
+              {
+                "name": "userId",
+                "value": "",
+                "type": "query",
+                "description": "Person to verify"
+              }
+            ]
+          },
+          "docs": "Removes the verification state for a person and a project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

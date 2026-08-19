@@ -1,0 +1,119 @@
+{
+  "item": [
+    {
+      "id": "0602ff49-a6d6-4ac1-9372-71d22bdf57d8",
+      "name": "DeltaImportCplPublication",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b0689ac-56fd-4bec-88ea-df49b669d7f8",
+          "name": "Request a delta-import of a publication in CPL using Azure Servicebus",
+          "request": {
+            "name": "Request a delta-import of a publication in CPL using Azure Servicebus",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DeltaImportCplPublication",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) Publication id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "140c19db-266a-406d-a972-6c095041bcad",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "DeltaImportCplPublication",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Publication id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "eaaa9b03-0d28-4704-b392-ff9c9112849a",
+    "name": "ChalmersResearch ContractImport DeltaImportCplPublication API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

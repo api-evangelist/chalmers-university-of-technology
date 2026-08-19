@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ProjectOrganizationUpdated API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ProjectOrganizationUpdated",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ProjectOrganizationUpdated_Post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ProjectOrganizationUpdated",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

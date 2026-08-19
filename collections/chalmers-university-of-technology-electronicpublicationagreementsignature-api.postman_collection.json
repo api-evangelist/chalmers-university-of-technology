@@ -1,0 +1,960 @@
+{
+  "item": [
+    {
+      "id": "cb5f7a06-117b-49bb-b421-200360aeb3dc",
+      "name": "ElectronicPublicationAgreementSignature",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "341a6303-d4d1-43f4-875c-0e4bfa289e74",
+          "name": "Gets a list of all electronic publishing contracts",
+          "request": {
+            "name": "Gets a list of all electronic publishing contracts",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ElectronicPublicationAgreementSignature"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4d386189-5025-47aa-833a-3fa9549df66c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ElectronicPublicationAgreementSignature"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"ID\": 6028,\n    \"PersonID\": \"string\",\n    \"Person\": {\n      \"Id\": \"string\",\n      \"FirstName\": \"string\",\n      \"LastName\": \"string\",\n      \"DisplayName\": \"string\",\n      \"BirthYear\": 7624,\n      \"IsReplacedById\": \"string\",\n      \"IsReplacingId\": \"string\",\n      \"IsActive\": false,\n      \"IsDeleted\": false,\n      \"HasOrganizationHome\": true,\n      \"HasIdentifiers\": true,\n      \"HasPublications\": true,\n      \"HasProjects\": true,\n      \"OrganizationHomeCount\": 1455,\n      \"IdentifiersCount\": 6934,\n      \"IdentifierCid\": [\n        \"string\",\n        \"string\"\n      ],\n      \"IdentifierCplPersonId\": [\n        \"string\",\n        \"string\"\n      ],\n      \"IdentifierOrcid\": [\n        \"string\",\n        \"string\"\n      ],\n      \"Identifiers\": [\n        {\n          \"Id\": \"string\",\n          \"Type\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"CreatedBy\": \"string\",\n          \"CreatedAt\": \"2008-07-28T04:41:38.321Z\",\n          \"UpdatedBy\": \"string\",\n          \"UpdatedAt\": \"1973-12-09T20:41:26.702Z\",\n          \"IsActive\": false,\n          \"Value\": \"string\"\n        },\n        {\n          \"Id\": \"string\",\n          \"Type\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"CreatedBy\": \"string\",\n          \"CreatedAt\": \"1982-03-30T23:11:58.679Z\",\n          \"UpdatedBy\": \"string\",\n          \"UpdatedAt\": \"2004-06-02T02:38:40.381Z\",\n          \"IsActive\": false,\n          \"Value\": \"string\"\n        }\n      ],\n      \"OrganizationHome\": [\n        {\n          \"Id\": \"string\",\n          \"OrganizationId\": \"string\",\n          \"OrganizationData\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PossibleDisplayPaths\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"City\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PostalNo\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Country\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLat\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLong\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Level\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"StartYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"EndYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationParents\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ActiveOrganizationParentIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"HasIdentifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifiersCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Identifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierLdapCode\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierCplDepartmentId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NeedsAttention\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsReplacedById\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsActive\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"LastUpdatedDate\": \"1946-11-30T01:45:07.412Z\",\n          \"TitleSwe\": \"string\",\n          \"TitleEng\": \"string\",\n          \"StartDate\": \"1989-02-16T17:18:18.451Z\",\n          \"EndDate\": \"2009-03-29T05:57:48.960Z\",\n          \"Source\": \"string\",\n          \"Priority\": \"string\"\n        },\n        {\n          \"Id\": \"string\",\n          \"OrganizationId\": \"string\",\n          \"OrganizationData\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PossibleDisplayPaths\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"City\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PostalNo\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Country\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLat\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLong\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Level\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"StartYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"EndYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationParents\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ActiveOrganizationParentIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"HasIdentifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifiersCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Identifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierLdapCode\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierCplDepartmentId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NeedsAttention\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsReplacedById\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsActive\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"LastUpdatedDate\": \"2009-12-16T01:35:04.485Z\",\n          \"TitleSwe\": \"string\",\n          \"TitleEng\": \"string\",\n          \"StartDate\": \"2007-11-06T08:24:48.363Z\",\n          \"EndDate\": \"1986-10-17T00:31:58.722Z\",\n          \"Source\": \"string\",\n          \"Priority\": \"string\"\n        }\n      ],\n      \"PdbCategories\": [\n        {\n          \"Id\": \"string\",\n          \"Name\": \"string\",\n          \"StartDate\": \"1950-11-30T02:30:17.358Z\",\n          \"EndDate\": \"2016-06-13T00:12:04.118Z\"\n        },\n        {\n          \"Id\": \"string\",\n          \"Name\": \"string\",\n          \"StartDate\": \"1997-10-02T10:32:52.863Z\",\n          \"EndDate\": \"2000-02-28T10:36:28.260Z\"\n        }\n      ],\n      \"CreatedBy\": \"string\",\n      \"CreatedAt\": \"1978-02-23T05:15:42.514Z\",\n      \"UpdatedBy\": \"string\",\n      \"UpdatedAt\": \"1975-07-12T13:01:37.413Z\",\n      \"DeletedBy\": \"string\",\n      \"DeletedAt\": \"1973-12-08T17:37:31.166Z\",\n      \"SightedBy\": \"string\",\n      \"SightedAt\": \"2009-06-09T15:20:13.658Z\",\n      \"ValidatedBy\": \"string\",\n      \"ValidatedDate\": \"1985-04-25T23:18:47.766Z\",\n      \"NeedsAttention\": false\n    },\n    \"PublicationType\": \"string\",\n    \"PublicationYear\": \"string\",\n    \"PublicationTitle\": \"string\",\n    \"PubID\": 7175,\n    \"Agree\": true,\n    \"Date\": \"2010-03-16T00:30:49.963Z\",\n    \"ContractText\": \"string\",\n    \"Checksum\": \"string\",\n    \"PrintAt\": \"string\",\n    \"Decision\": \"string\",\n    \"Message\": \"string\",\n    \"IpV4\": \"string\"\n  },\n  {\n    \"ID\": 6409,\n    \"PersonID\": \"string\",\n    \"Person\": {\n      \"Id\": \"string\",\n      \"FirstName\": \"string\",\n      \"LastName\": \"string\",\n      \"DisplayName\": \"string\",\n      \"BirthYear\": 3633,\n      \"IsReplacedById\": \"string\",\n      \"IsReplacingId\": \"string\",\n      \"IsActive\": false,\n      \"IsDeleted\": false,\n      \"HasOrganizationHome\": true,\n      \"HasIdentifiers\": false,\n      \"HasPublications\": true,\n      \"HasProjects\": false,\n      \"OrganizationHomeCount\": 3587,\n      \"IdentifiersCount\": 8747,\n      \"IdentifierCid\": [\n        \"string\",\n        \"string\"\n      ],\n      \"IdentifierCplPersonId\": [\n        \"string\",\n        \"string\"\n      ],\n      \"IdentifierOrcid\": [\n        \"string\",\n        \"string\"\n      ],\n      \"Identifiers\": [\n        {\n          \"Id\": \"string\",\n          \"Type\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"CreatedBy\": \"string\",\n          \"CreatedAt\": \"1956-06-07T19:31:14.751Z\",\n          \"UpdatedBy\": \"string\",\n          \"UpdatedAt\": \"2005-07-06T20:44:57.560Z\",\n          \"IsActive\": true,\n          \"Value\": \"string\"\n        },\n        {\n          \"Id\": \"string\",\n          \"Type\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DescriptionEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"CreatedBy\": \"string\",\n          \"CreatedAt\": \"1965-10-05T17:47:48.028Z\",\n          \"UpdatedBy\": \"string\",\n          \"UpdatedAt\": \"2023-10-24T03:58:32.130Z\",\n          \"IsActive\": false,\n          \"Value\": \"string\"\n        }\n      ],\n      \"OrganizationHome\": [\n        {\n          \"Id\": \"string\",\n          \"OrganizationId\": \"string\",\n          \"OrganizationData\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PossibleDisplayPaths\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"City\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PostalNo\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Country\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLat\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLong\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Level\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"StartYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"EndYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationParents\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ActiveOrganizationParentIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"HasIdentifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifiersCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Identifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierLdapCode\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierCplDepartmentId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NeedsAttention\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsReplacedById\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsActive\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"LastUpdatedDate\": \"2004-08-11T03:27:55.803Z\",\n          \"TitleSwe\": \"string\",\n          \"TitleEng\": \"string\",\n          \"StartDate\": \"1979-03-08T08:14:43.513Z\",\n          \"EndDate\": \"1950-05-30T20:55:21.310Z\",\n          \"Source\": \"string\",\n          \"Priority\": \"string\"\n        },\n        {\n          \"Id\": \"string\",\n          \"OrganizationId\": \"string\",\n          \"OrganizationData\": {\n            \"Id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayNameEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortSwe\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DisplayPathShortEng\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PossibleDisplayPaths\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"City\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"PostalNo\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Country\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLat\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"GeoLong\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Level\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"StartYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"EndYear\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"OrganizationParents\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ActiveOrganizationParentIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"HasIdentifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifiersCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"Identifiers\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierLdapCode\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IdentifierCplDepartmentId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"CreatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"ValidatedDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedBy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"DeletedAt\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"NeedsAttention\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsReplacedById\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"IsActive\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"LastUpdatedDate\": \"1957-11-16T20:12:08.425Z\",\n          \"TitleSwe\": \"string\",\n          \"TitleEng\": \"string\",\n          \"StartDate\": \"1967-04-19T03:18:03.242Z\",\n          \"EndDate\": \"2021-06-25T15:59:35.515Z\",\n          \"Source\": \"string\",\n          \"Priority\": \"string\"\n        }\n      ],\n      \"PdbCategories\": [\n        {\n          \"Id\": \"string\",\n          \"Name\": \"string\",\n          \"StartDate\": \"1972-09-07T18:42:38.392Z\",\n          \"EndDate\": \"1966-05-03T07:33:41.005Z\"\n        },\n        {\n          \"Id\": \"string\",\n          \"Name\": \"string\",\n          \"StartDate\": \"2005-02-20T01:38:43.885Z\",\n          \"EndDate\": \"1959-09-22T18:41:02.385Z\"\n        }\n      ],\n      \"CreatedBy\": \"string\",\n      \"CreatedAt\": \"2024-04-15T03:20:26.339Z\",\n      \"UpdatedBy\": \"string\",\n      \"UpdatedAt\": \"1958-12-05T17:43:56.903Z\",\n      \"DeletedBy\": \"string\",\n      \"DeletedAt\": \"1995-08-06T06:43:28.984Z\",\n      \"SightedBy\": \"string\",\n      \"SightedAt\": \"1988-03-06T10:01:50.590Z\",\n      \"ValidatedBy\": \"string\",\n      \"ValidatedDate\": \"1955-12-11T03:20:37.252Z\",\n      \"NeedsAttention\": false\n    },\n    \"PublicationType\": \"string\",\n    \"PublicationYear\": \"string\",\n    \"PublicationTitle\": \"string\",\n    \"PubID\": 1734,\n    \"Agree\": true,\n    \"Date\": \"1983-09-24T14:40:40.750Z\",\n    \"ContractText\": \"string\",\n    \"Checksum\": \"string\",\n    \"PrintAt\": \"string\",\n    \"Decision\": \"string\",\n    \"Message\": \"string\",\n    \"IpV4\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "77d7323f-3da3-4858-8522-91ee5054f7dc",
+          "name": "Creates a new signature line in database",
+          "request": {
+            "name": "Creates a new signature line in database",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ElectronicPublicationAgreementSignature"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "ID",
+                  "value": "<integer>",
+                  "description": "Internal id number for contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "PersonID",
+                  "value": "<string>",
+                  "description": "ResearchId-number for the person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "Id",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "FirstName",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "LastName",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "DisplayName",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "BirthYear",
+                  "value": "<integer>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsReplacedById",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsReplacingId",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsActive",
+                  "value": "<boolean>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IsDeleted",
+                  "value": "<boolean>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasOrganizationHome",
+                  "value": "<boolean>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasIdentifiers",
+                  "value": "<boolean>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasPublications",
+                  "value": "<boolean>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "HasProjects",
+                  "value": "<boolean>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationHomeCount",
+                  "value": "<integer>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifiersCount",
+                  "value": "<integer>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierCid",
+                  "value": "[\"<string>\",\"<string>\"]",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierCplPersonId",
+                  "value": "[\"<string>\",\"<string>\"]",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "IdentifierOrcid",
+                  "value": "[\"<string>\",\"<string>\"]",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "Identifiers",
+                  "value": "[{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationHome",
+                  "value": "[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}]",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "PdbCategories",
+                  "value": "[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}]",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedBy",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedAt",
+                  "value": "<dateTime>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedBy",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedAt",
+                  "value": "<dateTime>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "DeletedBy",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "DeletedAt",
+                  "value": "<dateTime>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "SightedBy",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "SightedAt",
+                  "value": "<dateTime>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "ValidatedBy",
+                  "value": "<string>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "ValidatedDate",
+                  "value": "<dateTime>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "NeedsAttention",
+                  "value": "<boolean>",
+                  "description": "Person that signs the contract"
+                },
+                {
+                  "disabled": false,
+                  "key": "PublicationType",
+                  "value": "<string>",
+                  "description": "Used for writing out Publication Type in Emails"
+                },
+                {
+                  "disabled": false,
+                  "key": "PublicationYear",
+                  "value": "<string>",
+                  "description": "Used for writing our Publication Year in Emails"
+                },
+                {
+                  "disabled": false,
+                  "key": "PublicationTitle",
+                  "value": "<string>",
+                  "description": "Title of publication"
+                },
+                {
+                  "disabled": false,
+                  "key": "PubID",
+                  "value": "<integer>",
+                  "description": "PubId from CPL"
+                },
+                {
+                  "disabled": false,
+                  "key": "Agree",
+                  "value": "<boolean>",
+                  "description": "True if contract is signed"
+                },
+                {
+                  "disabled": false,
+                  "key": "Date",
+                  "value": "<dateTime>",
+                  "description": "Date and time in UTC of contract signment"
+                },
+                {
+                  "disabled": false,
+                  "key": "ContractText",
+                  "value": "<string>",
+                  "description": "Complete contract text"
+                },
+                {
+                  "disabled": false,
+                  "key": "Checksum",
+                  "value": "<string>",
+                  "description": "SHA256 hash calculated on the UTF-8 representation of the \r\n            string \"Person.Firstname+Person.Lastname+PublictionTitle+ContractText+Date(DateTime.ToString(\"o\"))"
+                },
+                {
+                  "disabled": false,
+                  "key": "PrintAt",
+                  "value": "<string>",
+                  "description": "Print location"
+                },
+                {
+                  "disabled": false,
+                  "key": "Decision",
+                  "value": "<string>",
+                  "description": "Signees decision"
+                },
+                {
+                  "disabled": false,
+                  "key": "Message",
+                  "value": "<string>",
+                  "description": "Message to admin"
+                },
+                {
+                  "disabled": false,
+                  "key": "IpV4",
+                  "value": "<string>",
+                  "description": "Originating IP-address"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "86a9ed64-a414-4d69-a7b9-9947e3f506ce",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ElectronicPublicationAgreementSignature"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Internal id number for contract",
+                        "type": "text/plain"
+                      },
+                      "key": "ID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "ResearchId-number for the person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "PersonID",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "Id",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "FirstName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "LastName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "DisplayName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "BirthYear",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IsReplacedById",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IsReplacingId",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IsActive",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IsDeleted",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "HasOrganizationHome",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "HasIdentifiers",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "HasPublications",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "HasProjects",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationHomeCount",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IdentifiersCount",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IdentifierCid",
+                      "value": "[\"<string>\",\"<string>\"]"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IdentifierCplPersonId",
+                      "value": "[\"<string>\",\"<string>\"]"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "IdentifierOrcid",
+                      "value": "[\"<string>\",\"<string>\"]"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "Identifiers",
+                      "value": "[{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"Value\":\"<string>\",\"DescriptionSwe\":\"<string>\",\"DescriptionEng\":\"<string>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationHome",
+                      "value": "[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}]"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "PdbCategories",
+                      "value": "[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}]"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "CreatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "CreatedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "UpdatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "UpdatedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "DeletedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "DeletedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "SightedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "SightedAt",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "ValidatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "ValidatedDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Person that signs the contract",
+                        "type": "text/plain"
+                      },
+                      "key": "NeedsAttention",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Used for writing out Publication Type in Emails",
+                        "type": "text/plain"
+                      },
+                      "key": "PublicationType",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Used for writing our Publication Year in Emails",
+                        "type": "text/plain"
+                      },
+                      "key": "PublicationYear",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Title of publication",
+                        "type": "text/plain"
+                      },
+                      "key": "PublicationTitle",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "PubId from CPL",
+                        "type": "text/plain"
+                      },
+                      "key": "PubID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "True if contract is signed",
+                        "type": "text/plain"
+                      },
+                      "key": "Agree",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Date and time in UTC of contract signment",
+                        "type": "text/plain"
+                      },
+                      "key": "Date",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Complete contract text",
+                        "type": "text/plain"
+                      },
+                      "key": "ContractText",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "SHA256 hash calculated on the UTF-8 representation of the \r\n            string \"Person.Firstname+Person.Lastname+PublictionTitle+ContractText+Date(DateTime.ToString(\"o\"))",
+                        "type": "text/plain"
+                      },
+                      "key": "Checksum",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Print location",
+                        "type": "text/plain"
+                      },
+                      "key": "PrintAt",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Signees decision",
+                        "type": "text/plain"
+                      },
+                      "key": "Decision",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Message to admin",
+                        "type": "text/plain"
+                      },
+                      "key": "Message",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Originating IP-address",
+                        "type": "text/plain"
+                      },
+                      "key": "IpV4",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ID\": \"<integer>\",\n  \"PersonID\": \"<string>\",\n  \"Person\": {\n    \"Id\": \"<string>\",\n    \"FirstName\": \"<string>\",\n    \"LastName\": \"<string>\",\n    \"DisplayName\": \"<string>\",\n    \"BirthYear\": \"<integer>\",\n    \"IsReplacedById\": \"<string>\",\n    \"IsReplacingId\": \"<string>\",\n    \"IsActive\": \"<boolean>\",\n    \"IsDeleted\": \"<boolean>\",\n    \"HasOrganizationHome\": \"<boolean>\",\n    \"HasIdentifiers\": \"<boolean>\",\n    \"HasPublications\": \"<boolean>\",\n    \"HasProjects\": \"<boolean>\",\n    \"OrganizationHomeCount\": \"<integer>\",\n    \"IdentifiersCount\": \"<integer>\",\n    \"IdentifierCid\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"IdentifierCplPersonId\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"IdentifierOrcid\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"Identifiers\": [\n      {\n        \"Id\": \"<string>\",\n        \"Type\": {\n          \"Id\": \"<string>\",\n          \"Value\": \"<string>\",\n          \"DescriptionSwe\": \"<string>\",\n          \"DescriptionEng\": \"<string>\"\n        },\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"IsActive\": \"<boolean>\",\n        \"Value\": \"<string>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"Type\": {\n          \"Id\": \"<string>\",\n          \"Value\": \"<string>\",\n          \"DescriptionSwe\": \"<string>\",\n          \"DescriptionEng\": \"<string>\"\n        },\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"IsActive\": \"<boolean>\",\n        \"Value\": \"<string>\"\n      }\n    ],\n    \"OrganizationHome\": [\n      {\n        \"Id\": \"<string>\",\n        \"OrganizationId\": \"<string>\",\n        \"OrganizationData\": {\n          \"Id\": \"<string>\",\n          \"NameSwe\": \"<string>\",\n          \"NameEng\": \"<string>\",\n          \"DisplayNameSwe\": \"<string>\",\n          \"DisplayNameEng\": \"<string>\",\n          \"DisplayPathSwe\": \"<string>\",\n          \"DisplayPathEng\": \"<string>\",\n          \"DisplayPathShortSwe\": \"<string>\",\n          \"DisplayPathShortEng\": \"<string>\",\n          \"PossibleDisplayPaths\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"City\": \"<string>\",\n          \"PostalNo\": \"<string>\",\n          \"Country\": \"<string>\",\n          \"GeoLat\": \"<string>\",\n          \"GeoLong\": \"<string>\",\n          \"Level\": \"<integer>\",\n          \"StartYear\": \"<integer>\",\n          \"EndYear\": \"<integer>\",\n          \"OrganizationTypes\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"OrganizationParents\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"ActiveOrganizationParentIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"HasIdentifiers\": \"<boolean>\",\n          \"IdentifiersCount\": \"<integer>\",\n          \"Identifiers\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"IdentifierLdapCode\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"IdentifierCplDepartmentId\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"CreatedBy\": \"<string>\",\n          \"CreatedAt\": \"<dateTime>\",\n          \"UpdatedBy\": \"<string>\",\n          \"UpdatedAt\": \"<dateTime>\",\n          \"ValidatedBy\": \"<string>\",\n          \"ValidatedDate\": \"<dateTime>\",\n          \"DeletedBy\": \"<string>\",\n          \"DeletedAt\": \"<dateTime>\",\n          \"NeedsAttention\": \"<boolean>\",\n          \"IsReplacedById\": \"<string>\",\n          \"IsActive\": \"<boolean>\"\n        },\n        \"LastUpdatedDate\": \"<dateTime>\",\n        \"TitleSwe\": \"<string>\",\n        \"TitleEng\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\",\n        \"Source\": \"<string>\",\n        \"Priority\": \"<string>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"OrganizationId\": \"<string>\",\n        \"OrganizationData\": {\n          \"Id\": \"<string>\",\n          \"NameSwe\": \"<string>\",\n          \"NameEng\": \"<string>\",\n          \"DisplayNameSwe\": \"<string>\",\n          \"DisplayNameEng\": \"<string>\",\n          \"DisplayPathSwe\": \"<string>\",\n          \"DisplayPathEng\": \"<string>\",\n          \"DisplayPathShortSwe\": \"<string>\",\n          \"DisplayPathShortEng\": \"<string>\",\n          \"PossibleDisplayPaths\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"City\": \"<string>\",\n          \"PostalNo\": \"<string>\",\n          \"Country\": \"<string>\",\n          \"GeoLat\": \"<string>\",\n          \"GeoLong\": \"<string>\",\n          \"Level\": \"<integer>\",\n          \"StartYear\": \"<integer>\",\n          \"EndYear\": \"<integer>\",\n          \"OrganizationTypes\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"OrganizationParents\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"ActiveOrganizationParentIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"HasIdentifiers\": \"<boolean>\",\n          \"IdentifiersCount\": \"<integer>\",\n          \"Identifiers\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"IdentifierLdapCode\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"IdentifierCplDepartmentId\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"CreatedBy\": \"<string>\",\n          \"CreatedAt\": \"<dateTime>\",\n          \"UpdatedBy\": \"<string>\",\n          \"UpdatedAt\": \"<dateTime>\",\n          \"ValidatedBy\": \"<string>\",\n          \"ValidatedDate\": \"<dateTime>\",\n          \"DeletedBy\": \"<string>\",\n          \"DeletedAt\": \"<dateTime>\",\n          \"NeedsAttention\": \"<boolean>\",\n          \"IsReplacedById\": \"<string>\",\n          \"IsActive\": \"<boolean>\"\n        },\n        \"LastUpdatedDate\": \"<dateTime>\",\n        \"TitleSwe\": \"<string>\",\n        \"TitleEng\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\",\n        \"Source\": \"<string>\",\n        \"Priority\": \"<string>\"\n      }\n    ],\n    \"PdbCategories\": [\n      {\n        \"Id\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\"\n      }\n    ],\n    \"CreatedBy\": \"<string>\",\n    \"CreatedAt\": \"<dateTime>\",\n    \"UpdatedBy\": \"<string>\",\n    \"UpdatedAt\": \"<dateTime>\",\n    \"DeletedBy\": \"<string>\",\n    \"DeletedAt\": \"<dateTime>\",\n    \"SightedBy\": \"<string>\",\n    \"SightedAt\": \"<dateTime>\",\n    \"ValidatedBy\": \"<string>\",\n    \"ValidatedDate\": \"<dateTime>\",\n    \"NeedsAttention\": \"<boolean>\"\n  },\n  \"PublicationType\": \"<string>\",\n  \"PublicationYear\": \"<string>\",\n  \"PublicationTitle\": \"<string>\",\n  \"PubID\": \"<integer>\",\n  \"Agree\": \"<boolean>\",\n  \"Date\": \"<dateTime>\",\n  \"ContractText\": \"<string>\",\n  \"Checksum\": \"<string>\",\n  \"PrintAt\": \"<string>\",\n  \"Decision\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"IpV4\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b6aff9cd-ee4e-42b0-a5bd-c0958554cd93",
+          "name": "Get specified electronic publishing contracts",
+          "request": {
+            "name": "Get specified electronic publishing contracts",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ElectronicPublicationAgreementSignature",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5a998ff-40f4-407b-b02f-d31a2f1492a9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ElectronicPublicationAgreementSignature",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ID\": \"<integer>\",\n  \"PersonID\": \"<string>\",\n  \"Person\": {\n    \"Id\": \"<string>\",\n    \"FirstName\": \"<string>\",\n    \"LastName\": \"<string>\",\n    \"DisplayName\": \"<string>\",\n    \"BirthYear\": \"<integer>\",\n    \"IsReplacedById\": \"<string>\",\n    \"IsReplacingId\": \"<string>\",\n    \"IsActive\": \"<boolean>\",\n    \"IsDeleted\": \"<boolean>\",\n    \"HasOrganizationHome\": \"<boolean>\",\n    \"HasIdentifiers\": \"<boolean>\",\n    \"HasPublications\": \"<boolean>\",\n    \"HasProjects\": \"<boolean>\",\n    \"OrganizationHomeCount\": \"<integer>\",\n    \"IdentifiersCount\": \"<integer>\",\n    \"IdentifierCid\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"IdentifierCplPersonId\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"IdentifierOrcid\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"Identifiers\": [\n      {\n        \"Id\": \"<string>\",\n        \"Type\": {\n          \"Id\": \"<string>\",\n          \"Value\": \"<string>\",\n          \"DescriptionSwe\": \"<string>\",\n          \"DescriptionEng\": \"<string>\"\n        },\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"IsActive\": \"<boolean>\",\n        \"Value\": \"<string>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"Type\": {\n          \"Id\": \"<string>\",\n          \"Value\": \"<string>\",\n          \"DescriptionSwe\": \"<string>\",\n          \"DescriptionEng\": \"<string>\"\n        },\n        \"CreatedBy\": \"<string>\",\n        \"CreatedAt\": \"<dateTime>\",\n        \"UpdatedBy\": \"<string>\",\n        \"UpdatedAt\": \"<dateTime>\",\n        \"IsActive\": \"<boolean>\",\n        \"Value\": \"<string>\"\n      }\n    ],\n    \"OrganizationHome\": [\n      {\n        \"Id\": \"<string>\",\n        \"OrganizationId\": \"<string>\",\n        \"OrganizationData\": {\n          \"Id\": \"<string>\",\n          \"NameSwe\": \"<string>\",\n          \"NameEng\": \"<string>\",\n          \"DisplayNameSwe\": \"<string>\",\n          \"DisplayNameEng\": \"<string>\",\n          \"DisplayPathSwe\": \"<string>\",\n          \"DisplayPathEng\": \"<string>\",\n          \"DisplayPathShortSwe\": \"<string>\",\n          \"DisplayPathShortEng\": \"<string>\",\n          \"PossibleDisplayPaths\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"City\": \"<string>\",\n          \"PostalNo\": \"<string>\",\n          \"Country\": \"<string>\",\n          \"GeoLat\": \"<string>\",\n          \"GeoLong\": \"<string>\",\n          \"Level\": \"<integer>\",\n          \"StartYear\": \"<integer>\",\n          \"EndYear\": \"<integer>\",\n          \"OrganizationTypes\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"OrganizationParents\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"ActiveOrganizationParentIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"HasIdentifiers\": \"<boolean>\",\n          \"IdentifiersCount\": \"<integer>\",\n          \"Identifiers\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"IdentifierLdapCode\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"IdentifierCplDepartmentId\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"CreatedBy\": \"<string>\",\n          \"CreatedAt\": \"<dateTime>\",\n          \"UpdatedBy\": \"<string>\",\n          \"UpdatedAt\": \"<dateTime>\",\n          \"ValidatedBy\": \"<string>\",\n          \"ValidatedDate\": \"<dateTime>\",\n          \"DeletedBy\": \"<string>\",\n          \"DeletedAt\": \"<dateTime>\",\n          \"NeedsAttention\": \"<boolean>\",\n          \"IsReplacedById\": \"<string>\",\n          \"IsActive\": \"<boolean>\"\n        },\n        \"LastUpdatedDate\": \"<dateTime>\",\n        \"TitleSwe\": \"<string>\",\n        \"TitleEng\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\",\n        \"Source\": \"<string>\",\n        \"Priority\": \"<string>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"OrganizationId\": \"<string>\",\n        \"OrganizationData\": {\n          \"Id\": \"<string>\",\n          \"NameSwe\": \"<string>\",\n          \"NameEng\": \"<string>\",\n          \"DisplayNameSwe\": \"<string>\",\n          \"DisplayNameEng\": \"<string>\",\n          \"DisplayPathSwe\": \"<string>\",\n          \"DisplayPathEng\": \"<string>\",\n          \"DisplayPathShortSwe\": \"<string>\",\n          \"DisplayPathShortEng\": \"<string>\",\n          \"PossibleDisplayPaths\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"City\": \"<string>\",\n          \"PostalNo\": \"<string>\",\n          \"Country\": \"<string>\",\n          \"GeoLat\": \"<string>\",\n          \"GeoLong\": \"<string>\",\n          \"Level\": \"<integer>\",\n          \"StartYear\": \"<integer>\",\n          \"EndYear\": \"<integer>\",\n          \"OrganizationTypes\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"OrganizationParents\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"ActiveOrganizationParentIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"HasIdentifiers\": \"<boolean>\",\n          \"IdentifiersCount\": \"<integer>\",\n          \"Identifiers\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"IdentifierLdapCode\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"IdentifierCplDepartmentId\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"CreatedBy\": \"<string>\",\n          \"CreatedAt\": \"<dateTime>\",\n          \"UpdatedBy\": \"<string>\",\n          \"UpdatedAt\": \"<dateTime>\",\n          \"ValidatedBy\": \"<string>\",\n          \"ValidatedDate\": \"<dateTime>\",\n          \"DeletedBy\": \"<string>\",\n          \"DeletedAt\": \"<dateTime>\",\n          \"NeedsAttention\": \"<boolean>\",\n          \"IsReplacedById\": \"<string>\",\n          \"IsActive\": \"<boolean>\"\n        },\n        \"LastUpdatedDate\": \"<dateTime>\",\n        \"TitleSwe\": \"<string>\",\n        \"TitleEng\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\",\n        \"Source\": \"<string>\",\n        \"Priority\": \"<string>\"\n      }\n    ],\n    \"PdbCategories\": [\n      {\n        \"Id\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\"\n      },\n      {\n        \"Id\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"StartDate\": \"<dateTime>\",\n        \"EndDate\": \"<dateTime>\"\n      }\n    ],\n    \"CreatedBy\": \"<string>\",\n    \"CreatedAt\": \"<dateTime>\",\n    \"UpdatedBy\": \"<string>\",\n    \"UpdatedAt\": \"<dateTime>\",\n    \"DeletedBy\": \"<string>\",\n    \"DeletedAt\": \"<dateTime>\",\n    \"SightedBy\": \"<string>\",\n    \"SightedAt\": \"<dateTime>\",\n    \"ValidatedBy\": \"<string>\",\n    \"ValidatedDate\": \"<dateTime>\",\n    \"NeedsAttention\": \"<boolean>\"\n  },\n  \"PublicationType\": \"<string>\",\n  \"PublicationYear\": \"<string>\",\n  \"PublicationTitle\": \"<string>\",\n  \"PubID\": \"<integer>\",\n  \"Agree\": \"<boolean>\",\n  \"Date\": \"<dateTime>\",\n  \"ContractText\": \"<string>\",\n  \"Checksum\": \"<string>\",\n  \"PrintAt\": \"<string>\",\n  \"Decision\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"IpV4\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "249f81d1-8eac-4170-b2ad-62d41ea79d73",
+    "name": "ChalmersResearch ContractImport ElectronicPublicationAgreementSignature API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

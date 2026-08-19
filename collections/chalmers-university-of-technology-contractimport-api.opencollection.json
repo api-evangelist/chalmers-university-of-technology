@@ -1,0 +1,193 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ContractImport",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ContractImport",
+            "params": [
+              {
+                "name": "item.contractImportID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.ekoID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.rDProject",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportStatus",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportProjectTitleEng",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportProjectTitleSwe",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportProjectDescriptionEng",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportProjectDescriptionSwe",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportProjectUrl",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.ekoKst",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.ekoFormedlare",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportAmount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportCurrencyCode",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.ekoProjekt",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportFunder",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportFunderID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportProjectContactPerson",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportStartDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportEndDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportImportedDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportImported",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportDeleted",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.ekoAnkomstDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "item.contractImportSource",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Not implemented"
+        },
+        {
+          "info": {
+            "name": "Create new Contract Import object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ContractImport",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create new Contract Import object"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.research.chalmers.se/api/ContractImport"
+          },
+          "docs": "Not implemented"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.research.chalmers.se/api/ContractImport"
+          },
+          "docs": "Not implemented"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

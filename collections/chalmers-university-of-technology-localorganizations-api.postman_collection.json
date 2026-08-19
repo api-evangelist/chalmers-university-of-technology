@@ -1,0 +1,101 @@
+{
+  "item": [
+    {
+      "id": "fd0abd14-61a3-45cd-a24a-98bdd9332bce",
+      "name": "LocalOrganizations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "48da769c-d277-4012-8fcb-acaee2df780f",
+          "name": "Returns only local organizations without parent/child relations for faster access",
+          "request": {
+            "name": "Returns only local organizations without parent/child relations for faster access",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "LocalOrganizations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f3f21440-acd8-441f-8ae7-fe4e7c1fdbad",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "LocalOrganizations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"OrganizationNameSv\": \"string\",\n    \"OrganizationNameEn\": \"string\",\n    \"OrganizationDisplayNameSv\": \"string\",\n    \"OrganizationDisplayNameEn\": \"string\",\n    \"OrganizationTypeID\": 3469,\n    \"ID\": 8744,\n    \"OrganizationTypeNameSv\": \"string\",\n    \"OrganizationTypeNameEn\": \"string\",\n    \"OrganizationCity\": \"string\",\n    \"OrganizationPostalNo\": \"string\",\n    \"OrganizationCountry\": \"string\",\n    \"OrganizationGeoLat\": \"string\",\n    \"OrganizationGeoLong\": \"string\",\n    \"OrganizationLevel\": 2311,\n    \"OrganizationIdentifiers\": [\n      {\n        \"ID\": 9699,\n        \"OrganizationID\": 6191,\n        \"OrganizationIdentifierID\": 5723,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      },\n      {\n        \"ID\": 8932,\n        \"OrganizationID\": 2167,\n        \"OrganizationIdentifierID\": 4989,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      }\n    ],\n    \"OrganizationParents\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      }\n    ]\n  },\n  {\n    \"OrganizationNameSv\": \"string\",\n    \"OrganizationNameEn\": \"string\",\n    \"OrganizationDisplayNameSv\": \"string\",\n    \"OrganizationDisplayNameEn\": \"string\",\n    \"OrganizationTypeID\": 2101,\n    \"ID\": 8712,\n    \"OrganizationTypeNameSv\": \"string\",\n    \"OrganizationTypeNameEn\": \"string\",\n    \"OrganizationCity\": \"string\",\n    \"OrganizationPostalNo\": \"string\",\n    \"OrganizationCountry\": \"string\",\n    \"OrganizationGeoLat\": \"string\",\n    \"OrganizationGeoLong\": \"string\",\n    \"OrganizationLevel\": 6533,\n    \"OrganizationIdentifiers\": [\n      {\n        \"ID\": 6960,\n        \"OrganizationID\": 6439,\n        \"OrganizationIdentifierID\": 1901,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      },\n      {\n        \"ID\": 6545,\n        \"OrganizationID\": 7360,\n        \"OrganizationIdentifierID\": 8256,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      }\n    ],\n    \"OrganizationParents\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "db7416d9-989e-4f6b-afe2-c2a0eee99939",
+    "name": "ChalmersResearch ContractImport LocalOrganizations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "item": [
+    {
+      "id": "124fbaeb-b2ca-41c6-9a33-03657334da61",
+      "name": "ProjectEmbargos",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bc837f9b-5ab7-4fde-ad50-ec114dde314d",
+          "name": "Returns the projects with a specified publish status, created within a specified timespan (days). \r\n            1 - New, 2- Only visible for logged in users, 3 - Public",
+          "request": {
+            "name": "Returns the projects with a specified publish status, created within a specified timespan (days). \r\n            1 - New, 2- Only visible for logged in users, 3 - Public",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectEmbargos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "publishStatus",
+                  "value": "<integer>",
+                  "description": "(Required) Current publish status. 1 - New, 2- Only visible for logged in users, 3 - Public"
+                },
+                {
+                  "disabled": false,
+                  "key": "noOfDays",
+                  "value": "<integer>",
+                  "description": "(Required) Minimum number of days since publication"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "52244380-a23e-49c9-a868-fc812d6fc956",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectEmbargos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "publishStatus",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "noOfDays",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"projectID\": 8359,\n    \"publishStatus\": 9140,\n    \"createdDate\": \"1969-06-02T21:52:15.696Z\"\n  },\n  {\n    \"projectID\": 4855,\n    \"publishStatus\": 2194,\n    \"createdDate\": \"1979-04-03T22:40:38.994Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de39147e-6538-4a86-b59f-0ea24b7f4999",
+          "name": "Not implemented",
+          "request": {
+            "name": "Not implemented",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectEmbargos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8991e370-c9f8-4abc-b20b-9d5c38e6c2f1",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectEmbargos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8fb8b70e-de85-4a49-a296-6f8b9b2fe3bb",
+          "name": "Not implemented",
+          "request": {
+            "name": "Not implemented",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectEmbargos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "ID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectTitleSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectDescriptionSwe",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectDescriptionSweHtml",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectTitleEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectDescriptionEng",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectDescriptionEngHtml",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "PublishStatus",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ProjectSource",
+                  "value": "<string>",
+                  "description": "The information source that the project was created from"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "CreatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "UpdatedBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Contracts",
+                  "value": "{\"ID\":\"<integer>\",\"EkoImportID\":\"<integer>\",\"ContractSource\":\"<string>\",\"DmpValue\":\"<string>\",\"DmpVersion\":\"<string>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"ContractStartDate\":\"<dateTime>\",\"ContractEndDate\":\"<dateTime>\",\"ContractAmount\":\"<integer>\",\"ContractCurrencyCode\":\"<string>\",\"FunderID\":[\"<string>\",\"<string>\"],\"CreatedDate\":\"<dateTime>\",\"CreatedBy\":\"<string>\",\"UpdatedDate\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"ContractOrganization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"ContractIdentifiers\":[{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"}]}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Contracts",
+                  "value": "{\"ID\":\"<integer>\",\"EkoImportID\":\"<integer>\",\"ContractSource\":\"<string>\",\"DmpValue\":\"<string>\",\"DmpVersion\":\"<string>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"ContractStartDate\":\"<dateTime>\",\"ContractEndDate\":\"<dateTime>\",\"ContractAmount\":\"<integer>\",\"ContractCurrencyCode\":\"<string>\",\"FunderID\":[\"<string>\",\"<string>\"],\"CreatedDate\":\"<dateTime>\",\"CreatedBy\":\"<string>\",\"UpdatedDate\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"ContractOrganization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"ContractIdentifiers\":[{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"}]}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Identifiers",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"ProjectIdentifierID\":\"<integer>\",\"ProjectIdentifierDescription\":\"<string>\",\"ProjectIdentifierValue\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Identifiers",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"ProjectIdentifierID\":\"<integer>\",\"ProjectIdentifierDescription\":\"<string>\",\"ProjectIdentifierValue\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Organizations",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"Organization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"OrganizationRoleID\":\"<integer>\",\"OrganizationRoleNameEn\":\"<string>\",\"OrganizationRoleNameSv\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Organizations",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"Organization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"OrganizationRoleID\":\"<integer>\",\"OrganizationRoleNameEn\":\"<string>\",\"OrganizationRoleNameSv\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Persons",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"PersonID\":\"<string>\",\"OrganizationID\":\"<string>\",\"PersonRoleID\":\"<integer>\",\"PersonRoleName_en\":\"<string>\",\"PersonRoleName_sc\":\"<string>\",\"Person\":{\"Id\":\"<string>\",\"FirstName\":\"<string>\",\"LastName\":\"<string>\",\"DisplayName\":\"<string>\",\"BirthYear\":\"<integer>\",\"IsReplacedById\":\"<string>\",\"IsReplacingId\":\"<string>\",\"IsActive\":\"<boolean>\",\"IsDeleted\":\"<boolean>\",\"HasOrganizationHome\":\"<boolean>\",\"HasIdentifiers\":\"<boolean>\",\"HasPublications\":\"<boolean>\",\"HasProjects\":\"<boolean>\",\"OrganizationHomeCount\":\"<integer>\",\"IdentifiersCount\":\"<integer>\",\"IdentifierCid\":[\"<string>\",\"<string>\"],\"IdentifierCplPersonId\":[\"<string>\",\"<string>\"],\"IdentifierOrcid\":[\"<string>\",\"<string>\"],\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"OrganizationHome\":[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}],\"PdbCategories\":[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"SightedBy\":\"<string>\",\"SightedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\"},\"PersonOrganizations\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}},{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}],\"Verified\":\"<dateTime>\",\"VerificationMailSent\":\"<dateTime>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Persons",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"PersonID\":\"<string>\",\"OrganizationID\":\"<string>\",\"PersonRoleID\":\"<integer>\",\"PersonRoleName_en\":\"<string>\",\"PersonRoleName_sc\":\"<string>\",\"Person\":{\"Id\":\"<string>\",\"FirstName\":\"<string>\",\"LastName\":\"<string>\",\"DisplayName\":\"<string>\",\"BirthYear\":\"<integer>\",\"IsReplacedById\":\"<string>\",\"IsReplacingId\":\"<string>\",\"IsActive\":\"<boolean>\",\"IsDeleted\":\"<boolean>\",\"HasOrganizationHome\":\"<boolean>\",\"HasIdentifiers\":\"<boolean>\",\"HasPublications\":\"<boolean>\",\"HasProjects\":\"<boolean>\",\"OrganizationHomeCount\":\"<integer>\",\"IdentifiersCount\":\"<integer>\",\"IdentifierCid\":[\"<string>\",\"<string>\"],\"IdentifierCplPersonId\":[\"<string>\",\"<string>\"],\"IdentifierOrcid\":[\"<string>\",\"<string>\"],\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"OrganizationHome\":[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}],\"PdbCategories\":[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"SightedBy\":\"<string>\",\"SightedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\"},\"PersonOrganizations\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}},{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}],\"Verified\":\"<dateTime>\",\"VerificationMailSent\":\"<dateTime>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Categories",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"CategoryID\":\"<string>\",\"Category\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\"},\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Categories",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"CategoryID\":\"<string>\",\"Category\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\"},\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Keywords",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"Value\":\"<string>\",\"Lang\":\"<string>\",\"Type\":\"<integer>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "Keywords",
+                  "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"Value\":\"<string>\",\"Lang\":\"<string>\",\"Type\":\"<integer>\"}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a077e817-6cf3-42e6-87d1-707d076789fc",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectEmbargos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "ID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ProjectTitleSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ProjectDescriptionSwe",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ProjectDescriptionSweHtml",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ProjectTitleEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ProjectDescriptionEng",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ProjectDescriptionEngHtml",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "PublishStatus",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The information source that the project was created from",
+                        "type": "text/plain"
+                      },
+                      "key": "ProjectSource",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "CreatedDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "CreatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "UpdatedDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "UpdatedBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Contracts",
+                      "value": "{\"ID\":\"<integer>\",\"EkoImportID\":\"<integer>\",\"ContractSource\":\"<string>\",\"DmpValue\":\"<string>\",\"DmpVersion\":\"<string>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"ContractStartDate\":\"<dateTime>\",\"ContractEndDate\":\"<dateTime>\",\"ContractAmount\":\"<integer>\",\"ContractCurrencyCode\":\"<string>\",\"FunderID\":[\"<string>\",\"<string>\"],\"CreatedDate\":\"<dateTime>\",\"CreatedBy\":\"<string>\",\"UpdatedDate\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"ContractOrganization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"ContractIdentifiers\":[{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"}]}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Contracts",
+                      "value": "{\"ID\":\"<integer>\",\"EkoImportID\":\"<integer>\",\"ContractSource\":\"<string>\",\"DmpValue\":\"<string>\",\"DmpVersion\":\"<string>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"ContractStartDate\":\"<dateTime>\",\"ContractEndDate\":\"<dateTime>\",\"ContractAmount\":\"<integer>\",\"ContractCurrencyCode\":\"<string>\",\"FunderID\":[\"<string>\",\"<string>\"],\"CreatedDate\":\"<dateTime>\",\"CreatedBy\":\"<string>\",\"UpdatedDate\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"ContractOrganization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"ContractIdentifiers\":[{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"ProjectContractID\":\"<integer>\",\"ProjectContractIdentifierID\":\"<integer>\",\"ProjectContractIdentifierDescription\":\"<string>\",\"ProjectContractIdentifierValue\":\"<string>\"}]}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Identifiers",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"ProjectIdentifierID\":\"<integer>\",\"ProjectIdentifierDescription\":\"<string>\",\"ProjectIdentifierValue\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Identifiers",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"ProjectIdentifierID\":\"<integer>\",\"ProjectIdentifierDescription\":\"<string>\",\"ProjectIdentifierValue\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Organizations",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"Organization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"OrganizationRoleID\":\"<integer>\",\"OrganizationRoleNameEn\":\"<string>\",\"OrganizationRoleNameSv\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Organizations",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"Organization\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"},{\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"},{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"LegacyOrganizationTypeId\":\"<integer>\"}],\"OrganizationParents\":[{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}},{\"Id\":\"<string>\",\"FromDate\":\"<dateTime>\",\"ToDate\":\"<dateTime>\",\"ParentOrganizationId\":\"<string>\",\"ParentOrganizationData\":{\"value\":\"<Circular reference to #/components/schemas/OrganizationOrganization detected>\"}}],\"ActiveOrganizationParentIds\":[\"<string>\",\"<string>\"],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"IdentifierLdapCode\":[\"<string>\",\"<string>\"],\"IdentifierCplDepartmentId\":[\"<string>\",\"<string>\"],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"},\"OrganizationRoleID\":\"<integer>\",\"OrganizationRoleNameEn\":\"<string>\",\"OrganizationRoleNameSv\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Persons",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"PersonID\":\"<string>\",\"OrganizationID\":\"<string>\",\"PersonRoleID\":\"<integer>\",\"PersonRoleName_en\":\"<string>\",\"PersonRoleName_sc\":\"<string>\",\"Person\":{\"Id\":\"<string>\",\"FirstName\":\"<string>\",\"LastName\":\"<string>\",\"DisplayName\":\"<string>\",\"BirthYear\":\"<integer>\",\"IsReplacedById\":\"<string>\",\"IsReplacingId\":\"<string>\",\"IsActive\":\"<boolean>\",\"IsDeleted\":\"<boolean>\",\"HasOrganizationHome\":\"<boolean>\",\"HasIdentifiers\":\"<boolean>\",\"HasPublications\":\"<boolean>\",\"HasProjects\":\"<boolean>\",\"OrganizationHomeCount\":\"<integer>\",\"IdentifiersCount\":\"<integer>\",\"IdentifierCid\":[\"<string>\",\"<string>\"],\"IdentifierCplPersonId\":[\"<string>\",\"<string>\"],\"IdentifierOrcid\":[\"<string>\",\"<string>\"],\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"OrganizationHome\":[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}],\"PdbCategories\":[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"SightedBy\":\"<string>\",\"SightedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\"},\"PersonOrganizations\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}},{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}],\"Verified\":\"<dateTime>\",\"VerificationMailSent\":\"<dateTime>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Persons",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"PersonID\":\"<string>\",\"OrganizationID\":\"<string>\",\"PersonRoleID\":\"<integer>\",\"PersonRoleName_en\":\"<string>\",\"PersonRoleName_sc\":\"<string>\",\"Person\":{\"Id\":\"<string>\",\"FirstName\":\"<string>\",\"LastName\":\"<string>\",\"DisplayName\":\"<string>\",\"BirthYear\":\"<integer>\",\"IsReplacedById\":\"<string>\",\"IsReplacingId\":\"<string>\",\"IsActive\":\"<boolean>\",\"IsDeleted\":\"<boolean>\",\"HasOrganizationHome\":\"<boolean>\",\"HasIdentifiers\":\"<boolean>\",\"HasPublications\":\"<boolean>\",\"HasProjects\":\"<boolean>\",\"OrganizationHomeCount\":\"<integer>\",\"IdentifiersCount\":\"<integer>\",\"IdentifierCid\":[\"<string>\",\"<string>\"],\"IdentifierCplPersonId\":[\"<string>\",\"<string>\"],\"IdentifierOrcid\":[\"<string>\",\"<string>\"],\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}],\"OrganizationHome\":[{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"},{\"Id\":\"<string>\",\"OrganizationId\":\"<string>\",\"OrganizationData\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"LastUpdatedDate\":\"<dateTime>\",\"TitleSwe\":\"<string>\",\"TitleEng\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"Source\":\"<string>\",\"Priority\":\"<string>\"}],\"PdbCategories\":[{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"},{\"Id\":\"<string>\",\"Name\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"SightedBy\":\"<string>\",\"SightedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\"},\"PersonOrganizations\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}},{\"ID\":\"<integer>\",\"OrganizationID\":\"<string>\",\"StartDate\":\"<dateTime>\",\"EndDate\":\"<dateTime>\",\"ProjectOrganizationPersonID\":\"<integer>\",\"OrganizationData\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"DisplayNameSwe\":\"<string>\",\"DisplayNameEng\":\"<string>\",\"DisplayPathSwe\":\"<string>\",\"DisplayPathEng\":\"<string>\",\"DisplayPathShortSwe\":\"<string>\",\"DisplayPathShortEng\":\"<string>\",\"PossibleDisplayPaths\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"City\":\"<string>\",\"PostalNo\":\"<string>\",\"Country\":\"<string>\",\"GeoLat\":\"<string>\",\"GeoLong\":\"<string>\",\"Level\":\"<integer>\",\"StartYear\":\"<integer>\",\"EndYear\":\"<integer>\",\"OrganizationTypes\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"OrganizationParents\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"ActiveOrganizationParentIds\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"HasIdentifiers\":\"<boolean>\",\"IdentifiersCount\":\"<integer>\",\"Identifiers\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierLdapCode\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"IdentifierCplDepartmentId\":[{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"}],\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"ValidatedBy\":\"<string>\",\"ValidatedDate\":\"<dateTime>\",\"DeletedBy\":\"<string>\",\"DeletedAt\":\"<dateTime>\",\"NeedsAttention\":\"<boolean>\",\"IsReplacedById\":\"<string>\",\"IsActive\":\"<boolean>\"}}],\"Verified\":\"<dateTime>\",\"VerificationMailSent\":\"<dateTime>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Categories",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"CategoryID\":\"<string>\",\"Category\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\"},\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Categories",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"CategoryID\":\"<string>\",\"Category\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\",\"Type\":{\"Id\":\"<string>\",\"NameSwe\":\"<string>\",\"NameEng\":\"<string>\"},\"Identifiers\":[{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"},{\"Id\":\"<string>\",\"Type\":{\"value\":\"<Error: Too many levels of nesting to fake this schema>\"},\"CreatedBy\":\"<string>\",\"CreatedAt\":\"<dateTime>\",\"UpdatedBy\":\"<string>\",\"UpdatedAt\":\"<dateTime>\",\"IsActive\":\"<boolean>\",\"Value\":\"<string>\"}]}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Keywords",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"Value\":\"<string>\",\"Lang\":\"<string>\",\"Type\":\"<integer>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Keywords",
+                      "value": "{\"ID\":\"<integer>\",\"ProjectID\":\"<integer>\",\"Value\":\"<string>\",\"Lang\":\"<string>\",\"Type\":\"<integer>\"}"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6e103325-956d-4796-82bf-a8e834e3e35f",
+          "name": "Not implemented",
+          "request": {
+            "name": "Not implemented",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProjectEmbargos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "projectId",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "userId",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3784088c-f433-40b7-b8e6-d5f048d4fd2d",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ProjectEmbargos"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "projectId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "userId",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "337a9df0-a620-495e-8fc9-44eac9bf791c",
+    "name": "ChalmersResearch ContractImport ProjectEmbargos API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

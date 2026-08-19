@@ -1,0 +1,105 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport Projects API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Return a list of all Projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/Projects"
+          },
+          "docs": "Return a list of all Projects"
+        },
+        {
+          "info": {
+            "name": "Create a new Project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/Projects",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new Project"
+        },
+        {
+          "info": {
+            "name": "Returns a single Project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/Projects/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Project id"
+              }
+            ]
+          },
+          "docs": "Returns a single Project"
+        },
+        {
+          "info": {
+            "name": "Update Project properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.research.chalmers.se/api/Projects/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Project id"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Project properties"
+        },
+        {
+          "info": {
+            "name": "Deletes a research project",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.research.chalmers.se/api/Projects/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Id number of project to delete"
+              }
+            ]
+          },
+          "docs": "Deletes a research project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

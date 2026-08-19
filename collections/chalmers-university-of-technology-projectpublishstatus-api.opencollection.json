@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ProjectPublishStatus API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ProjectPublishStatus",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns the publish status for a given project. \r\n            1 - New, 2- Only visible for logged in users, 3 - Public",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ProjectPublishStatus",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "query",
+                "description": "ProjectID to retrieve publish status for"
+              }
+            ]
+          },
+          "docs": "Returns the publish status for a given project. \r\n            1 - New, 2- Only visible for logged in users, 3 - Public"
+        },
+        {
+          "info": {
+            "name": "Sets the publish status for a given project\r\n            1 - New, 2- Only visible for logged in users, 3 - Public",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ProjectPublishStatus",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sets the publish status for a given project\r\n            1 - New, 2- Only visible for logged in users, 3 - Public"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.research.chalmers.se/api/ProjectPublishStatus"
+          },
+          "docs": "Not implemented"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.research.chalmers.se/api/ProjectPublishStatus",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "userId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Not implemented"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

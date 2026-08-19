@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ElectronicPublicationAgreementSignature API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ElectronicPublicationAgreementSignature",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Gets a list of all electronic publishing contracts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ElectronicPublicationAgreementSignature"
+          },
+          "docs": "Gets a list of all electronic publishing contracts"
+        },
+        {
+          "info": {
+            "name": "Creates a new signature line in database",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ElectronicPublicationAgreementSignature",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new signature line in database"
+        },
+        {
+          "info": {
+            "name": "Get specified electronic publishing contracts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ElectronicPublicationAgreementSignature/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get specified electronic publishing contracts"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

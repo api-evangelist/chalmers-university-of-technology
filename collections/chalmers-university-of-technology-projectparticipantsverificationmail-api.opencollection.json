@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport ProjectParticipantsVerificationMail API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ProjectParticipantsVerificationMail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns a list of persons eligable for Verification Mails.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerificationMail"
+          },
+          "docs": "Returns a list of persons eligable for Verification Mails."
+        },
+        {
+          "info": {
+            "name": "Sets verifiction mail sent date for a given person",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerificationMail",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sets verifiction mail sent date for a given person"
+        },
+        {
+          "info": {
+            "name": "Not implemented",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerificationMail"
+          },
+          "docs": "Not implemented"
+        },
+        {
+          "info": {
+            "name": "Removes the verification mail sent date for a person and project",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.research.chalmers.se/api/ProjectParticipantsVerificationMail",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "query",
+                "description": "Project"
+              },
+              {
+                "name": "userId",
+                "value": "",
+                "type": "query",
+                "description": "Person"
+              }
+            ]
+          },
+          "docs": "Removes the verification mail sent date for a person and project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

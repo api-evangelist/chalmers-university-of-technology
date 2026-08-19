@@ -1,0 +1,174 @@
+{
+  "item": [
+    {
+      "id": "35f37235-bb21-4e56-a25f-a9298abeb314",
+      "name": "SolrImport",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "198c6a82-7e3c-4247-b42b-f42c64da4bcc",
+          "name": "Solr Import Post",
+          "request": {
+            "name": "Solr Import Post",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SolrImport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "coreName",
+                  "value": "<string>",
+                  "description": "Solr core name"
+                },
+                {
+                  "disabled": false,
+                  "key": "importType",
+                  "value": "<string>",
+                  "description": "Type of import, Delta or Full"
+                },
+                {
+                  "disabled": false,
+                  "key": "docId",
+                  "value": "<integer>",
+                  "description": "Document Id when requesting Delta"
+                },
+                {
+                  "disabled": false,
+                  "key": "doOptimize",
+                  "value": "<boolean>",
+                  "description": "Optimize index after import"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "950adbe5-e7e1-4611-92b9-33d20bd9d663",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "SolrImport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Solr core name",
+                        "type": "text/plain"
+                      },
+                      "key": "coreName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Type of import, Delta or Full",
+                        "type": "text/plain"
+                      },
+                      "key": "importType",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Document Id when requesting Delta",
+                        "type": "text/plain"
+                      },
+                      "key": "docId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Optimize index after import",
+                        "type": "text/plain"
+                      },
+                      "key": "doOptimize",
+                      "value": "<boolean>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d8ab55a3-ee9e-464c-9208-a5af61a57ba4",
+    "name": "ChalmersResearch ContractImport SolrImport API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

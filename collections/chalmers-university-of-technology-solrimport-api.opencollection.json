@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport SolrImport API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SolrImport",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "SolrImport_Post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.research.chalmers.se/api/SolrImport",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ChalmersResearch ContractImport SimpleProjectMetadata API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SimpleProjectMetadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns simple metadata for a single Project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.research.chalmers.se/api/SimpleProjectMetadata/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Project id"
+              }
+            ]
+          },
+          "docs": "Returns simple metadata for a single Project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

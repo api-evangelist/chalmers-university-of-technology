@@ -1,0 +1,119 @@
+{
+  "item": [
+    {
+      "id": "9295c7bf-6f8a-4ad1-bc41-6505e58cfbf8",
+      "name": "SimpleProjectMetadata",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "afc10f04-8b61-4a72-a83c-4b238f453007",
+          "name": "Returns simple metadata for a single Project",
+          "request": {
+            "name": "Returns simple metadata for a single Project",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SimpleProjectMetadata",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) Project id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8ce6bf16-abf0-41e0-b19e-8138a604d7d2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "SimpleProjectMetadata",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Project id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ID\": 317,\n  \"ProjectTitleSwe\": \"string\",\n  \"ProjectTitleEng\": \"string\",\n  \"StartDate\": \"2006-02-26T19:47:52.429Z\",\n  \"EndDate\": \"2009-07-31T23:32:32.866Z\",\n  \"PublishStatus\": 2371,\n  \"CreatedDate\": \"2018-02-06T16:26:33.373Z\",\n  \"UpdatedDate\": \"1957-08-04T01:51:25.088Z\",\n  \"Identifiers\": [\n    {\n      \"ID\": 1677,\n      \"ProjectID\": 8382,\n      \"ProjectIdentifierID\": 4875,\n      \"ProjectIdentifierDescription\": \"string\",\n      \"ProjectIdentifierValue\": \"string\"\n    },\n    {\n      \"ID\": 6020,\n      \"ProjectID\": 9962,\n      \"ProjectIdentifierID\": 6913,\n      \"ProjectIdentifierDescription\": \"string\",\n      \"ProjectIdentifierValue\": \"string\"\n    }\n  ],\n  \"Contracts\": [\n    {\n      \"ID\": 9879,\n      \"ProjectID\": 7732,\n      \"OrganizationID\": \"string\",\n      \"FunderID\": [\n        \"string\",\n        \"string\"\n      ],\n      \"ContractStartDate\": \"1962-07-26T02:02:08.882Z\",\n      \"ContractEndDate\": \"1973-09-22T08:50:30.178Z\",\n      \"CreatedDate\": \"1995-11-18T16:32:14.829Z\",\n      \"UpdatedDate\": \"1952-05-19T00:12:55.794Z\",\n      \"ContractOrganization\": {\n        \"Id\": \"string\",\n        \"NameSwe\": \"string\",\n        \"NameEng\": \"string\",\n        \"DisplayNameSwe\": \"string\",\n        \"DisplayNameEng\": \"string\",\n        \"DisplayPathSwe\": \"string\",\n        \"DisplayPathEng\": \"string\",\n        \"DisplayPathShortSwe\": \"string\",\n        \"DisplayPathShortEng\": \"string\",\n        \"City\": \"string\",\n        \"Country\": \"string\",\n        \"GeoLat\": \"string\",\n        \"GeoLong\": \"string\",\n        \"Level\": 9111,\n        \"StartYear\": 1294,\n        \"EndYear\": 1150,\n        \"OrganizationTypes\": [\n          {\n            \"NameSwe\": \"string\",\n            \"NameEng\": \"string\",\n            \"LegacyOrganizationTypeId\": 6785\n          },\n          {\n            \"NameSwe\": \"string\",\n            \"NameEng\": \"string\",\n            \"LegacyOrganizationTypeId\": 7685\n          }\n        ],\n        \"OrganizationParents\": [\n          {\n            \"FromDate\": \"1991-01-21T03:18:45.323Z\",\n            \"ToDate\": \"1992-03-02T22:37:54.263Z\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/SimpleOrganization detected>\"\n            }\n          },\n          {\n            \"FromDate\": \"2012-08-01T19:37:33.148Z\",\n            \"ToDate\": \"2013-08-26T02:16:19.354Z\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/SimpleOrganization detected>\"\n            }\n          }\n        ],\n        \"Identifiers\": [\n          {\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": \"string\",\n            \"UpdatedAt\": \"1994-11-13T14:26:42.102Z\",\n            \"IsActive\": true,\n            \"Value\": \"string\"\n          },\n          {\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": \"string\",\n            \"UpdatedAt\": \"2010-11-05T04:10:45.729Z\",\n            \"IsActive\": false,\n            \"Value\": \"string\"\n          }\n        ],\n        \"IdentifierLdapCode\": [\n          \"string\",\n          \"string\"\n        ],\n        \"IdentifierCplDepartmentId\": [\n          \"string\",\n          \"string\"\n        ],\n        \"DeletedBy\": \"string\",\n        \"DeletedAt\": \"2023-06-10T09:56:10.082Z\"\n      },\n      \"ContractIdentifiers\": [\n        {\n          \"ID\": 8875,\n          \"ProjectContractID\": 7142,\n          \"ProjectContractIdentifierID\": 9564,\n          \"ProjectContractIdentifierDescription\": \"string\",\n          \"ProjectContractIdentifierValue\": \"string\"\n        },\n        {\n          \"ID\": 9947,\n          \"ProjectContractID\": 801,\n          \"ProjectContractIdentifierID\": 592,\n          \"ProjectContractIdentifierDescription\": \"string\",\n          \"ProjectContractIdentifierValue\": \"string\"\n        }\n      ]\n    },\n    {\n      \"ID\": 5152,\n      \"ProjectID\": 4550,\n      \"OrganizationID\": \"string\",\n      \"FunderID\": [\n        \"string\",\n        \"string\"\n      ],\n      \"ContractStartDate\": \"2014-11-13T08:41:29.982Z\",\n      \"ContractEndDate\": \"2020-04-18T01:49:54.344Z\",\n      \"CreatedDate\": \"1946-11-03T14:22:23.278Z\",\n      \"UpdatedDate\": \"1980-05-02T08:32:41.853Z\",\n      \"ContractOrganization\": {\n        \"Id\": \"string\",\n        \"NameSwe\": \"string\",\n        \"NameEng\": \"string\",\n        \"DisplayNameSwe\": \"string\",\n        \"DisplayNameEng\": \"string\",\n        \"DisplayPathSwe\": \"string\",\n        \"DisplayPathEng\": \"string\",\n        \"DisplayPathShortSwe\": \"string\",\n        \"DisplayPathShortEng\": \"string\",\n        \"City\": \"string\",\n        \"Country\": \"string\",\n        \"GeoLat\": \"string\",\n        \"GeoLong\": \"string\",\n        \"Level\": 4554,\n        \"StartYear\": 25,\n        \"EndYear\": 856,\n        \"OrganizationTypes\": [\n          {\n            \"NameSwe\": \"string\",\n            \"NameEng\": \"string\",\n            \"LegacyOrganizationTypeId\": 1533\n          },\n          {\n            \"NameSwe\": \"string\",\n            \"NameEng\": \"string\",\n            \"LegacyOrganizationTypeId\": 394\n          }\n        ],\n        \"OrganizationParents\": [\n          {\n            \"FromDate\": \"2020-01-23T01:14:20.082Z\",\n            \"ToDate\": \"2025-07-24T19:31:18.925Z\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/SimpleOrganization detected>\"\n            }\n          },\n          {\n            \"FromDate\": \"1988-06-14T07:25:27.596Z\",\n            \"ToDate\": \"2009-11-23T09:39:52.287Z\",\n            \"ParentOrganizationData\": {\n              \"value\": \"<Circular reference to #/components/schemas/SimpleOrganization detected>\"\n            }\n          }\n        ],\n        \"Identifiers\": [\n          {\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": \"string\",\n            \"UpdatedAt\": \"1973-03-16T21:46:15.464Z\",\n            \"IsActive\": false,\n            \"Value\": \"string\"\n          },\n          {\n            \"Type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"UpdatedBy\": \"string\",\n            \"UpdatedAt\": \"2015-02-16T17:47:40.942Z\",\n            \"IsActive\": true,\n            \"Value\": \"string\"\n          }\n        ],\n        \"IdentifierLdapCode\": [\n          \"string\",\n          \"string\"\n        ],\n        \"IdentifierCplDepartmentId\": [\n          \"string\",\n          \"string\"\n        ],\n        \"DeletedBy\": \"string\",\n        \"DeletedAt\": \"1981-10-03T13:45:57.939Z\"\n      },\n      \"ContractIdentifiers\": [\n        {\n          \"ID\": 7442,\n          \"ProjectContractID\": 3799,\n          \"ProjectContractIdentifierID\": 9713,\n          \"ProjectContractIdentifierDescription\": \"string\",\n          \"ProjectContractIdentifierValue\": \"string\"\n        },\n        {\n          \"ID\": 5630,\n          \"ProjectContractID\": 8715,\n          \"ProjectContractIdentifierID\": 6158,\n          \"ProjectContractIdentifierDescription\": \"string\",\n          \"ProjectContractIdentifierValue\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "423e4059-5f28-4492-b720-693d01ffe974",
+    "name": "ChalmersResearch ContractImport SimpleProjectMetadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}

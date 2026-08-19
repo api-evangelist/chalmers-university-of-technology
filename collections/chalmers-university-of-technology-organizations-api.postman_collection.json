@@ -1,0 +1,867 @@
+{
+  "item": [
+    {
+      "id": "aecfad8c-732c-49ce-b1bc-c7d5b2ce2bbd",
+      "name": "Organizations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8dbd8cb1-4bdd-42b0-8d4e-1f8b0b074e69",
+          "name": "Returns a list of all Organizations in the database.",
+          "request": {
+            "name": "Returns a list of all Organizations in the database.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "Organizations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "107dbbf6-2a0b-4f2c-932d-1a9ff4938a8a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "Organizations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"OrganizationNameSv\": \"string\",\n    \"OrganizationNameEn\": \"string\",\n    \"OrganizationDisplayNameSv\": \"string\",\n    \"OrganizationDisplayNameEn\": \"string\",\n    \"OrganizationTypeID\": 4933,\n    \"ID\": 7308,\n    \"OrganizationTypeNameSv\": \"string\",\n    \"OrganizationTypeNameEn\": \"string\",\n    \"OrganizationCity\": \"string\",\n    \"OrganizationPostalNo\": \"string\",\n    \"OrganizationCountry\": \"string\",\n    \"OrganizationGeoLat\": \"string\",\n    \"OrganizationGeoLong\": \"string\",\n    \"OrganizationLevel\": 9138,\n    \"OrganizationIdentifiers\": [\n      {\n        \"ID\": 6968,\n        \"OrganizationID\": 1423,\n        \"OrganizationIdentifierID\": 9566,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      },\n      {\n        \"ID\": 1643,\n        \"OrganizationID\": 3257,\n        \"OrganizationIdentifierID\": 6398,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      }\n    ],\n    \"OrganizationParents\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      }\n    ]\n  },\n  {\n    \"OrganizationNameSv\": \"string\",\n    \"OrganizationNameEn\": \"string\",\n    \"OrganizationDisplayNameSv\": \"string\",\n    \"OrganizationDisplayNameEn\": \"string\",\n    \"OrganizationTypeID\": 5110,\n    \"ID\": 5075,\n    \"OrganizationTypeNameSv\": \"string\",\n    \"OrganizationTypeNameEn\": \"string\",\n    \"OrganizationCity\": \"string\",\n    \"OrganizationPostalNo\": \"string\",\n    \"OrganizationCountry\": \"string\",\n    \"OrganizationGeoLat\": \"string\",\n    \"OrganizationGeoLong\": \"string\",\n    \"OrganizationLevel\": 200,\n    \"OrganizationIdentifiers\": [\n      {\n        \"ID\": 1207,\n        \"OrganizationID\": 8358,\n        \"OrganizationIdentifierID\": 2163,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      },\n      {\n        \"ID\": 8916,\n        \"OrganizationID\": 7701,\n        \"OrganizationIdentifierID\": 6229,\n        \"OrganizationIdentifierDescription\": \"string\",\n        \"OrganizationIdentifierValue\": \"string\"\n      }\n    ],\n    \"OrganizationParents\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "503ad728-4052-4ad5-b691-c128e406c090",
+          "name": "Create a new Organization",
+          "request": {
+            "name": "Create a new Organization",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "Organizations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "OrganizationNameSv",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationNameEn",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationDisplayNameSv",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationDisplayNameEn",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypeID",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "ID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypeNameSv",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypeNameEn",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationCity",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationPostalNo",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationCountry",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationGeoLat",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationGeoLong",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationLevel",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationIdentifiers",
+                  "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationIdentifiers",
+                  "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationParents",
+                  "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationParents",
+                  "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a21fe22b-2746-44b8-94eb-10bea1f99a6a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "Organizations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationNameSv",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationNameEn",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationDisplayNameSv",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationDisplayNameEn",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationTypeID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationTypeNameSv",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationTypeNameEn",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationCity",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationPostalNo",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationCountry",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationGeoLat",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationGeoLong",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationLevel",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationIdentifiers",
+                      "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationIdentifiers",
+                      "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationParents",
+                      "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationParents",
+                      "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"OrganizationNameSv\": \"<string>\",\n  \"OrganizationNameEn\": \"<string>\",\n  \"OrganizationDisplayNameSv\": \"<string>\",\n  \"OrganizationDisplayNameEn\": \"<string>\",\n  \"OrganizationTypeID\": \"<integer>\",\n  \"ID\": \"<integer>\",\n  \"OrganizationTypeNameSv\": \"<string>\",\n  \"OrganizationTypeNameEn\": \"<string>\",\n  \"OrganizationCity\": \"<string>\",\n  \"OrganizationPostalNo\": \"<string>\",\n  \"OrganizationCountry\": \"<string>\",\n  \"OrganizationGeoLat\": \"<string>\",\n  \"OrganizationGeoLong\": \"<string>\",\n  \"OrganizationLevel\": \"<integer>\",\n  \"OrganizationIdentifiers\": [\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    },\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    }\n  ],\n  \"OrganizationParents\": [\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    },\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81622661-1c5c-4ec7-ba07-ed3434a68858",
+          "name": "Return details about a specific Organization",
+          "request": {
+            "name": "Return details about a specific Organization",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "Organizations",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) Organization id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4c9bba56-e47b-4da5-8202-efb7ce671d27",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "Organizations",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Organization id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"OrganizationNameSv\": \"<string>\",\n  \"OrganizationNameEn\": \"<string>\",\n  \"OrganizationDisplayNameSv\": \"<string>\",\n  \"OrganizationDisplayNameEn\": \"<string>\",\n  \"OrganizationTypeID\": \"<integer>\",\n  \"ID\": \"<integer>\",\n  \"OrganizationTypeNameSv\": \"<string>\",\n  \"OrganizationTypeNameEn\": \"<string>\",\n  \"OrganizationCity\": \"<string>\",\n  \"OrganizationPostalNo\": \"<string>\",\n  \"OrganizationCountry\": \"<string>\",\n  \"OrganizationGeoLat\": \"<string>\",\n  \"OrganizationGeoLong\": \"<string>\",\n  \"OrganizationLevel\": \"<integer>\",\n  \"OrganizationIdentifiers\": [\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    },\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    }\n  ],\n  \"OrganizationParents\": [\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    },\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70397db7-9566-4ea1-b59a-2205155f0c18",
+          "name": "Updates an organization",
+          "request": {
+            "name": "Updates an organization",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "Organizations",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) Organization to update"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "OrganizationNameSv",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationNameEn",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationDisplayNameSv",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationDisplayNameEn",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypeID",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "ID",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypeNameSv",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationTypeNameEn",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationCity",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationPostalNo",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationCountry",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationGeoLat",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationGeoLong",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationLevel",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationIdentifiers",
+                  "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationIdentifiers",
+                  "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationParents",
+                  "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                },
+                {
+                  "disabled": false,
+                  "key": "OrganizationParents",
+                  "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4588e788-eb08-4a86-9fb3-1d4ef9b18d13",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "Organizations",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Organization to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationNameSv",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationNameEn",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationDisplayNameSv",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationDisplayNameEn",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "OrganizationTypeID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ID",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationTypeNameSv",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationTypeNameEn",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationCity",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationPostalNo",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationCountry",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationGeoLat",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationGeoLong",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationLevel",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationIdentifiers",
+                      "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationIdentifiers",
+                      "value": "{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationParents",
+                      "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "OrganizationParents",
+                      "value": "{\"OrganizationNameSv\":\"<string>\",\"OrganizationNameEn\":\"<string>\",\"OrganizationDisplayNameSv\":\"<string>\",\"OrganizationDisplayNameEn\":\"<string>\",\"OrganizationTypeID\":\"<integer>\",\"ID\":\"<integer>\",\"OrganizationTypeNameSv\":\"<string>\",\"OrganizationTypeNameEn\":\"<string>\",\"OrganizationCity\":\"<string>\",\"OrganizationPostalNo\":\"<string>\",\"OrganizationCountry\":\"<string>\",\"OrganizationGeoLat\":\"<string>\",\"OrganizationGeoLong\":\"<string>\",\"OrganizationLevel\":\"<integer>\",\"OrganizationIdentifiers\":[{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"},{\"ID\":\"<integer>\",\"OrganizationID\":\"<integer>\",\"OrganizationIdentifierID\":\"<integer>\",\"OrganizationIdentifierDescription\":\"<string>\",\"OrganizationIdentifierValue\":\"<string>\"}],\"OrganizationParents\":[{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"},{\"value\":\"<Circular reference to #/components/schemas/Organization detected>\"}]}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"OrganizationNameSv\": \"<string>\",\n  \"OrganizationNameEn\": \"<string>\",\n  \"OrganizationDisplayNameSv\": \"<string>\",\n  \"OrganizationDisplayNameEn\": \"<string>\",\n  \"OrganizationTypeID\": \"<integer>\",\n  \"ID\": \"<integer>\",\n  \"OrganizationTypeNameSv\": \"<string>\",\n  \"OrganizationTypeNameEn\": \"<string>\",\n  \"OrganizationCity\": \"<string>\",\n  \"OrganizationPostalNo\": \"<string>\",\n  \"OrganizationCountry\": \"<string>\",\n  \"OrganizationGeoLat\": \"<string>\",\n  \"OrganizationGeoLong\": \"<string>\",\n  \"OrganizationLevel\": \"<integer>\",\n  \"OrganizationIdentifiers\": [\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    },\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    }\n  ],\n  \"OrganizationParents\": [\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    },\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e540661f-734b-499d-8bd7-dac7cd46a149",
+          "name": "Deletes an organization [Not implemented]",
+          "request": {
+            "name": "Deletes an organization [Not implemented]",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "Organizations",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) Id number of the organization to delete"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5c29ea5f-a963-4f57-aa32-03befcb802ce",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "Organizations",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Id number of the organization to delete"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"OrganizationNameSv\": \"<string>\",\n  \"OrganizationNameEn\": \"<string>\",\n  \"OrganizationDisplayNameSv\": \"<string>\",\n  \"OrganizationDisplayNameEn\": \"<string>\",\n  \"OrganizationTypeID\": \"<integer>\",\n  \"ID\": \"<integer>\",\n  \"OrganizationTypeNameSv\": \"<string>\",\n  \"OrganizationTypeNameEn\": \"<string>\",\n  \"OrganizationCity\": \"<string>\",\n  \"OrganizationPostalNo\": \"<string>\",\n  \"OrganizationCountry\": \"<string>\",\n  \"OrganizationGeoLat\": \"<string>\",\n  \"OrganizationGeoLong\": \"<string>\",\n  \"OrganizationLevel\": \"<integer>\",\n  \"OrganizationIdentifiers\": [\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    },\n    {\n      \"ID\": \"<integer>\",\n      \"OrganizationID\": \"<integer>\",\n      \"OrganizationIdentifierID\": \"<integer>\",\n      \"OrganizationIdentifierDescription\": \"<string>\",\n      \"OrganizationIdentifierValue\": \"<string>\"\n    }\n  ],\n  \"OrganizationParents\": [\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    },\n    {\n      \"OrganizationNameSv\": \"<string>\",\n      \"OrganizationNameEn\": \"<string>\",\n      \"OrganizationDisplayNameSv\": \"<string>\",\n      \"OrganizationDisplayNameEn\": \"<string>\",\n      \"OrganizationTypeID\": \"<integer>\",\n      \"ID\": \"<integer>\",\n      \"OrganizationTypeNameSv\": \"<string>\",\n      \"OrganizationTypeNameEn\": \"<string>\",\n      \"OrganizationCity\": \"<string>\",\n      \"OrganizationPostalNo\": \"<string>\",\n      \"OrganizationCountry\": \"<string>\",\n      \"OrganizationGeoLat\": \"<string>\",\n      \"OrganizationGeoLong\": \"<string>\",\n      \"OrganizationLevel\": \"<integer>\",\n      \"OrganizationIdentifiers\": [\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        },\n        {\n          \"ID\": \"<integer>\",\n          \"OrganizationID\": \"<integer>\",\n          \"OrganizationIdentifierID\": \"<integer>\",\n          \"OrganizationIdentifierDescription\": \"<string>\",\n          \"OrganizationIdentifierValue\": \"<string>\"\n        }\n      ],\n      \"OrganizationParents\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Organization detected>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.research.chalmers.se",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7af6a853-b161-4f35-843b-b9ed06362cd2",
+    "name": "ChalmersResearch ContractImport Organizations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.",
+      "type": "text/plain"
+    }
+  }
+}
