@@ -356,6 +356,8 @@ apis:
   humanURL: https://api.research.chalmers.se/
   baseURL: https://api.research.chalmers.se/
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
@@ -628,6 +630,8 @@ apis:
   humanURL: https://api.research.chalmers.se/
   baseURL: https://api.research.chalmers.se/
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
