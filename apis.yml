@@ -841,6 +841,9 @@ apis:
   - type: x-json-ld
     url: json-ld/chalmers-university-of-technology-context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/chalmers-university-of-technology-capability-edges.yml
+    name: Chalmers University of Technology Business Capability Map
   - type: AgenticAccess
     url: agentic-access/chalmers-university-of-technology-agentic-access.yml
   - type: DomainSecurity

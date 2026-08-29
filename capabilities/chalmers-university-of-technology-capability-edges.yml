@@ -1,0 +1,44 @@
+slug: chalmers-university-of-technology
+provider: Chalmers University of Technology
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Education
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Projects
+  spec_file: chalmers-university-of-technology-projects-api-openapi.yml
+  capability_id: BC-4780
+  capability_id_l1: BC-4780
+  capability_name: Research & Scholarship Management
+  confidence: 0.8
+  evidence: POST /api/Projects 'Create a new Project'; DELETE /api/Projects/{id} 'Deletes a research project';
+    schemas ProjectContract, ProjectContractIdentifier
+  reason: Full CRUD over research project records including funder/contract linkages in a university research
+    information system — clearly Research & Scholarship Management. Split between portfolio (.10) and
+    grant management (.20) is ambiguous, so L1 only.
+- tag: DeltaImportCplPublication
+  spec_file: chalmers-university-of-technology-deltaimportcplpublication-api-openapi.yml
+  capability_id: BC-4780.40
+  capability_id_l1: BC-4780
+  capability_name: Scholarly Output & Publication Management
+  confidence: 0.7
+  evidence: Request a delta-import of a publication in CPL using Azure Servicebus
+  reason: Synchronises publication records into the research publications repository — scholarly output
+    stewardship, though the operation is largely a data-integration mechanism.
+- tag: ElectronicPublicationAgreementSignature
+  spec_file: chalmers-university-of-technology-electronicpublicationagreementsignature-api-openapi.yml
+  capability_id: BC-4780.40
+  capability_id_l1: BC-4780
+  capability_name: Scholarly Output & Publication Management
+  confidence: 0.7
+  evidence: Gets a list of all electronic publishing contracts; Creates a new signature line in database
+  reason: Manages electronic publishing agreements signed by authors for deposit of scholarly publications
+    — publication stewardship in the research repository.
