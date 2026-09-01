@@ -2,17 +2,22 @@
 aid: chalmers-university-of-technology
 name: Chalmers University of Technology
 description: >-
-  Chalmers University of Technology (Chalmers tekniska hogskola) is a private
-  technical university in Gothenburg, Sweden, ranked #139 in the QS World
-  University Rankings 2025. Its public, machine-readable footprint is centered
-  on research information and library/repository services rather than a unified
-  developer portal. Confirmed surfaces include the Chalmers Research API
-  (api.research.chalmers.se), OAI-PMH metadata interfaces for the Chalmers
-  Research portal and the Chalmers Open Digital Repository (ODR), and the
-  Chalmers University Library GitHub organization hosting open-source data and
-  metadata tooling. There is no single consolidated, self-service developer
-  portal; access is API/repository specific.
+  Chalmers University of Technology (Chalmers tekniska hogskola) is a private technical university in
+  Gothenburg, Sweden, run by the Chalmers Foundation and ranked in the QS World University Rankings.
+  Unlike most of the university cohort, Chalmers operates a genuinely institution-owned API: the
+  Chalmers Research API at api.research.chalmers.se, a first-party CRIS interface over research
+  projects, organizations and publications, described by a live Swagger 2.0 document and protected by
+  HTTP Basic authentication (public reads return 401). Around it sit two institution-hosted OAI-PMH
+  endpoints — Chalmers Research (records back to 1942) and the Chalmers Open Digital Repository, a
+  self-hosted DSpace 8.3 whose REST API answers on odr.chalmers.se — plus a SAML 2.0 identity
+  provider registered in SWAMID, the Swedish national federation. Chalmers is a DataCite consortium
+  member with its own repository account, and its CRIS carries ORCID iDs. There is no consolidated,
+  self-service developer portal, no public open-data portal and no public course-catalog API; the
+  teaching, timetable and data-deposit layers run on vendor tenancies (Canvas, TimeEdit, SND) whose
+  contracts belong to those vendors, not to Chalmers.
 type: Index
+x-type: university
+x-category: Technical University
 deliveryModel:
   model: saas
   open_source: false
@@ -46,17 +51,90 @@ tags:
   - Education
   - Higher Education
   - University
+  - Technical University
   - Research
+  - Research Data
   - Open Data
   - Library
   - OAI-PMH
+  - Identity Federation
+  - CRIS
   - Sweden
 created: '2026-06-03'
-modified: '2026-06-03'
+modified: '2026-09-01'
 specificationVersion: '0.23'
+x-coverage:
+  state: covered
+  reason: covered
+  detail: >-
+    Chalmers is one of the minority of universities in this cohort that operates a first-party API.
+    The Chalmers Research API (api.research.chalmers.se) serves a live Swagger 2.0 description over
+    25 paths and 46 definitions from the institution's own host, and returns 401 on data reads
+    because it is Basic-authenticated — gated, but real and institution-operated, so the 22 refined
+    per-tag OpenAPIs in this repo are correctly attributed. Two institution-hosted OAI-PMH
+    repositories and a self-hosted DSpace 8.3 REST API were probed live, and a SAML 2.0 identity
+    provider registered in SWAMID was retrieved per-entity from the federation's MDQ service.
+    DataCite membership and repository accounts were confirmed against DataCite's own API. What
+    Chalmers does NOT publish is equally clear: api.chalmers.se, developer.chalmers.se,
+    data.chalmers.se and opendata.chalmers.se do not resolve at all, there is no consolidated
+    developer portal, no llms.txt and no security.txt, the course catalog is HTML-only (roughly
+    thousands of kursplaner pages in the sitemap, no API), and the previously recorded API
+    documentation pointer https://api.research.chalmers.se/Help now returns 500 and was replaced with
+    the live Swagger UI at /swagger. Teaching, timetabling and data deposit run on vendor tenancies
+    (Instructure Canvas, TimeEdit, SND/DORIS) which are recorded as relationships, not as Chalmers
+    contracts. One language-barrier note: the institutional rules for the use of AI tools exist only
+    on the Swedish surface — the English path 404s.
+  evidence:
+    - url: https://api.research.chalmers.se/swagger/docs/v1
+      status: 200
+    - url: https://api.research.chalmers.se/swagger
+      status: 200
+    - url: https://api.research.chalmers.se/api/Projects
+      status: 401
+    - url: https://api.research.chalmers.se/Help
+      status: 500
+    - url: https://research.chalmers.se/oai-pmh/general/?verb=Identify
+      status: 200
+    - url: https://odr.chalmers.se/server/oai/request?verb=Identify
+      status: 200
+    - url: https://odr.chalmers.se/server/api
+      status: 200
+    - url: https://odr.chalmers.se/server/api/core/items?size=1
+      status: 401
+    - url: https://mds.swamid.se/entities/http%3A%2F%2Fidp.chalmers.se%2Fadfs%2Fservices%2Ftrust
+      status: 200
+    - url: https://api.datacite.org/providers/ojuo
+      status: 200
+    - url: https://api.datacite.org/clients/snd.chalmers
+      status: 200
+    - url: https://api.ror.org/organizations?query=Chalmers
+      status: 200
+    - url: https://chalmers.instructure.com/
+      status: 200
+    - url: https://cloud.timeedit.net/chalmers/web/public/
+      status: 200
+    - url: https://api.chalmers.se/
+      status: 0
+      note: DNS does not resolve
+    - url: https://developer.chalmers.se/
+      status: 0
+      note: DNS does not resolve
+    - url: https://data.chalmers.se/
+      status: 0
+      note: DNS does not resolve
+    - url: https://www.chalmers.se/llms.txt
+      status: 404
+    - url: https://www.chalmers.se/.well-known/security.txt
+      status: 404
+    - url: https://www.chalmers.se/en/education/your-studies/bachelors-and-masters-thesis/rules-for-the-use-of-ai-tools/
+      status: 404
+      note: English AI-tools rules absent; Swedish page returns 200
+  generated: '2026-09-01'
+  method: probed
 apis:
 - aid: chalmers-university-of-technology:research-oai-pmh
   name: Chalmers Research OAI-PMH
+  x-operator: institution
   description: >-
     OAI-PMH 2.0 metadata harvesting interface for the Chalmers Research portal (research.chalmers.se),
     covering Chalmers research publications with records dating back to 1942. Returns a valid Identify
@@ -74,6 +152,7 @@ apis:
     url: https://research.chalmers.se/oai-pmh/general/?verb=Identify
 - aid: chalmers-university-of-technology:odr-oai-pmh
   name: Chalmers Open Digital Repository (ODR) OAI-PMH
+  x-operator: institution
   description: >-
     OAI-PMH 2.0 metadata harvesting interface for the Chalmers Open Digital Repository (ODR), which holds
     student theses and selected special digital collections. Confirmed via an Identify response; the base
@@ -91,6 +170,7 @@ apis:
     url: https://odr.chalmers.se/server/oai/request?verb=Identify
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-contractimport-api
   name: Chalmers University of Technology ContractImport API
+  x-operator: institution
   description: >-
     The ContractImport API from Chalmers University of Technology — 1 operation(s) for contractimport.
   humanURL: https://api.research.chalmers.se/
@@ -101,7 +181,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-contractimport-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -125,6 +205,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-deltaimportcplpublication-api
   name: Chalmers University of Technology DeltaImportCplPublication API
+  x-operator: institution
   description: >-
     The DeltaImportCplPublication API from Chalmers University of Technology — 1 operation(s) for deltaimportcplpublication.
   humanURL: https://api.research.chalmers.se/
@@ -135,7 +216,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-deltaimportcplpublication-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -159,6 +240,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-deltaimportprojectorganization-api
   name: Chalmers University of Technology DeltaImportProjectOrganization API
+  x-operator: institution
   description: >-
     The DeltaImportProjectOrganization API from Chalmers University of Technology — 1 operation(s) for
     deltaimportprojectorganization.
@@ -170,7 +252,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-deltaimportprojectorganization-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -194,6 +276,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-deltaimportprojectperson-api
   name: Chalmers University of Technology DeltaImportProjectPerson API
+  x-operator: institution
   description: >-
     The DeltaImportProjectPerson API from Chalmers University of Technology — 1 operation(s) for deltaimportprojectperson.
   humanURL: https://api.research.chalmers.se/
@@ -204,7 +287,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-deltaimportprojectperson-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -228,6 +311,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-electronicpublicationagreementsignature-api
   name: Chalmers University of Technology ElectronicPublicationAgreementSignature API
+  x-operator: institution
   description: >-
     The ElectronicPublicationAgreementSignature API from Chalmers University of Technology — 2 operation(s)
     for electronicpublicationagreementsignature.
@@ -240,7 +324,7 @@ apis:
     url: >-
       openapi/chalmers-university-of-technology-electronicpublicationagreementsignature-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -263,6 +347,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-indexallprojects-api
   name: Chalmers University of Technology IndexAllProjects API
+  x-operator: institution
   description: >-
     The IndexAllProjects API from Chalmers University of Technology — 1 operation(s) for indexallprojects.
   humanURL: https://api.research.chalmers.se/
@@ -273,7 +358,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-indexallprojects-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -296,6 +381,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-indexoneproject-api
   name: Chalmers University of Technology IndexOneProject API
+  x-operator: institution
   description: >-
     The IndexOneProject API from Chalmers University of Technology — 1 operation(s) for indexoneproject.
   humanURL: https://api.research.chalmers.se/
@@ -306,7 +392,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-indexoneproject-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -330,6 +416,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-localorganizations-api
   name: Chalmers University of Technology LocalOrganizations API
+  x-operator: institution
   description: >-
     The LocalOrganizations API from Chalmers University of Technology — 1 operation(s) for localorganizations.
   humanURL: https://api.research.chalmers.se/
@@ -340,7 +427,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-localorganizations-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -363,6 +450,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-organizations-api
   name: Chalmers University of Technology Organizations API
+  x-operator: institution
   description: >-
     The Organizations API from Chalmers University of Technology — 2 operation(s) for organizations.
   humanURL: https://api.research.chalmers.se/
@@ -375,7 +463,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-organizations-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -398,6 +486,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-projectembargos-api
   name: Chalmers University of Technology ProjectEmbargos API
+  x-operator: institution
   description: >-
     The ProjectEmbargos API from Chalmers University of Technology — 1 operation(s) for projectembargos.
   humanURL: https://api.research.chalmers.se/
@@ -408,7 +497,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projectembargos-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -432,6 +521,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-projectorganizationupdated-api
   name: Chalmers University of Technology ProjectOrganizationUpdated API
+  x-operator: institution
   description: >-
     The ProjectOrganizationUpdated API from Chalmers University of Technology — 1 operation(s) for projectorganizationupdated.
   humanURL: https://api.research.chalmers.se/
@@ -442,7 +532,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projectorganizationupdated-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -466,6 +556,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-projectparticipantsverification-api
   name: Chalmers University of Technology ProjectParticipantsVerification API
+  x-operator: institution
   description: >-
     The ProjectParticipantsVerification API from Chalmers University of Technology — 1 operation(s) for
     projectparticipantsverification.
@@ -478,7 +569,7 @@ apis:
     url: >-
       openapi/chalmers-university-of-technology-projectparticipantsverification-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -502,6 +593,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-projectparticipantsverificationmail-api
   name: Chalmers University of Technology ProjectParticipantsVerificationMail API
+  x-operator: institution
   description: >-
     The ProjectParticipantsVerificationMail API from Chalmers University of Technology — 1 operation(s)
     for projectparticipantsverificationmail.
@@ -514,7 +606,7 @@ apis:
     url: >-
       openapi/chalmers-university-of-technology-projectparticipantsverificationmail-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -538,6 +630,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-projectpersonupdated-api
   name: Chalmers University of Technology ProjectPersonUpdated API
+  x-operator: institution
   description: >-
     The ProjectPersonUpdated API from Chalmers University of Technology — 1 operation(s) for projectpersonupdated.
   humanURL: https://api.research.chalmers.se/
@@ -548,7 +641,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projectpersonupdated-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -572,6 +665,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-projectpublishstatus-api
   name: Chalmers University of Technology ProjectPublishStatus API
+  x-operator: institution
   description: >-
     The ProjectPublishStatus API from Chalmers University of Technology — 1 operation(s) for projectpublishstatus.
   humanURL: https://api.research.chalmers.se/
@@ -582,7 +676,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projectpublishstatus-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -605,6 +699,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-projectqueries-api
   name: Chalmers University of Technology ProjectQueries API
+  x-operator: institution
   description: >-
     The ProjectQueries API from Chalmers University of Technology — 1 operation(s) for projectqueries.
   humanURL: https://api.research.chalmers.se/
@@ -615,7 +710,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projectqueries-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -638,6 +733,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-projects-api
   name: Chalmers University of Technology Projects API
+  x-operator: institution
   description: The Projects API from Chalmers University of Technology — 2 operation(s) for projects.
   humanURL: https://api.research.chalmers.se/
   baseURL: https://api.research.chalmers.se/
@@ -649,7 +745,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projects-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -673,6 +769,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-projectsconnectedtoorganization-api
   name: Chalmers University of Technology ProjectsConnectedToOrganization API
+  x-operator: institution
   description: >-
     The ProjectsConnectedToOrganization API from Chalmers University of Technology — 1 operation(s) for
     projectsconnectedtoorganization.
@@ -685,7 +782,7 @@ apis:
     url: >-
       openapi/chalmers-university-of-technology-projectsconnectedtoorganization-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -709,6 +806,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-projectsconnectedtoperson-api
   name: Chalmers University of Technology ProjectsConnectedToPerson API
+  x-operator: institution
   description: >-
     The ProjectsConnectedToPerson API from Chalmers University of Technology — 1 operation(s) for projectsconnectedtoperson.
   humanURL: https://api.research.chalmers.se/
@@ -719,7 +817,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projectsconnectedtoperson-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -742,6 +840,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-projectsearch-api
   name: Chalmers University of Technology ProjectSearch API
+  x-operator: institution
   description: >-
     The ProjectSearch API from Chalmers University of Technology — 1 operation(s) for projectsearch.
   humanURL: https://api.research.chalmers.se/
@@ -752,7 +851,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-projectsearch-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -776,6 +875,7 @@ apis:
 - aid: >-
     chalmers-university-of-technology:chalmers-university-of-technology-simpleprojectmetadata-api
   name: Chalmers University of Technology SimpleProjectMetadata API
+  x-operator: institution
   description: >-
     The SimpleProjectMetadata API from Chalmers University of Technology — 1 operation(s) for simpleprojectmetadata.
   humanURL: https://api.research.chalmers.se/
@@ -786,7 +886,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-simpleprojectmetadata-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -809,6 +909,7 @@ apis:
     url: json-ld/chalmers-university-of-technology-context.jsonld
 - aid: chalmers-university-of-technology:chalmers-university-of-technology-solrimport-api
   name: Chalmers University of Technology SolrImport API
+  x-operator: institution
   description: >-
     The SolrImport API from Chalmers University of Technology — 1 operation(s) for solrimport.
   humanURL: https://api.research.chalmers.se/
@@ -819,7 +920,7 @@ apis:
   - type: OpenAPI
     url: openapi/chalmers-university-of-technology-solrimport-api-openapi.yml
   - type: Documentation
-    url: https://api.research.chalmers.se/Help
+    url: https://api.research.chalmers.se/swagger
   - type: JSONSchema
     url: json-schema/chalmers-university-of-technology-project-schema.json
   - type: JSONSchema
@@ -840,6 +941,183 @@ apis:
     url: vocabulary/chalmers-university-of-technology-vocabulary.yml
   - type: x-json-ld
     url: json-ld/chalmers-university-of-technology-context.jsonld
+- aid: chalmers-university-of-technology:odr-dspace-rest
+  name: Chalmers Open Digital Repository (ODR) REST API
+  x-operator: institution
+  description: >-
+    HAL+JSON REST API of the Chalmers Open Digital Repository, a DSpace 8.3 instance Chalmers runs on
+    its own host (odr.chalmers.se). The API root and the communities collection answer publicly; item
+    listing requires authentication. The deployment and the content are Chalmers'; the API contract
+    itself is DSpace's open-source software contract, so no generic DSpace specification is stored
+    here under Chalmers' name.
+  humanURL: https://odr.chalmers.se/
+  baseURL: https://odr.chalmers.se/server/api
+  x-software: DSpace 8.3
+  tags:
+  - Repository
+  - Theses
+  - DSpace
+  - Research Data
+  - Metadata
+  properties:
+  - type: Documentation
+    url: https://odr.chalmers.se/server/api
+  - type: x-oai-pmh
+    url: https://odr.chalmers.se/server/oai/request?verb=Identify
+- aid: chalmers-university-of-technology:swamid-identity-provider
+  name: Chalmers SAML Identity Provider (SWAMID / eduGAIN)
+  x-operator: federation
+  description: >-
+    Chalmers' own SAML 2.0 identity provider, entityID http://idp.chalmers.se/adfs/services/trust,
+    running on Microsoft AD FS with single sign-on at https://idp.chalmers.se/adfs/ls/ and registered
+    in SWAMID, the Swedish national identity federation (registrationAuthority http://www.swamid.se/).
+    The metadata is machine-readable and retrievable per-entity from the SWAMID MDQ service. Chalmers
+    additionally registers ten service providers in SWAMID, including myaccount.chalmers.se,
+    play.chalmers.se, indico.chalmers.se and the portal.chalmers.se degree-application services; two
+    further SPs on c3se.chalmers.se are registered by NAISS, the Swedish national supercomputing
+    infrastructure hosted in part at Chalmers.
+  humanURL: https://www.sunet.se/swamid
+  baseURL: https://mds.swamid.se/entities/
+  tags:
+  - Identity Federation
+  - SAML
+  - Shibboleth
+  - Single Sign-On
+  - eduGAIN
+  properties:
+  - type: x-saml-metadata
+    url: https://mds.swamid.se/entities/http%3A%2F%2Fidp.chalmers.se%2Fadfs%2Fservices%2Ftrust
+  - type: Documentation
+    url: https://mds.swamid.se/entities/
+- aid: chalmers-university-of-technology:datacite-membership
+  name: DataCite Membership and DOI Registration
+  x-operator: registry
+  description: >-
+    Chalmers is a DataCite consortium organization (member id ojuo, joined 2020-09-14, ROR
+    https://ror.org/040wg7k59) and operates the repository account snd.chalmers, registered in 2014
+    with domain scope *.chalmers.se, under which 57 DOIs resolve to research.chalmers.se via the
+    10.17196 prefix. This is a registry MEMBERSHIP, a fact about Chalmers; the DataCite REST API is
+    DataCite's contract and is not stored here.
+  humanURL: https://api.datacite.org/clients/snd.chalmers
+  baseURL: https://api.datacite.org
+  x-registrant-id: ojuo
+  x-repository-id: snd.chalmers
+  tags:
+  - DataCite
+  - DOI
+  - Persistent Identifiers
+  - Research Data
+  - Registry
+  properties:
+  - type: x-registry-record
+    url: https://api.datacite.org/providers/ojuo
+  - type: x-repository-record
+    url: https://api.datacite.org/clients/snd.chalmers
+- aid: chalmers-university-of-technology:ror-registration
+  name: ROR Registration
+  x-operator: registry
+  description: >-
+    Chalmers University of Technology is registered in the Research Organization Registry as
+    https://ror.org/040wg7k59, the identifier DataCite carries for its consortium membership. The ROR
+    API is ROR's contract, not Chalmers'; the registration is the institutional fact recorded here.
+  humanURL: https://ror.org/040wg7k59
+  baseURL: https://api.ror.org
+  x-ror-id: https://ror.org/040wg7k59
+  tags:
+  - ROR
+  - Persistent Identifiers
+  - Registry
+  - Research
+  - Organizations
+  properties:
+  - type: x-registry-record
+    url: https://api.ror.org/organizations?query=Chalmers
+- aid: chalmers-university-of-technology:orcid-adoption
+  name: ORCID in Chalmers Research
+  x-operator: registry
+  description: >-
+    The Chalmers Research CRIS surfaces ORCID iDs on researcher profiles and links out to the ORCID
+    registry, e.g. https://research.chalmers.se/en/person/hanhel carries orcid.org/0000-0003-3888-3446.
+    ORCID is an identifier registry Chalmers researchers are registered in; the ORCID public API is
+    ORCID's contract and is not stored here.
+  humanURL: https://research.chalmers.se/en/person/hanhel
+  baseURL: https://orcid.org
+  tags:
+  - ORCID
+  - Persistent Identifiers
+  - Researchers
+  - Registry
+  - CRIS
+  properties:
+  - type: x-evidence
+    url: https://research.chalmers.se/en/person/hanhel
+- aid: chalmers-university-of-technology:snd-doris-repository
+  name: Chalmers Data Repository on SND (DORIS)
+  x-operator: tenant
+  description: >-
+    Chalmers deposits research data through DORIS, the deposit service of the Swedish National Data
+    Service (SND), which publishes it on researchdata.se. DataCite records this as repository account
+    ojuo.xranyx, "Chalmers University of Technology / DORIS repository", created 2024-10-22 with
+    domain scope researchdata.se,snd.se, and 27 DOIs resolve there today. The datasets and the DOIs
+    are Chalmers'; the platform and its API contract are SND's.
+  humanURL: https://researchdata.se/en/catalogue?q=Chalmers
+  baseURL: https://researchdata.se
+  x-vendor: Swedish National Data Service (SND)
+  x-repository-id: ojuo.xranyx
+  tags:
+  - Research Data
+  - Repository
+  - DataCite
+  - Open Data
+  - Sweden
+  properties:
+  - type: x-repository-record
+    url: https://api.datacite.org/clients/ojuo.xranyx
+  - type: Documentation
+    url: https://researchdata.se/en/catalogue?q=Chalmers
+- aid: chalmers-university-of-technology:canvas-lms-tenant
+  name: Canvas LMS Tenant
+  x-operator: tenant
+  description: >-
+    Chalmers runs its learning management system as an Instructure Canvas tenant at
+    chalmers.instructure.com. Chalmers Library publishes several first-party LTI 1.3 / LTI Advantage
+    integrations against it as open source (nodejs-lti-canvas-groups, canvas-group-bookings,
+    canvas-lti-advantage-example), which is genuine institutional LTI engineering — but the Canvas API
+    contract itself is Instructure's and is not stored here.
+  humanURL: https://chalmers.instructure.com/
+  baseURL: https://chalmers.instructure.com/
+  x-vendor: Instructure
+  tags:
+  - Learning Management
+  - LTI
+  - Canvas
+  - Teaching
+  - Education
+  properties:
+  - type: x-tenant-host
+    url: https://chalmers.instructure.com/
+  - type: SourceCode
+    url: https://github.com/ChalmersLibrary/nodejs-lti-canvas-groups
+- aid: chalmers-university-of-technology:timeedit-scheduling-tenant
+  name: TimeEdit Scheduling Tenant
+  x-operator: tenant
+  description: >-
+    Chalmers' timetable and room-booking layer is a TimeEdit tenancy, public at
+    cloud.timeedit.net/chalmers/web/public/ and federated through SWAMID as service provider
+    https://se.timeedit.net/chalmers-sp, whose metadata names TimeEdit AB as the organization. The
+    schedules are Chalmers'; the software and any API are TimeEdit's.
+  humanURL: https://cloud.timeedit.net/chalmers/web/public/
+  baseURL: https://cloud.timeedit.net/chalmers/web/public/
+  x-vendor: TimeEdit AB
+  tags:
+  - Timetable
+  - Scheduling
+  - Room Booking
+  - Campus
+  - Education
+  properties:
+  - type: x-tenant-host
+    url: https://cloud.timeedit.net/chalmers/web/public/
 common:
   - type: CapabilityMap
     url: capabilities/chalmers-university-of-technology-capability-edges.yml
@@ -866,6 +1144,26 @@ common:
     url: finops/chalmers-university-of-technology-finops.yml
   - type: Review
     url: review.yml
+  - type: APIReference
+    url: https://api.research.chalmers.se/swagger
+  - type: ResearchRepository
+    url: https://research.chalmers.se/
+  - type: ResearchRepository
+    url: https://odr.chalmers.se/
+  - type: CourseCatalog
+    url: https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/
+  - type: IdentityFederation
+    url: https://mds.swamid.se/entities/http%3A%2F%2Fidp.chalmers.se%2Fadfs%2Fservices%2Ftrust
+  - type: ResearchComputing
+    url: https://www.chalmers.se/en/infrastructure/ecommons/
+  - type: AIPolicy
+    url: https://www.chalmers.se/utbildning/dina-studier/kandidat-och-examensarbete/regler-for-anvandning-av-ai-verktyg/
+  - type: PrivacyPolicy
+    url: https://www.chalmers.se/en/about-chalmers/about-the-website/processing-of-personal-data/
+  - type: Library
+    url: https://www.chalmers.se/en/departments/cls/chalmers-library/
+  - type: x-conformance
+    url: conformance/chalmers-university-of-technology-conformance.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
