@@ -1030,6 +1030,12 @@ apis:
   - Persistent Identifiers
   - Registry
   - Research
+  - Organization
+  tags_raw:
+  - ROR
+  - Persistent Identifiers
+  - Registry
+  - Research
   - Organizations
   properties:
   - type: x-registry-record
