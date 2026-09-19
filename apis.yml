@@ -60,6 +60,19 @@ tags:
   - Library
   - OAI-PMH
   - Identity Federation
+  - CRI
+  - Sweden
+tags_raw:
+  - Education
+  - Higher Education
+  - University
+  - Technical University
+  - Research
+  - Research Data
+  - Open Data
+  - Library
+  - OAI-PMH
+  - Identity Federation
   - CRIS
   - Sweden
 created: '2026-06-03'
@@ -984,6 +997,12 @@ apis:
   - Identity Federation
   - SAML
   - Shibboleth
+  - SSO
+  - eduGAIN
+  tags_raw:
+  - Identity Federation
+  - SAML
+  - Shibboleth
   - Single Sign-On
   - eduGAIN
   properties:
@@ -1051,6 +1070,12 @@ apis:
   humanURL: https://research.chalmers.se/en/person/hanhel
   baseURL: https://orcid.org
   tags:
+  - ORCID
+  - Persistent Identifiers
+  - Researchers
+  - Registry
+  - CRI
+  tags_raw:
   - ORCID
   - Persistent Identifiers
   - Researchers
