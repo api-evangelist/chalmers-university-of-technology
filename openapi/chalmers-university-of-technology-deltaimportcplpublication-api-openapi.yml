@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: ChalmersResearch ContractImport DeltaImportCplPublication API
+  title: ChalmersResearch Delta Import Cpl Publication API
   version: v1
   description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
 servers:

@@ -1,0 +1,139 @@
+---
+name: Chalmers University of Technology — Domain Standard Conformance
+aid: chalmers-university-of-technology
+description: >-
+  Conformance of Chalmers University of Technology's institution-operated surfaces against the
+  standards named in the Kin Score `education` regulatory regime. Every entry is evidenced by a URL
+  that was fetched live on 2026-09-01 with the status code recorded. Standards not evidenced are
+  listed as absent rather than omitted; nothing here is inferred from a prose claim.
+generated: '2026-09-01'
+method: probed
+source: https://api.research.chalmers.se/swagger/docs/v1
+regime: education
+x-operator: institution
+standards:
+  - standard: oai-pmh
+    status: confirmed
+    x-operator: institution
+    detail: >-
+      Two institution-hosted OAI-PMH 2.0 repositories answer a valid Identify. Chalmers Research
+      declares repositoryIdentifier research.chalmers.se with an earliestDatestamp of 1942-01-01 and
+      serves oai_dc; the Chalmers Open Digital Repository declares odr.chalmers.se and serves
+      thirteen metadata formats including oai_dc, mods, mets, rioxx, etdms, qdc and marc.
+    evidence:
+      - url: https://research.chalmers.se/oai-pmh/general/?verb=Identify
+        status: 200
+        note: repositoryName "Chalmers Research", adminEmail research.lib@chalmers.se
+      - url: https://odr.chalmers.se/server/oai/request?verb=Identify
+        status: 200
+        note: repositoryName "Chalmers Open Digital Repository (ODR)"
+      - url: https://odr.chalmers.se/server/oai/request?verb=ListMetadataFormats
+        status: 200
+        note: didl, mods, ore, mets, xoai, dim, rioxx, uketd_dc, qdc, oai_dc, rdf, marc, etdms
+    generated: '2026-09-01'
+    method: probed
+  - standard: saml
+    status: confirmed
+    x-operator: federation
+    detail: >-
+      Chalmers operates its own SAML 2.0 identity provider, entityID
+      http://idp.chalmers.se/adfs/services/trust, published as an IDPSSODescriptor in SWAMID with
+      registrationAuthority http://www.swamid.se/ and SingleSignOnService at
+      https://idp.chalmers.se/adfs/ls/. Ten further Chalmers-registered service providers appear in
+      the same aggregate.
+    evidence:
+      - url: https://mds.swamid.se/entities/http%3A%2F%2Fidp.chalmers.se%2Fadfs%2Fservices%2Ftrust
+        status: 200
+        note: application/samlmetadata+xml, 13528 bytes, single-entity MDQ response
+      - url: https://mds.swamid.se/entities/
+        status: 200
+        note: SWAMID full metadata aggregate; grep of entityIDs returns 13 chalmers.se entities
+    generated: '2026-09-01'
+    method: probed
+  - standard: shibboleth
+    status: partial
+    x-operator: federation
+    detail: >-
+      Chalmers participates in SWAMID, a Shibboleth/SAML federation, and its library publishes
+      Shibboleth-facing operational tooling (ChalmersLibrary/shibuser-denied, denial of Shibboleth
+      users for EZproxy). The IdP implementation itself is Microsoft AD FS rather than Shibboleth IdP
+      software, so this is federation-profile participation, not a Shibboleth software deployment.
+    evidence:
+      - url: https://mds.swamid.se/entities/http%3A%2F%2Fidp.chalmers.se%2Fadfs%2Fservices%2Ftrust
+        status: 200
+        note: registrationAuthority http://www.swamid.se/
+      - url: https://github.com/ChalmersLibrary/shibuser-denied
+        status: 200
+        note: Chalmers Library Shibboleth/EZproxy tooling
+    generated: '2026-09-01'
+    method: probed
+  - standard: datacite
+    status: confirmed
+    x-operator: registry
+    detail: >-
+      Chalmers is a DataCite consortium organization (provider id ojuo, created 2020-09-14, ROR
+      https://ror.org/040wg7k59) and operates repository account snd.chalmers (created 2014-10-22,
+      domain scope *.chalmers.se) under which 57 DOIs resolve, using prefix 10.17196 and landing on
+      research.chalmers.se. A second account, ojuo.xranyx, covers the SND-hosted DORIS deposit route
+      and is a tenant relationship rather than a Chalmers-operated repository.
+    evidence:
+      - url: https://api.datacite.org/providers/ojuo
+        status: 200
+        note: memberType consortium_organization, rorId https://ror.org/040wg7k59
+      - url: https://api.datacite.org/clients/snd.chalmers
+        status: 200
+        note: isActive true, domains *.chalmers.se
+      - url: https://api.datacite.org/dois?client-id=snd.chalmers&page%5Bsize%5D=1
+        status: 200
+        note: meta.total 57; sample 10.17196/cth.preprint.2025.001
+    generated: '2026-09-01'
+    method: probed
+  - standard: orcid
+    status: confirmed
+    x-operator: registry
+    detail: >-
+      Chalmers Research researcher profiles display and link the ORCID iD, e.g. the profile for Hans
+      Hellsmark carries orcid.org/0000-0003-3888-3446 with an "ORCID-profile for" link. ORCID
+      identifiers are surfaced by the institution's own CRIS; the ORCID public API is ORCID's.
+    evidence:
+      - url: https://research.chalmers.se/en/person/hanhel
+        status: 200
+        note: 'ORCID-profile for Hans Hellsmark; orcid.org/0000-0003-3888-3446'
+    generated: '2026-09-01'
+    method: probed
+  - standard: lti
+    status: partial
+    x-operator: institution
+    detail: >-
+      Chalmers Library publishes first-party LTI 1.3 / LTI Advantage integrations for its Canvas
+      tenant as open source — nodejs-lti-canvas-groups, canvas-group-bookings (LTI + OAuth2) and
+      canvas-lti-advantage-example. The evidence is source code the institution wrote, not a
+      published API contract, so this is recorded as partial and is not claimed as contract-level
+      conformance.
+    evidence:
+      - url: https://github.com/ChalmersLibrary/nodejs-lti-canvas-groups
+        status: 200
+        note: LTI integration for Canvas, MIT licensed, Chalmers Library
+      - url: https://github.com/ChalmersLibrary/canvas-group-bookings
+        status: 200
+        note: group booking tool for Canvas with LTI and OAuth2
+    generated: '2026-09-01'
+    method: searched
+absent:
+  - standard: crossref
+    detail: No Chalmers Crossref depositor membership was evidenced; DOI registration runs through DataCite.
+  - standard: scim
+    detail: No SCIM provisioning endpoint or contract found on any chalmers.se host.
+  - standard: oneroster
+    detail: No OneRoster surface found; rostering is internal to the Canvas tenant.
+  - standard: ed-fi
+    detail: Ed-Fi is a US K-12/state-agency standard and is not applicable to a Swedish technical university.
+  - standard: caliper
+    detail: No Caliper analytics endpoint or claim found.
+  - standard: qti
+    detail: No QTI assessment interchange surface found.
+x-notes: >-
+  A further standards signal sits outside the education regime list: ChalmersLibrary/cth-dmps-api and
+  dsw2es implement the RDA Common Machine-Actionable DMP (maDMP 1.1/1.2) standard for data management
+  plans. That code is Chalmers', but no public deployment was found — the README targets
+  localhost:3000 — so it is recorded as source code, not as a callable surface.

@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: ChalmersResearch ContractImport ProjectEmbargos API
+  title: ChalmersResearch Project Embargos API
   version: v1
   description: Public API serving research information from the Chalmers Research portal, including research projects, publications, funders/organizations and collaborations. Converted from the live Swagger 2.0 description at https://api.research.chalmers.se/swagger/docs/v1.
 servers:
@@ -12,7 +12,7 @@ paths:
     get:
       tags:
       - ProjectEmbargos
-      summary: "Returns the projects with a specified publish status, created within a specified timespan (days). \r\n            1 - New, 2- Only visible for logged in users, 3 - Public"
+      summary: Returns the projects with a specified publish status, created within a…
       operationId: ProjectEmbargos_Get
       deprecated: false
       parameters:
@@ -114,21 +114,226 @@ paths:
           description: No Content
 components:
   schemas:
-    PersonOrganizationParent:
+    Project:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectTitleSwe:
+          type: string
+        ProjectDescriptionSwe:
+          type: string
+        ProjectDescriptionSweHtml:
+          type: string
+        ProjectTitleEng:
+          type: string
+        ProjectDescriptionEng:
+          type: string
+        ProjectDescriptionEngHtml:
+          type: string
+        PublishStatus:
+          format: int32
+          type: integer
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        ProjectSource:
+          description: The information source that the project was created from
+          type: string
+        CreatedDate:
+          format: date-time
+          type: string
+        CreatedBy:
+          type: string
+        UpdatedDate:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        Contracts:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectContract'
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectIdentifier'
+        Organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectOrganization'
+        Persons:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectOrganizationPerson'
+        Categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectCategory'
+        Keywords:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectKeyword'
+    ProjectKeyword:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        Value:
+          type: string
+        Lang:
+          type: string
+        Type:
+          format: int32
+          type: integer
+    OrganizationOrganizationType:
       type: object
       properties:
         Id:
           type: string
-        FromDate:
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    PersonIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    ProjectOrganization:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        OrganizationID:
+          type: string
+        Organization:
+          $ref: '#/components/schemas/OrganizationOrganization'
+        OrganizationRoleID:
+          format: int32
+          type: integer
+        OrganizationRoleNameEn:
+          type: string
+        OrganizationRoleNameSv:
+          type: string
+    CategoryType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+    IdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    Identifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/IdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
           format: date-time
           type: string
-        ToDate:
+        UpdatedBy:
+          type: string
+        UpdatedAt:
           format: date-time
           type: string
-        ParentOrganizationId:
+        IsActive:
+          type: boolean
+        Value:
           type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/PersonOrganization'
+    ProjectOrganizationPerson:
+      description: Connects a person with affiliation to a project
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        PersonID:
+          type: string
+        OrganizationID:
+          type: string
+        PersonRoleID:
+          format: int32
+          type: integer
+        PersonRoleName_en:
+          type: string
+        PersonRoleName_sc:
+          type: string
+        Person:
+          $ref: '#/components/schemas/PersonPerson'
+        PersonOrganizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectOrganizationPersonOrganization'
+        Verified:
+          format: date-time
+          description: The date for a users verification as a project member
+          type: string
+        VerificationMailSent:
+          format: date-time
+          description: The date for sending a users verification email
+          type: string
+    PersonIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
     PersonOrganization:
       type: object
       properties:
@@ -228,150 +433,26 @@ components:
           type: string
         IsActive:
           type: boolean
-    ProjectCategory:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectID:
-          format: int32
-          type: integer
-        CategoryID:
-          type: string
-        Category:
-          $ref: '#/components/schemas/Category'
-    PersonOrganizationType:
+    OrganizationIdentifier:
       type: object
       properties:
         Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
-    OrganizationOrganizationType:
-      type: object
-      properties:
-        Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
-    OrganizationDisplayPath:
-      type: object
-      properties:
-        DisplayPathSwe:
-          type: string
-        DisplayPathEng:
-          type: string
-    ProjectContractIdentifier:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectContractID:
-          format: int32
-          type: integer
-        ProjectContractIdentifierID:
-          format: int32
-          type: integer
-        ProjectContractIdentifierDescription:
-          type: string
-        ProjectContractIdentifierValue:
-          type: string
-    ProjectOrganizationPersonOrganization:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        OrganizationID:
-          type: string
-        StartDate:
-          format: date-time
-          type: string
-        EndDate:
-          format: date-time
-          type: string
-        ProjectOrganizationPersonID:
-          format: int32
-          type: integer
-        OrganizationData:
-          $ref: '#/components/schemas/OrganizationOrganization'
-    PdbCategory:
-      type: object
-      properties:
-        Id:
-          type: string
-        Name:
-          type: string
-        StartDate:
-          format: date-time
-          type: string
-        EndDate:
-          format: date-time
-          type: string
-    OrganizationOrganizationParent:
-      type: object
-      properties:
-        Id:
-          type: string
-        FromDate:
-          format: date-time
-          type: string
-        ToDate:
-          format: date-time
-          type: string
-        ParentOrganizationId:
-          type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/OrganizationOrganization'
-    PersonIdentifierType:
-      type: object
-      properties:
-        Id:
-          type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    Category:
-      type: object
-      properties:
-        Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
           type: string
         Type:
-          $ref: '#/components/schemas/CategoryType'
-        Identifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Identifier'
-    ProjectEmbargo:
-      type: object
-      properties:
-        projectID:
-          format: int32
-          type: integer
-        publishStatus:
-          format: int32
-          type: integer
-        createdDate:
+          $ref: '#/components/schemas/OrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
           format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
           type: string
     PersonOrganizationIdentifierType:
       type: object
@@ -405,70 +486,6 @@ components:
           type: boolean
         Value:
           type: string
-    Project:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectTitleSwe:
-          type: string
-        ProjectDescriptionSwe:
-          type: string
-        ProjectDescriptionSweHtml:
-          type: string
-        ProjectTitleEng:
-          type: string
-        ProjectDescriptionEng:
-          type: string
-        ProjectDescriptionEngHtml:
-          type: string
-        PublishStatus:
-          format: int32
-          type: integer
-        StartDate:
-          format: date-time
-          type: string
-        EndDate:
-          format: date-time
-          type: string
-        ProjectSource:
-          description: The information source that the project was created from
-          type: string
-        CreatedDate:
-          format: date-time
-          type: string
-        CreatedBy:
-          type: string
-        UpdatedDate:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        Contracts:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectContract'
-        Identifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectIdentifier'
-        Organizations:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectOrganization'
-        Persons:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectOrganizationPerson'
-        Categories:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectCategory'
-        Keywords:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectKeyword'
     ProjectIdentifier:
       type: object
       properties:
@@ -485,6 +502,144 @@ components:
           type: string
         ProjectIdentifierValue:
           type: string
+    ProjectOrganizationPersonOrganization:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        OrganizationID:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        ProjectOrganizationPersonID:
+          format: int32
+          type: integer
+        OrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
+    PersonOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+    PdbCategory:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+    Category:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        Type:
+          $ref: '#/components/schemas/CategoryType'
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Identifier'
+    ProjectCategory:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        CategoryID:
+          type: string
+        Category:
+          $ref: '#/components/schemas/Category'
+    ProjectContract:
+      type: object
+      properties:
+        ID:
+          format: int32
+          description: Primary key for FundingContracts
+          type: integer
+        EkoImportID:
+          format: int32
+          description: Id number used in EKO-database for this contract
+          type: integer
+        ContractSource:
+          description: The information source that the project was created from
+          type: string
+        DmpValue:
+          description: Data Management Plan (DMP), link or id
+          type: string
+        DmpVersion:
+          description: Data Management Plan (DMP), version
+          type: string
+        ProjectID:
+          format: int32
+          description: Internal id of project
+          type: integer
+        OrganizationID:
+          description: Internal id of funding organization
+          type: string
+        ContractStartDate:
+          format: date-time
+          description: Start date for funding
+          type: string
+        ContractEndDate:
+          format: date-time
+          description: End date for funding
+          type: string
+        ContractAmount:
+          format: int32
+          description: Funding amount
+          type: integer
+        ContractCurrencyCode:
+          description: Funding currency code
+          type: string
+        FunderID:
+          description: Funder ID(s), virtual field
+          type: array
+          items:
+            type: string
+        CreatedDate:
+          format: date-time
+          type: string
+        CreatedBy:
+          type: string
+        UpdatedDate:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        ContractOrganization:
+          $ref: '#/components/schemas/OrganizationOrganization'
+        ContractIdentifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectContractIdentifier'
     PersonPerson:
       type: object
       properties:
@@ -572,62 +727,6 @@ components:
           type: string
         NeedsAttention:
           type: boolean
-    OrganizationIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/OrganizationIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
-          type: string
-    ProjectOrganizationPerson:
-      description: Connects a person with affiliation to a project
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectID:
-          format: int32
-          type: integer
-        PersonID:
-          type: string
-        OrganizationID:
-          type: string
-        PersonRoleID:
-          format: int32
-          type: integer
-        PersonRoleName_en:
-          type: string
-        PersonRoleName_sc:
-          type: string
-        Person:
-          $ref: '#/components/schemas/PersonPerson'
-        PersonOrganizations:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectOrganizationPersonOrganization'
-        Verified:
-          format: date-time
-          description: The date for a users verification as a project member
-          type: string
-        VerificationMailSent:
-          format: date-time
-          description: The date for sending a users verification email
-          type: string
     OrganizationHome:
       type: object
       properties:
@@ -654,27 +753,45 @@ components:
           type: string
         Priority:
           type: string
-    ProjectOrganization:
+    OrganizationOrganizationParent:
       type: object
       properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectID:
-          format: int32
-          type: integer
-        OrganizationID:
+        Id:
           type: string
-        Organization:
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
           $ref: '#/components/schemas/OrganizationOrganization'
-        OrganizationRoleID:
+    ProjectEmbargo:
+      type: object
+      properties:
+        projectID:
           format: int32
           type: integer
-        OrganizationRoleNameEn:
+        publishStatus:
+          format: int32
+          type: integer
+        createdDate:
+          format: date-time
           type: string
-        OrganizationRoleNameSv:
+    OrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
           type: string
-    CategoryType:
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    PersonOrganizationType:
       type: object
       properties:
         Id:
@@ -683,90 +800,9 @@ components:
           type: string
         NameEng:
           type: string
-    Identifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/IdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
-          type: string
-    ProjectContract:
-      type: object
-      properties:
-        ID:
+        LegacyOrganizationTypeId:
           format: int32
-          description: Primary key for FundingContracts
           type: integer
-        EkoImportID:
-          format: int32
-          description: Id number used in EKO-database for this contract
-          type: integer
-        ContractSource:
-          description: The information source that the project was created from
-          type: string
-        DmpValue:
-          description: Data Management Plan (DMP), link or id
-          type: string
-        DmpVersion:
-          description: Data Management Plan (DMP), version
-          type: string
-        ProjectID:
-          format: int32
-          description: Internal id of project
-          type: integer
-        OrganizationID:
-          description: Internal id of funding organization
-          type: string
-        ContractStartDate:
-          format: date-time
-          description: Start date for funding
-          type: string
-        ContractEndDate:
-          format: date-time
-          description: End date for funding
-          type: string
-        ContractAmount:
-          format: int32
-          description: Funding amount
-          type: integer
-        ContractCurrencyCode:
-          description: Funding currency code
-          type: string
-        FunderID:
-          description: Funder ID(s), virtual field
-          type: array
-          items:
-            type: string
-        CreatedDate:
-          format: date-time
-          type: string
-        CreatedBy:
-          type: string
-        UpdatedDate:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        ContractOrganization:
-          $ref: '#/components/schemas/OrganizationOrganization'
-        ContractIdentifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectContractIdentifier'
     PersonDisplayPath:
       type: object
       properties:
@@ -774,43 +810,6 @@ components:
           type: string
         DisplayPathEng:
           type: string
-    PersonIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/PersonIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
-          type: string
-    ProjectKeyword:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectID:
-          format: int32
-          type: integer
-        Value:
-          type: string
-        Lang:
-          type: string
-        Type:
-          format: int32
-          type: integer
     OrganizationOrganization:
       type: object
       properties:
@@ -910,27 +909,28 @@ components:
           type: string
         IsActive:
           type: boolean
-    OrganizationIdentifierType:
+    ProjectContractIdentifier:
       type: object
       properties:
-        Id:
+        ID:
+          format: int32
+          type: integer
+        ProjectContractID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierDescription:
           type: string
-        Value:
+        ProjectContractIdentifierValue:
           type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    IdentifierType:
+    OrganizationDisplayPath:
       type: object
       properties:
-        Id:
+        DisplayPathSwe:
           type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
+        DisplayPathEng:
           type: string
   securitySchemes:
     basic:
