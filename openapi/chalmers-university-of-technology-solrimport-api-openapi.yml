@@ -53,6 +53,9 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    Object:
+      type: object
+      properties: {}
     SolrImportRequestModel:
       description: Model for requesting an import to Solr
       type: object
@@ -70,9 +73,6 @@ components:
         doOptimize:
           description: Optimize index after import
           type: boolean
-    Object:
-      type: object
-      properties: {}
   securitySchemes:
     basic:
       type: http

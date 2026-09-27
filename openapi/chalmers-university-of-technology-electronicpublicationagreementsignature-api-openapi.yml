@@ -111,30 +111,93 @@ paths:
                 $ref: '#/components/schemas/ElectronicPublicationAgreementSignature'
 components:
   schemas:
-    PdbCategory:
+    PersonPerson:
       type: object
       properties:
         Id:
           type: string
-        Name:
+        FirstName:
           type: string
-        StartDate:
+        LastName:
+          type: string
+        DisplayName:
+          type: string
+        BirthYear:
+          format: int32
+          type: integer
+        IsReplacedById:
+          type: string
+        IsReplacingId:
+          type: string
+        IsActive:
+          type: boolean
+        IsDeleted:
+          type: boolean
+        HasOrganizationHome:
+          type: boolean
+        HasIdentifiers:
+          type: boolean
+        HasPublications:
+          type: boolean
+        HasProjects:
+          type: boolean
+        OrganizationHomeCount:
+          format: int32
+          type: integer
+        IdentifiersCount:
+          format: int32
+          type: integer
+        IdentifierCid:
+          type: array
+          items:
+            type: string
+        IdentifierCplPersonId:
+          type: array
+          items:
+            type: string
+        IdentifierOrcid:
+          type: array
+          items:
+            type: string
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonIdentifier'
+        OrganizationHome:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationHome'
+        PdbCategories:
+          type: array
+          items:
+            $ref: '#/components/schemas/PdbCategory'
+        CreatedBy:
+          type: string
+        CreatedAt:
           format: date-time
           type: string
-        EndDate:
+        UpdatedBy:
+          type: string
+        UpdatedAt:
           format: date-time
           type: string
-    PersonIdentifierType:
-      type: object
-      properties:
-        Id:
+        DeletedBy:
           type: string
-        Value:
+        DeletedAt:
+          format: date-time
           type: string
-        DescriptionSwe:
+        SightedBy:
           type: string
-        DescriptionEng:
+        SightedAt:
+          format: date-time
           type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
     PersonOrganization:
       type: object
       properties:
@@ -234,6 +297,70 @@ components:
           type: string
         IsActive:
           type: boolean
+    PersonOrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    PersonIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    PersonIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    PersonOrganizationIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
     ElectronicPublicationAgreementSignature:
       type: object
       properties:
@@ -285,93 +412,46 @@ components:
         IpV4:
           description: Originating IP-address
           type: string
-    PersonPerson:
+    PdbCategory:
       type: object
       properties:
         Id:
           type: string
-        FirstName:
+        Name:
           type: string
-        LastName:
+        StartDate:
+          format: date-time
           type: string
-        DisplayName:
+        EndDate:
+          format: date-time
           type: string
-        BirthYear:
+    PersonOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+    PersonOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
           format: int32
           type: integer
-        IsReplacedById:
-          type: string
-        IsReplacingId:
-          type: string
-        IsActive:
-          type: boolean
-        IsDeleted:
-          type: boolean
-        HasOrganizationHome:
-          type: boolean
-        HasIdentifiers:
-          type: boolean
-        HasPublications:
-          type: boolean
-        HasProjects:
-          type: boolean
-        OrganizationHomeCount:
-          format: int32
-          type: integer
-        IdentifiersCount:
-          format: int32
-          type: integer
-        IdentifierCid:
-          type: array
-          items:
-            type: string
-        IdentifierCplPersonId:
-          type: array
-          items:
-            type: string
-        IdentifierOrcid:
-          type: array
-          items:
-            type: string
-        Identifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/PersonIdentifier'
-        OrganizationHome:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationHome'
-        PdbCategories:
-          type: array
-          items:
-            $ref: '#/components/schemas/PdbCategory'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        DeletedBy:
-          type: string
-        DeletedAt:
-          format: date-time
-          type: string
-        SightedBy:
-          type: string
-        SightedAt:
-          format: date-time
-          type: string
-        ValidatedBy:
-          type: string
-        ValidatedDate:
-          format: date-time
-          type: string
-        NeedsAttention:
-          type: boolean
     OrganizationHome:
       type: object
       properties:
@@ -398,86 +478,6 @@ components:
           type: string
         Priority:
           type: string
-    PersonOrganizationIdentifierType:
-      type: object
-      properties:
-        Id:
-          type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    PersonOrganizationIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
-          type: string
-    PersonOrganizationParent:
-      type: object
-      properties:
-        Id:
-          type: string
-        FromDate:
-          format: date-time
-          type: string
-        ToDate:
-          format: date-time
-          type: string
-        ParentOrganizationId:
-          type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/PersonOrganization'
-    PersonIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/PersonIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
-          type: string
-    PersonOrganizationType:
-      type: object
-      properties:
-        Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
     PersonDisplayPath:
       type: object
       properties:
