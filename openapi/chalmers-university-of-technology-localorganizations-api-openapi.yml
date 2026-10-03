@@ -41,22 +41,6 @@ paths:
                   $ref: '#/components/schemas/Organization'
 components:
   schemas:
-    ApiOrganizationIdentifier:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        OrganizationID:
-          format: int32
-          type: integer
-        OrganizationIdentifierID:
-          format: int32
-          type: integer
-        OrganizationIdentifierDescription:
-          type: string
-        OrganizationIdentifierValue:
-          type: string
     Organization:
       required:
       - OrganizationNameSv
@@ -105,6 +89,22 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Organization'
+    ApiOrganizationIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        OrganizationID:
+          format: int32
+          type: integer
+        OrganizationIdentifierID:
+          format: int32
+          type: integer
+        OrganizationIdentifierDescription:
+          type: string
+        OrganizationIdentifierValue:
+          type: string
   securitySchemes:
     basic:
       type: http

@@ -52,27 +52,39 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    OrganizationIdentifier:
+    OrganizationDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+    OrganizationIdentifierType:
       type: object
       properties:
         Id:
           type: string
-        Type:
-          $ref: '#/components/schemas/OrganizationIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
         Value:
           type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    OrganizationOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
     OrganizationOrganizationType:
       type: object
       properties:
@@ -85,17 +97,6 @@ components:
         LegacyOrganizationTypeId:
           format: int32
           type: integer
-    OrganizationIdentifierType:
-      type: object
-      properties:
-        Id:
-          type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
     OrganizationOrganization:
       type: object
       properties:
@@ -195,31 +196,30 @@ components:
           type: string
         IsActive:
           type: boolean
-    OrganizationDisplayPath:
-      type: object
-      properties:
-        DisplayPathSwe:
-          type: string
-        DisplayPathEng:
-          type: string
     Object:
       type: object
       properties: {}
-    OrganizationOrganizationParent:
+    OrganizationIdentifier:
       type: object
       properties:
         Id:
           type: string
-        FromDate:
+        Type:
+          $ref: '#/components/schemas/OrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
           format: date-time
           type: string
-        ToDate:
+        UpdatedBy:
+          type: string
+        UpdatedAt:
           format: date-time
           type: string
-        ParentOrganizationId:
+        IsActive:
+          type: boolean
+        Value:
           type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/OrganizationOrganization'
   securitySchemes:
     basic:
       type: http

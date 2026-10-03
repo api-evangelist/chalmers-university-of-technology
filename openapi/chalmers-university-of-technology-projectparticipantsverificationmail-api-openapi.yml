@@ -114,15 +114,6 @@ paths:
           description: No Content
 components:
   schemas:
-    RecipientsOfVerificationMail:
-      type: object
-      properties:
-        personID:
-          type: string
-        email:
-          type: string
-        source:
-          type: string
     PersonPerson:
       type: object
       properties:
@@ -210,6 +201,68 @@ components:
           type: string
         NeedsAttention:
           type: boolean
+    PersonOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+    OrganizationHome:
+      type: object
+      properties:
+        Id:
+          type: string
+        OrganizationId:
+          type: string
+        OrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+        LastUpdatedDate:
+          format: date-time
+          type: string
+        TitleSwe:
+          type: string
+        TitleEng:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        Source:
+          type: string
+        Priority:
+          type: string
+    PersonOrganizationIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
     PersonOrganization:
       type: object
       properties:
@@ -309,17 +362,6 @@ components:
           type: string
         IsActive:
           type: boolean
-    PersonOrganizationIdentifierType:
-      type: object
-      properties:
-        Id:
-          type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
     PersonIdentifierType:
       type: object
       properties:
@@ -331,59 +373,16 @@ components:
           type: string
         DescriptionEng:
           type: string
-    PersonIdentifier:
+    PersonOrganizationIdentifierType:
       type: object
       properties:
         Id:
           type: string
-        Type:
-          $ref: '#/components/schemas/PersonIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
         Value:
           type: string
-    PersonOrganizationType:
-      type: object
-      properties:
-        Id:
+        DescriptionSwe:
           type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
-    PersonOrganizationIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
+        DescriptionEng:
           type: string
     PdbCategory:
       type: object
@@ -405,47 +404,48 @@ components:
           type: string
         DisplayPathEng:
           type: string
-    OrganizationHome:
+    PersonOrganizationType:
       type: object
       properties:
         Id:
           type: string
-        OrganizationId:
+        NameSwe:
           type: string
-        OrganizationData:
-          $ref: '#/components/schemas/PersonOrganization'
-        LastUpdatedDate:
-          format: date-time
+        NameEng:
           type: string
-        TitleSwe:
-          type: string
-        TitleEng:
-          type: string
-        StartDate:
-          format: date-time
-          type: string
-        EndDate:
-          format: date-time
-          type: string
-        Source:
-          type: string
-        Priority:
-          type: string
-    PersonOrganizationParent:
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    PersonIdentifier:
       type: object
       properties:
         Id:
           type: string
-        FromDate:
+        Type:
+          $ref: '#/components/schemas/PersonIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
           format: date-time
           type: string
-        ToDate:
+        UpdatedBy:
+          type: string
+        UpdatedAt:
           format: date-time
           type: string
-        ParentOrganizationId:
+        IsActive:
+          type: boolean
+        Value:
           type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/PersonOrganization'
+    RecipientsOfVerificationMail:
+      type: object
+      properties:
+        personID:
+          type: string
+        email:
+          type: string
+        source:
+          type: string
   securitySchemes:
     basic:
       type: http
