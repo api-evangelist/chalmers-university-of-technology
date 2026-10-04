@@ -111,205 +111,16 @@ paths:
                 $ref: '#/components/schemas/ElectronicPublicationAgreementSignature'
 components:
   schemas:
-    PersonPerson:
+    PersonIdentifierType:
       type: object
       properties:
         Id:
           type: string
-        FirstName:
-          type: string
-        LastName:
-          type: string
-        DisplayName:
-          type: string
-        BirthYear:
-          format: int32
-          type: integer
-        IsReplacedById:
-          type: string
-        IsReplacingId:
-          type: string
-        IsActive:
-          type: boolean
-        IsDeleted:
-          type: boolean
-        HasOrganizationHome:
-          type: boolean
-        HasIdentifiers:
-          type: boolean
-        HasPublications:
-          type: boolean
-        HasProjects:
-          type: boolean
-        OrganizationHomeCount:
-          format: int32
-          type: integer
-        IdentifiersCount:
-          format: int32
-          type: integer
-        IdentifierCid:
-          type: array
-          items:
-            type: string
-        IdentifierCplPersonId:
-          type: array
-          items:
-            type: string
-        IdentifierOrcid:
-          type: array
-          items:
-            type: string
-        Identifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/PersonIdentifier'
-        OrganizationHome:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationHome'
-        PdbCategories:
-          type: array
-          items:
-            $ref: '#/components/schemas/PdbCategory'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        DeletedBy:
-          type: string
-        DeletedAt:
-          format: date-time
-          type: string
-        SightedBy:
-          type: string
-        SightedAt:
-          format: date-time
-          type: string
-        ValidatedBy:
-          type: string
-        ValidatedDate:
-          format: date-time
-          type: string
-        NeedsAttention:
-          type: boolean
-    PersonOrganizationParent:
-      type: object
-      properties:
-        Id:
-          type: string
-        FromDate:
-          format: date-time
-          type: string
-        ToDate:
-          format: date-time
-          type: string
-        ParentOrganizationId:
-          type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/PersonOrganization'
-    OrganizationHome:
-      type: object
-      properties:
-        Id:
-          type: string
-        OrganizationId:
-          type: string
-        OrganizationData:
-          $ref: '#/components/schemas/PersonOrganization'
-        LastUpdatedDate:
-          format: date-time
-          type: string
-        TitleSwe:
-          type: string
-        TitleEng:
-          type: string
-        StartDate:
-          format: date-time
-          type: string
-        EndDate:
-          format: date-time
-          type: string
-        Source:
-          type: string
-        Priority:
-          type: string
-    ElectronicPublicationAgreementSignature:
-      type: object
-      properties:
-        ID:
-          format: int32
-          description: Internal id number for contract
-          type: integer
-        PersonID:
-          description: ResearchId-number for the person that signs the contract
-          type: string
-        Person:
-          $ref: '#/components/schemas/PersonPerson'
-          description: Person that signs the contract
-        PublicationType:
-          description: Used for writing out Publication Type in Emails
-          type: string
-        PublicationYear:
-          description: Used for writing our Publication Year in Emails
-          type: string
-        PublicationTitle:
-          description: Title of publication
-          type: string
-        PubID:
-          format: int32
-          description: PubId from CPL
-          type: integer
-        Agree:
-          description: True if contract is signed
-          type: boolean
-        Date:
-          format: date-time
-          description: Date and time in UTC of contract signment
-          type: string
-        ContractText:
-          description: Complete contract text
-          type: string
-        Checksum:
-          description: "SHA256 hash calculated on the UTF-8 representation of the \n            string \"Person.Firstname+Person.Lastname+PublictionTitle+ContractText+Date(DateTime.ToString(\"o\"))"
-          type: string
-        PrintAt:
-          description: Print location
-          type: string
-        Decision:
-          description: Signees decision
-          type: string
-        Message:
-          description: Message to admin
-          type: string
-        IpV4:
-          description: Originating IP-address
-          type: string
-    PersonOrganizationIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
         Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
           type: string
     PersonOrganization:
       type: object
@@ -410,27 +221,89 @@ components:
           type: string
         IsActive:
           type: boolean
-    PersonIdentifierType:
+    PersonOrganizationIdentifier:
       type: object
       properties:
         Id:
           type: string
+        Type:
+          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
         Value:
           type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    PersonOrganizationIdentifierType:
+    PersonOrganizationType:
       type: object
       properties:
         Id:
           type: string
-        Value:
+        NameSwe:
           type: string
-        DescriptionSwe:
+        NameEng:
           type: string
-        DescriptionEng:
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    ElectronicPublicationAgreementSignature:
+      type: object
+      properties:
+        ID:
+          format: int32
+          description: Internal id number for contract
+          type: integer
+        PersonID:
+          description: ResearchId-number for the person that signs the contract
+          type: string
+        Person:
+          $ref: '#/components/schemas/PersonPerson'
+          description: Person that signs the contract
+        PublicationType:
+          description: Used for writing out Publication Type in Emails
+          type: string
+        PublicationYear:
+          description: Used for writing our Publication Year in Emails
+          type: string
+        PublicationTitle:
+          description: Title of publication
+          type: string
+        PubID:
+          format: int32
+          description: PubId from CPL
+          type: integer
+        Agree:
+          description: True if contract is signed
+          type: boolean
+        Date:
+          format: date-time
+          description: Date and time in UTC of contract signment
+          type: string
+        ContractText:
+          description: Complete contract text
+          type: string
+        Checksum:
+          description: "SHA256 hash calculated on the UTF-8 representation of the \n            string \"Person.Firstname+Person.Lastname+PublictionTitle+ContractText+Date(DateTime.ToString(\"o\"))"
+          type: string
+        PrintAt:
+          description: Print location
+          type: string
+        Decision:
+          description: Signees decision
+          type: string
+        Message:
+          description: Message to admin
+          type: string
+        IpV4:
+          description: Originating IP-address
           type: string
     PdbCategory:
       type: object
@@ -445,6 +318,32 @@ components:
         EndDate:
           format: date-time
           type: string
+    OrganizationHome:
+      type: object
+      properties:
+        Id:
+          type: string
+        OrganizationId:
+          type: string
+        OrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+        LastUpdatedDate:
+          format: date-time
+          type: string
+        TitleSwe:
+          type: string
+        TitleEng:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        Source:
+          type: string
+        Priority:
+          type: string
     PersonDisplayPath:
       type: object
       properties:
@@ -452,18 +351,108 @@ components:
           type: string
         DisplayPathEng:
           type: string
-    PersonOrganizationType:
+    PersonOrganizationParent:
       type: object
       properties:
         Id:
           type: string
-        NameSwe:
+        FromDate:
+          format: date-time
           type: string
-        NameEng:
+        ToDate:
+          format: date-time
           type: string
-        LegacyOrganizationTypeId:
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+    PersonPerson:
+      type: object
+      properties:
+        Id:
+          type: string
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        DisplayName:
+          type: string
+        BirthYear:
           format: int32
           type: integer
+        IsReplacedById:
+          type: string
+        IsReplacingId:
+          type: string
+        IsActive:
+          type: boolean
+        IsDeleted:
+          type: boolean
+        HasOrganizationHome:
+          type: boolean
+        HasIdentifiers:
+          type: boolean
+        HasPublications:
+          type: boolean
+        HasProjects:
+          type: boolean
+        OrganizationHomeCount:
+          format: int32
+          type: integer
+        IdentifiersCount:
+          format: int32
+          type: integer
+        IdentifierCid:
+          type: array
+          items:
+            type: string
+        IdentifierCplPersonId:
+          type: array
+          items:
+            type: string
+        IdentifierOrcid:
+          type: array
+          items:
+            type: string
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonIdentifier'
+        OrganizationHome:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationHome'
+        PdbCategories:
+          type: array
+          items:
+            $ref: '#/components/schemas/PdbCategory'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        SightedBy:
+          type: string
+        SightedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
     PersonIdentifier:
       type: object
       properties:
@@ -484,6 +473,17 @@ components:
         IsActive:
           type: boolean
         Value:
+          type: string
+    PersonOrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
           type: string
   securitySchemes:
     basic:

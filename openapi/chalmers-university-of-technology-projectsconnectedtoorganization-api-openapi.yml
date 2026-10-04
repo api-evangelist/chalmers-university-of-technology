@@ -48,91 +48,6 @@ paths:
                   $ref: '#/components/schemas/SimpleProjectMetadata'
 components:
   schemas:
-    SimpleProjectContractMetadata:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectID:
-          format: int32
-          type: integer
-        OrganizationID:
-          type: string
-        FunderID:
-          type: array
-          items:
-            type: string
-        ContractStartDate:
-          format: date-time
-          type: string
-        ContractEndDate:
-          format: date-time
-          type: string
-        CreatedDate:
-          format: date-time
-          type: string
-        UpdatedDate:
-          format: date-time
-          type: string
-        ContractOrganization:
-          $ref: '#/components/schemas/SimpleOrganization'
-        ContractIdentifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProjectContractIdentifier'
-    SimpleIdentifierType:
-      type: object
-      properties:
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    SimpleOrganizationParent:
-      type: object
-      properties:
-        FromDate:
-          format: date-time
-          type: string
-        ToDate:
-          format: date-time
-          type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/SimpleOrganization'
-    ProjectContractIdentifier:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectContractID:
-          format: int32
-          type: integer
-        ProjectContractIdentifierID:
-          format: int32
-          type: integer
-        ProjectContractIdentifierDescription:
-          type: string
-        ProjectContractIdentifierValue:
-          type: string
-    ProjectIdentifier:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        ProjectID:
-          format: int32
-          type: integer
-        ProjectIdentifierID:
-          format: int32
-          type: integer
-        ProjectIdentifierDescription:
-          type: string
-        ProjectIdentifierValue:
-          type: string
     SimpleIdentifier:
       type: object
       properties:
@@ -147,6 +62,17 @@ components:
           type: boolean
         Value:
           type: string
+    SimpleOrganizationParent:
+      type: object
+      properties:
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/SimpleOrganization'
     SimpleOrganization:
       type: object
       properties:
@@ -210,16 +136,6 @@ components:
         DeletedAt:
           format: date-time
           type: string
-    SimpleOrganizationType:
-      type: object
-      properties:
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
     SimpleProjectMetadata:
       type: object
       properties:
@@ -253,6 +169,90 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/SimpleProjectContractMetadata'
+    SimpleIdentifierType:
+      type: object
+      properties:
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    SimpleOrganizationType:
+      type: object
+      properties:
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    SimpleProjectContractMetadata:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        OrganizationID:
+          type: string
+        FunderID:
+          type: array
+          items:
+            type: string
+        ContractStartDate:
+          format: date-time
+          type: string
+        ContractEndDate:
+          format: date-time
+          type: string
+        CreatedDate:
+          format: date-time
+          type: string
+        UpdatedDate:
+          format: date-time
+          type: string
+        ContractOrganization:
+          $ref: '#/components/schemas/SimpleOrganization'
+        ContractIdentifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectContractIdentifier'
+    ProjectIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectID:
+          format: int32
+          type: integer
+        ProjectIdentifierID:
+          format: int32
+          type: integer
+        ProjectIdentifierDescription:
+          type: string
+        ProjectIdentifierValue:
+          type: string
+    ProjectContractIdentifier:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        ProjectContractID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierID:
+          format: int32
+          type: integer
+        ProjectContractIdentifierDescription:
+          type: string
+        ProjectContractIdentifierValue:
+          type: string
   securitySchemes:
     basic:
       type: http

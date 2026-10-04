@@ -52,51 +52,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    OrganizationDisplayPath:
-      type: object
-      properties:
-        DisplayPathSwe:
-          type: string
-        DisplayPathEng:
-          type: string
-    OrganizationIdentifierType:
-      type: object
-      properties:
-        Id:
-          type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    OrganizationOrganizationParent:
-      type: object
-      properties:
-        Id:
-          type: string
-        FromDate:
-          format: date-time
-          type: string
-        ToDate:
-          format: date-time
-          type: string
-        ParentOrganizationId:
-          type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/OrganizationOrganization'
-    OrganizationOrganizationType:
-      type: object
-      properties:
-        Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
     OrganizationOrganization:
       type: object
       properties:
@@ -196,9 +151,6 @@ components:
           type: string
         IsActive:
           type: boolean
-    Object:
-      type: object
-      properties: {}
     OrganizationIdentifier:
       type: object
       properties:
@@ -219,6 +171,54 @@ components:
         IsActive:
           type: boolean
         Value:
+          type: string
+    OrganizationDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+    OrganizationOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
+    Object:
+      type: object
+      properties: {}
+    OrganizationOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    OrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
           type: string
   securitySchemes:
     basic:
