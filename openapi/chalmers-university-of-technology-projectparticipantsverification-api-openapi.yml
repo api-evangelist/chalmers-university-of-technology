@@ -124,116 +124,6 @@ paths:
           description: No Content
 components:
   schemas:
-    PersonIdentifierType:
-      type: object
-      properties:
-        Id:
-          type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    OrganizationOrganization:
-      type: object
-      properties:
-        Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        DisplayNameSwe:
-          type: string
-        DisplayNameEng:
-          type: string
-        DisplayPathSwe:
-          type: string
-        DisplayPathEng:
-          type: string
-        DisplayPathShortSwe:
-          type: string
-        DisplayPathShortEng:
-          type: string
-        PossibleDisplayPaths:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationDisplayPath'
-        City:
-          type: string
-        PostalNo:
-          type: string
-        Country:
-          type: string
-        GeoLat:
-          type: string
-        GeoLong:
-          type: string
-        Level:
-          format: int32
-          type: integer
-        StartYear:
-          format: int32
-          type: integer
-        EndYear:
-          format: int32
-          type: integer
-        OrganizationTypes:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationOrganizationType'
-        OrganizationParents:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationOrganizationParent'
-        ActiveOrganizationParentIds:
-          type: array
-          items:
-            type: string
-        HasIdentifiers:
-          type: boolean
-        IdentifiersCount:
-          format: int32
-          type: integer
-        Identifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationIdentifier'
-        IdentifierLdapCode:
-          type: array
-          items:
-            type: string
-        IdentifierCplDepartmentId:
-          type: array
-          items:
-            type: string
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        ValidatedBy:
-          type: string
-        ValidatedDate:
-          format: date-time
-          type: string
-        DeletedBy:
-          type: string
-        DeletedAt:
-          format: date-time
-          type: string
-        NeedsAttention:
-          type: boolean
-        IsReplacedById:
-          type: string
-        IsActive:
-          type: boolean
     ProjectOrganizationPerson:
       description: Connects a person with affiliation to a project
       type: object
@@ -269,234 +159,6 @@ components:
           format: date-time
           description: The date for sending a users verification email
           type: string
-    PersonPerson:
-      type: object
-      properties:
-        Id:
-          type: string
-        FirstName:
-          type: string
-        LastName:
-          type: string
-        DisplayName:
-          type: string
-        BirthYear:
-          format: int32
-          type: integer
-        IsReplacedById:
-          type: string
-        IsReplacingId:
-          type: string
-        IsActive:
-          type: boolean
-        IsDeleted:
-          type: boolean
-        HasOrganizationHome:
-          type: boolean
-        HasIdentifiers:
-          type: boolean
-        HasPublications:
-          type: boolean
-        HasProjects:
-          type: boolean
-        OrganizationHomeCount:
-          format: int32
-          type: integer
-        IdentifiersCount:
-          format: int32
-          type: integer
-        IdentifierCid:
-          type: array
-          items:
-            type: string
-        IdentifierCplPersonId:
-          type: array
-          items:
-            type: string
-        IdentifierOrcid:
-          type: array
-          items:
-            type: string
-        Identifiers:
-          type: array
-          items:
-            $ref: '#/components/schemas/PersonIdentifier'
-        OrganizationHome:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationHome'
-        PdbCategories:
-          type: array
-          items:
-            $ref: '#/components/schemas/PdbCategory'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        DeletedBy:
-          type: string
-        DeletedAt:
-          format: date-time
-          type: string
-        SightedBy:
-          type: string
-        SightedAt:
-          format: date-time
-          type: string
-        ValidatedBy:
-          type: string
-        ValidatedDate:
-          format: date-time
-          type: string
-        NeedsAttention:
-          type: boolean
-    PersonIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/PersonIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
-          type: string
-    OrganizationIdentifierType:
-      type: object
-      properties:
-        Id:
-          type: string
-        Value:
-          type: string
-        DescriptionSwe:
-          type: string
-        DescriptionEng:
-          type: string
-    OrganizationIdentifier:
-      type: object
-      properties:
-        Id:
-          type: string
-        Type:
-          $ref: '#/components/schemas/OrganizationIdentifierType'
-        CreatedBy:
-          type: string
-        CreatedAt:
-          format: date-time
-          type: string
-        UpdatedBy:
-          type: string
-        UpdatedAt:
-          format: date-time
-          type: string
-        IsActive:
-          type: boolean
-        Value:
-          type: string
-    PersonDisplayPath:
-      type: object
-      properties:
-        DisplayPathSwe:
-          type: string
-        DisplayPathEng:
-          type: string
-    OrganizationOrganizationType:
-      type: object
-      properties:
-        Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
-    ProjectOrganizationPersonOrganization:
-      type: object
-      properties:
-        ID:
-          format: int32
-          type: integer
-        OrganizationID:
-          type: string
-        StartDate:
-          format: date-time
-          type: string
-        EndDate:
-          format: date-time
-          type: string
-        ProjectOrganizationPersonID:
-          format: int32
-          type: integer
-        OrganizationData:
-          $ref: '#/components/schemas/OrganizationOrganization'
-    OrganizationOrganizationParent:
-      type: object
-      properties:
-        Id:
-          type: string
-        FromDate:
-          format: date-time
-          type: string
-        ToDate:
-          format: date-time
-          type: string
-        ParentOrganizationId:
-          type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/OrganizationOrganization'
-    PdbCategory:
-      type: object
-      properties:
-        Id:
-          type: string
-        Name:
-          type: string
-        StartDate:
-          format: date-time
-          type: string
-        EndDate:
-          format: date-time
-          type: string
-    OrganizationDisplayPath:
-      type: object
-      properties:
-        DisplayPathSwe:
-          type: string
-        DisplayPathEng:
-          type: string
-    PersonOrganizationParent:
-      type: object
-      properties:
-        Id:
-          type: string
-        FromDate:
-          format: date-time
-          type: string
-        ToDate:
-          format: date-time
-          type: string
-        ParentOrganizationId:
-          type: string
-        ParentOrganizationData:
-          $ref: '#/components/schemas/PersonOrganization'
     PersonOrganization:
       type: object
       properties:
@@ -596,13 +258,232 @@ components:
           type: string
         IsActive:
           type: boolean
-    PersonOrganizationIdentifier:
+    PersonDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+    OrganizationDisplayPath:
+      type: object
+      properties:
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+    PersonPerson:
+      type: object
+      properties:
+        Id:
+          type: string
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        DisplayName:
+          type: string
+        BirthYear:
+          format: int32
+          type: integer
+        IsReplacedById:
+          type: string
+        IsReplacingId:
+          type: string
+        IsActive:
+          type: boolean
+        IsDeleted:
+          type: boolean
+        HasOrganizationHome:
+          type: boolean
+        HasIdentifiers:
+          type: boolean
+        HasPublications:
+          type: boolean
+        HasProjects:
+          type: boolean
+        OrganizationHomeCount:
+          format: int32
+          type: integer
+        IdentifiersCount:
+          format: int32
+          type: integer
+        IdentifierCid:
+          type: array
+          items:
+            type: string
+        IdentifierCplPersonId:
+          type: array
+          items:
+            type: string
+        IdentifierOrcid:
+          type: array
+          items:
+            type: string
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonIdentifier'
+        OrganizationHome:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationHome'
+        PdbCategories:
+          type: array
+          items:
+            $ref: '#/components/schemas/PdbCategory'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        SightedBy:
+          type: string
+        SightedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+    OrganizationOrganization:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        DisplayNameSwe:
+          type: string
+        DisplayNameEng:
+          type: string
+        DisplayPathSwe:
+          type: string
+        DisplayPathEng:
+          type: string
+        DisplayPathShortSwe:
+          type: string
+        DisplayPathShortEng:
+          type: string
+        PossibleDisplayPaths:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationDisplayPath'
+        City:
+          type: string
+        PostalNo:
+          type: string
+        Country:
+          type: string
+        GeoLat:
+          type: string
+        GeoLong:
+          type: string
+        Level:
+          format: int32
+          type: integer
+        StartYear:
+          format: int32
+          type: integer
+        EndYear:
+          format: int32
+          type: integer
+        OrganizationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationOrganizationType'
+        OrganizationParents:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationOrganizationParent'
+        ActiveOrganizationParentIds:
+          type: array
+          items:
+            type: string
+        HasIdentifiers:
+          type: boolean
+        IdentifiersCount:
+          format: int32
+          type: integer
+        Identifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationIdentifier'
+        IdentifierLdapCode:
+          type: array
+          items:
+            type: string
+        IdentifierCplDepartmentId:
+          type: array
+          items:
+            type: string
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        ValidatedBy:
+          type: string
+        ValidatedDate:
+          format: date-time
+          type: string
+        DeletedBy:
+          type: string
+        DeletedAt:
+          format: date-time
+          type: string
+        NeedsAttention:
+          type: boolean
+        IsReplacedById:
+          type: string
+        IsActive:
+          type: boolean
+    ProjectOrganizationPersonOrganization:
+      type: object
+      properties:
+        ID:
+          format: int32
+          type: integer
+        OrganizationID:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
+          type: string
+        ProjectOrganizationPersonID:
+          format: int32
+          type: integer
+        OrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
+    OrganizationIdentifier:
       type: object
       properties:
         Id:
           type: string
         Type:
-          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
+          $ref: '#/components/schemas/OrganizationIdentifierType'
         CreatedBy:
           type: string
         CreatedAt:
@@ -617,18 +498,6 @@ components:
           type: boolean
         Value:
           type: string
-    PersonOrganizationType:
-      type: object
-      properties:
-        Id:
-          type: string
-        NameSwe:
-          type: string
-        NameEng:
-          type: string
-        LegacyOrganizationTypeId:
-          format: int32
-          type: integer
     OrganizationHome:
       type: object
       properties:
@@ -665,6 +534,137 @@ components:
         DescriptionSwe:
           type: string
         DescriptionEng:
+          type: string
+    PersonIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    OrganizationOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/OrganizationOrganization'
+    PersonOrganizationParent:
+      type: object
+      properties:
+        Id:
+          type: string
+        FromDate:
+          format: date-time
+          type: string
+        ToDate:
+          format: date-time
+          type: string
+        ParentOrganizationId:
+          type: string
+        ParentOrganizationData:
+          $ref: '#/components/schemas/PersonOrganization'
+    OrganizationOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    PersonIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    OrganizationIdentifierType:
+      type: object
+      properties:
+        Id:
+          type: string
+        Value:
+          type: string
+        DescriptionSwe:
+          type: string
+        DescriptionEng:
+          type: string
+    PersonOrganizationType:
+      type: object
+      properties:
+        Id:
+          type: string
+        NameSwe:
+          type: string
+        NameEng:
+          type: string
+        LegacyOrganizationTypeId:
+          format: int32
+          type: integer
+    PersonOrganizationIdentifier:
+      type: object
+      properties:
+        Id:
+          type: string
+        Type:
+          $ref: '#/components/schemas/PersonOrganizationIdentifierType'
+        CreatedBy:
+          type: string
+        CreatedAt:
+          format: date-time
+          type: string
+        UpdatedBy:
+          type: string
+        UpdatedAt:
+          format: date-time
+          type: string
+        IsActive:
+          type: boolean
+        Value:
+          type: string
+    PdbCategory:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        StartDate:
+          format: date-time
+          type: string
+        EndDate:
+          format: date-time
           type: string
   securitySchemes:
     basic:
